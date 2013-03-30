@@ -9,13 +9,13 @@
         <property name="disconnect_python_events">0</property>
         <property name="encoding">UTF-8</property>
         <property name="event_generation">connect</property>
-        <property name="file"></property>
+        <property name="file">DSudoku</property>
         <property name="first_id">1000</property>
         <property name="help_provider">none</property>
         <property name="internationalize">0</property>
         <property name="name">DebugSudoku</property>
         <property name="namespace"></property>
-        <property name="path">C:\Users\Tim\Documents\GitHub\New folder</property>
+        <property name="path">C:\Users\Shaj\Documents\GitHub\DebugSudoku</property>
         <property name="precompiled_header"></property>
         <property name="relative_path">1</property>
         <property name="skip_python_events">1</property>
@@ -35,9 +35,9 @@
             <property name="id">wxID_ANY</property>
             <property name="maximum_size"></property>
             <property name="minimum_size"></property>
-            <property name="name">MyFrame1</property>
+            <property name="name">MainFrame</property>
             <property name="pos"></property>
-            <property name="size">694,424</property>
+            <property name="size">719,492</property>
             <property name="style">wxDEFAULT_FRAME_STYLE</property>
             <property name="subclass"></property>
             <property name="title"></property>
@@ -53,7 +53,7 @@
             <event name="OnActivate"></event>
             <event name="OnActivateApp"></event>
             <event name="OnChar"></event>
-            <event name="OnClose"></event>
+            <event name="OnClose">OnClose</event>
             <event name="OnEnterWindow"></event>
             <event name="OnEraseBackground"></event>
             <event name="OnHibernate"></event>
@@ -90,7 +90,7 @@
                 <object class="sizeritem" expanded="1">
                     <property name="border">5</property>
                     <property name="flag">wxEXPAND | wxALL</property>
-                    <property name="proportion">1</property>
+                    <property name="proportion">2</property>
                     <object class="wxPanel" expanded="1">
                         <property name="bg"></property>
                         <property name="context_help"></property>
@@ -101,12 +101,12 @@
                         <property name="hidden">0</property>
                         <property name="id">wxID_ANY</property>
                         <property name="maximum_size"></property>
-                        <property name="minimum_size"></property>
+                        <property name="minimum_size">300,300</property>
                         <property name="name">m_panelGuess</property>
                         <property name="permission">protected</property>
                         <property name="pos"></property>
-                        <property name="size"></property>
-                        <property name="subclass"></property>
+                        <property name="size">300,300</property>
+                        <property name="subclass">GamePanel; GamePanel.h</property>
                         <property name="tooltip"></property>
                         <property name="validator_data_type"></property>
                         <property name="validator_style">wxFILTER_NONE</property>
@@ -115,7 +115,7 @@
                         <property name="window_extra_style"></property>
                         <property name="window_name"></property>
                         <property name="window_style">wxTAB_TRAVERSAL</property>
-                        <event name="OnChar"></event>
+                        <event name="OnChar">OnChar</event>
                         <event name="OnEnterWindow"></event>
                         <event name="OnEraseBackground"></event>
                         <event name="OnKeyDown"></event>
@@ -124,14 +124,14 @@
                         <event name="OnLeaveWindow"></event>
                         <event name="OnLeftDClick"></event>
                         <event name="OnLeftDown"></event>
-                        <event name="OnLeftUp"></event>
+                        <event name="OnLeftUp">OnLeftUp</event>
                         <event name="OnMiddleDClick"></event>
                         <event name="OnMiddleDown"></event>
                         <event name="OnMiddleUp"></event>
                         <event name="OnMotion"></event>
                         <event name="OnMouseEvents"></event>
                         <event name="OnMouseWheel"></event>
-                        <event name="OnPaint"></event>
+                        <event name="OnPaint">OnPaint</event>
                         <event name="OnRightDClick"></event>
                         <event name="OnRightDown"></event>
                         <event name="OnRightUp"></event>
@@ -143,7 +143,7 @@
                 <object class="sizeritem" expanded="1">
                     <property name="border">5</property>
                     <property name="flag">wxEXPAND | wxALL</property>
-                    <property name="proportion">1</property>
+                    <property name="proportion">2</property>
                     <object class="wxPanel" expanded="1">
                         <property name="bg"></property>
                         <property name="context_help"></property>
@@ -154,12 +154,12 @@
                         <property name="hidden">0</property>
                         <property name="id">wxID_ANY</property>
                         <property name="maximum_size"></property>
-                        <property name="minimum_size"></property>
+                        <property name="minimum_size">300,300</property>
                         <property name="name">m_panelTrue</property>
                         <property name="permission">protected</property>
                         <property name="pos"></property>
-                        <property name="size"></property>
-                        <property name="subclass"></property>
+                        <property name="size">300,300</property>
+                        <property name="subclass">GamePanel; GamePanel.h</property>
                         <property name="tooltip"></property>
                         <property name="validator_data_type"></property>
                         <property name="validator_style">wxFILTER_NONE</property>
@@ -168,7 +168,7 @@
                         <property name="window_extra_style"></property>
                         <property name="window_name"></property>
                         <property name="window_style">wxTAB_TRAVERSAL</property>
-                        <event name="OnChar"></event>
+                        <event name="OnChar">OnChar</event>
                         <event name="OnEnterWindow"></event>
                         <event name="OnEraseBackground"></event>
                         <event name="OnKeyDown"></event>
@@ -177,14 +177,14 @@
                         <event name="OnLeaveWindow"></event>
                         <event name="OnLeftDClick"></event>
                         <event name="OnLeftDown"></event>
-                        <event name="OnLeftUp"></event>
+                        <event name="OnLeftUp">OnLeftUp</event>
                         <event name="OnMiddleDClick"></event>
                         <event name="OnMiddleDown"></event>
                         <event name="OnMiddleUp"></event>
                         <event name="OnMotion"></event>
                         <event name="OnMouseEvents"></event>
                         <event name="OnMouseWheel"></event>
-                        <event name="OnPaint"></event>
+                        <event name="OnPaint">OnPaint</event>
                         <event name="OnRightDClick"></event>
                         <event name="OnRightDown"></event>
                         <event name="OnRightUp"></event>
@@ -206,7 +206,7 @@
                         <property name="font"></property>
                         <property name="hidden">0</property>
                         <property name="id">wxID_ANY</property>
-                        <property name="maximum_size"></property>
+                        <property name="maximum_size">-1,-1</property>
                         <property name="minimum_size"></property>
                         <property name="name">m_panelControls</property>
                         <property name="permission">protected</property>
@@ -252,7 +252,7 @@
                             <object class="sizeritem" expanded="1">
                                 <property name="border">5</property>
                                 <property name="flag">wxEXPAND | wxALL</property>
-                                <property name="proportion">1</property>
+                                <property name="proportion">0</property>
                                 <object class="wxPanel" expanded="1">
                                     <property name="bg"></property>
                                     <property name="context_help"></property>
@@ -336,7 +336,7 @@
                                                 <property name="window_extra_style"></property>
                                                 <property name="window_name"></property>
                                                 <property name="window_style"></property>
-                                                <event name="OnButtonClick"></event>
+                                                <event name="OnButtonClick">OnNumButtonClick</event>
                                                 <event name="OnChar"></event>
                                                 <event name="OnEnterWindow"></event>
                                                 <event name="OnEraseBackground"></event>
@@ -393,7 +393,7 @@
                                                 <property name="window_extra_style"></property>
                                                 <property name="window_name"></property>
                                                 <property name="window_style"></property>
-                                                <event name="OnButtonClick"></event>
+                                                <event name="OnButtonClick">OnNumButtonClick</event>
                                                 <event name="OnChar"></event>
                                                 <event name="OnEnterWindow"></event>
                                                 <event name="OnEraseBackground"></event>
@@ -450,7 +450,7 @@
                                                 <property name="window_extra_style"></property>
                                                 <property name="window_name"></property>
                                                 <property name="window_style"></property>
-                                                <event name="OnButtonClick"></event>
+                                                <event name="OnButtonClick">OnNumButtonClick</event>
                                                 <event name="OnChar"></event>
                                                 <event name="OnEnterWindow"></event>
                                                 <event name="OnEraseBackground"></event>
@@ -507,7 +507,7 @@
                                                 <property name="window_extra_style"></property>
                                                 <property name="window_name"></property>
                                                 <property name="window_style"></property>
-                                                <event name="OnButtonClick"></event>
+                                                <event name="OnButtonClick">OnNumButtonClick</event>
                                                 <event name="OnChar"></event>
                                                 <event name="OnEnterWindow"></event>
                                                 <event name="OnEraseBackground"></event>
@@ -564,7 +564,7 @@
                                                 <property name="window_extra_style"></property>
                                                 <property name="window_name"></property>
                                                 <property name="window_style"></property>
-                                                <event name="OnButtonClick"></event>
+                                                <event name="OnButtonClick">OnNumButtonClick</event>
                                                 <event name="OnChar"></event>
                                                 <event name="OnEnterWindow"></event>
                                                 <event name="OnEraseBackground"></event>
@@ -621,7 +621,7 @@
                                                 <property name="window_extra_style"></property>
                                                 <property name="window_name"></property>
                                                 <property name="window_style"></property>
-                                                <event name="OnButtonClick"></event>
+                                                <event name="OnButtonClick">OnNumButtonClick</event>
                                                 <event name="OnChar"></event>
                                                 <event name="OnEnterWindow"></event>
                                                 <event name="OnEraseBackground"></event>
@@ -678,7 +678,7 @@
                                                 <property name="window_extra_style"></property>
                                                 <property name="window_name"></property>
                                                 <property name="window_style"></property>
-                                                <event name="OnButtonClick"></event>
+                                                <event name="OnButtonClick">OnNumButtonClick</event>
                                                 <event name="OnChar"></event>
                                                 <event name="OnEnterWindow"></event>
                                                 <event name="OnEraseBackground"></event>
@@ -735,7 +735,7 @@
                                                 <property name="window_extra_style"></property>
                                                 <property name="window_name"></property>
                                                 <property name="window_style"></property>
-                                                <event name="OnButtonClick"></event>
+                                                <event name="OnButtonClick">OnNumButtonClick</event>
                                                 <event name="OnChar"></event>
                                                 <event name="OnEnterWindow"></event>
                                                 <event name="OnEraseBackground"></event>
@@ -792,7 +792,7 @@
                                                 <property name="window_extra_style"></property>
                                                 <property name="window_name"></property>
                                                 <property name="window_style"></property>
-                                                <event name="OnButtonClick"></event>
+                                                <event name="OnButtonClick">OnNumButtonClick</event>
                                                 <event name="OnChar"></event>
                                                 <event name="OnEnterWindow"></event>
                                                 <event name="OnEraseBackground"></event>
@@ -824,7 +824,7 @@
                             <object class="sizeritem" expanded="1">
                                 <property name="border">5</property>
                                 <property name="flag">wxEXPAND|wxALL|wxALIGN_CENTER_HORIZONTAL</property>
-                                <property name="proportion">1</property>
+                                <property name="proportion">0</property>
                                 <object class="wxPanel" expanded="1">
                                     <property name="bg"></property>
                                     <property name="context_help"></property>
@@ -908,7 +908,7 @@
                                                 <property name="window_extra_style"></property>
                                                 <property name="window_name"></property>
                                                 <property name="window_style"></property>
-                                                <event name="OnButtonClick"></event>
+                                                <event name="OnButtonClick">OnSetButtonClick</event>
                                                 <event name="OnChar"></event>
                                                 <event name="OnEnterWindow"></event>
                                                 <event name="OnEraseBackground"></event>
@@ -965,7 +965,7 @@
                                                 <property name="window_extra_style"></property>
                                                 <property name="window_name"></property>
                                                 <property name="window_style"></property>
-                                                <event name="OnButtonClick"></event>
+                                                <event name="OnButtonClick">OnNoteButtonClick</event>
                                                 <event name="OnChar"></event>
                                                 <event name="OnEnterWindow"></event>
                                                 <event name="OnEraseBackground"></event>
@@ -1022,7 +1022,7 @@
                                                 <property name="window_extra_style"></property>
                                                 <property name="window_name"></property>
                                                 <property name="window_style"></property>
-                                                <event name="OnButtonClick"></event>
+                                                <event name="OnButtonClick">OnClearButtonClick</event>
                                                 <event name="OnChar"></event>
                                                 <event name="OnEnterWindow"></event>
                                                 <event name="OnEraseBackground"></event>
@@ -1067,7 +1067,7 @@
                         <property name="font"></property>
                         <property name="hidden">0</property>
                         <property name="id">wxID_ANY</property>
-                        <property name="maximum_size"></property>
+                        <property name="maximum_size">-1,-1</property>
                         <property name="minimum_size"></property>
                         <property name="name">m_panelDebug</property>
                         <property name="permission">protected</property>
@@ -1108,55 +1108,6 @@
                     </object>
                 </object>
             </object>
-        </object>
-        <object class="Panel" expanded="1">
-            <property name="bg"></property>
-            <property name="context_help"></property>
-            <property name="context_menu">1</property>
-            <property name="enabled">1</property>
-            <property name="event_handler">impl_virtual</property>
-            <property name="fg"></property>
-            <property name="font"></property>
-            <property name="hidden">0</property>
-            <property name="id">wxID_ANY</property>
-            <property name="maximum_size"></property>
-            <property name="minimum_size"></property>
-            <property name="name">MyPanel1</property>
-            <property name="pos"></property>
-            <property name="size">500,300</property>
-            <property name="subclass"></property>
-            <property name="tooltip"></property>
-            <property name="validator_data_type"></property>
-            <property name="validator_style">wxFILTER_NONE</property>
-            <property name="validator_type">wxDefaultValidator</property>
-            <property name="validator_variable"></property>
-            <property name="window_extra_style"></property>
-            <property name="window_name"></property>
-            <property name="window_style">wxTAB_TRAVERSAL</property>
-            <event name="OnChar"></event>
-            <event name="OnEnterWindow"></event>
-            <event name="OnEraseBackground"></event>
-            <event name="OnInitDialog"></event>
-            <event name="OnKeyDown"></event>
-            <event name="OnKeyUp"></event>
-            <event name="OnKillFocus"></event>
-            <event name="OnLeaveWindow"></event>
-            <event name="OnLeftDClick"></event>
-            <event name="OnLeftDown"></event>
-            <event name="OnLeftUp"></event>
-            <event name="OnMiddleDClick"></event>
-            <event name="OnMiddleDown"></event>
-            <event name="OnMiddleUp"></event>
-            <event name="OnMotion"></event>
-            <event name="OnMouseEvents"></event>
-            <event name="OnMouseWheel"></event>
-            <event name="OnPaint"></event>
-            <event name="OnRightDClick"></event>
-            <event name="OnRightDown"></event>
-            <event name="OnRightUp"></event>
-            <event name="OnSetFocus"></event>
-            <event name="OnSize"></event>
-            <event name="OnUpdateUI"></event>
         </object>
     </object>
 </wxFormBuilder_Project>
