@@ -16,13 +16,14 @@ class GamePanel: public wxPanel
 
 		GamePanel(wxWindow* parent,wxWindowID id=wxID_ANY,const wxPoint& pos=wxDefaultPosition,const wxSize& size=wxDefaultSize, long style = wxTAB_TRAVERSAL|wxNO_BORDER);
 		virtual ~GamePanel();
+        void DrawBoardBackground(wxPaintDC &dc);
+        void DrawBoardNumbers(wxPaintDC &dc);
 
 		//(*Declarations(GamePanel)
 		//*)
 
 	protected:
-        void DrawBoardBackground(wxPaintDC &dc);
-        void DrawBoardNumbers(wxPaintDC &dc);
+
         void OnPaint( wxPaintEvent& event );
 		//(*Identifiers(GamePanel)
 		//*)

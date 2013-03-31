@@ -54,8 +54,14 @@ void DebugSudokuMainFrame::OnLeftUp( wxMouseEvent& event )
 void DebugSudokuMainFrame::OnPaint( wxPaintEvent& event )
 {
 // TODO: Implement OnPaint
-    m_panelGuess->Refresh();
-    m_panelTrue->Refresh();
+    wxPaintDC dc1( m_panelGuess );
+    wxPaintDC dc2( m_panelTrue);
+
+    m_panelGuess->DrawBoardBackground(dc1);
+    m_panelGuess->DrawBoardNumbers(dc1);
+
+    m_panelTrue->DrawBoardBackground(dc2);
+    m_panelTrue->DrawBoardNumbers(dc2);
 }
 
 void DebugSudokuMainFrame::OnNumButtonClick( wxCommandEvent& event )
