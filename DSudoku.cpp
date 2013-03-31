@@ -15,24 +15,45 @@ MainFrame::MainFrame( wxWindow* parent, wxWindowID id, const wxString& title, co
 {
 	this->SetSizeHints( wxDefaultSize, wxDefaultSize );
 	
-	wxGridSizer* gSizer1;
-	gSizer1 = new wxGridSizer( 2, 2, 0, 0 );
+	m_menubar1 = new wxMenuBar( 0 );
+	m_menuFile = new wxMenu();
+	wxMenuItem* m_menuItem1;
+	m_menuItem1 = new wxMenuItem( m_menuFile, wxID_ANY, wxString( wxT("MyMenuItem") ) , wxEmptyString, wxITEM_NORMAL );
+	m_menuFile->Append( m_menuItem1 );
 	
-	m_panelGuess = new GamePanel( this, wxID_ANY, wxDefaultPosition, wxSize( 300,300 ), wxTAB_TRAVERSAL );
-	m_panelGuess->SetMinSize( wxSize( 300,300 ) );
+	m_menubar1->Append( m_menuFile, wxT("&File") ); 
 	
-	gSizer1->Add( m_panelGuess, 2, wxEXPAND | wxALL, 5 );
+	m_menuAbout = new wxMenu();
+	wxMenuItem* m_menuItem2;
+	m_menuItem2 = new wxMenuItem( m_menuAbout, wxID_ANY, wxString( wxT("MyMenuItem") ) , wxEmptyString, wxITEM_NORMAL );
+	m_menuAbout->Append( m_menuItem2 );
 	
-	m_panelTrue = new GamePanel( this, wxID_ANY, wxDefaultPosition, wxSize( 300,300 ), wxTAB_TRAVERSAL );
-	m_panelTrue->SetMinSize( wxSize( 300,300 ) );
+	m_menubar1->Append( m_menuAbout, wxT("&About") ); 
 	
-	gSizer1->Add( m_panelTrue, 2, wxEXPAND | wxALL, 5 );
+	this->SetMenuBar( m_menubar1 );
+	
+	wxFlexGridSizer* fgSizer1;
+	fgSizer1 = new wxFlexGridSizer( 2, 2, 0, 0 );
+	fgSizer1->SetFlexibleDirection( wxBOTH );
+	fgSizer1->SetNonFlexibleGrowMode( wxFLEX_GROWMODE_SPECIFIED );
+	
+	m_panelGuess = new GamePanel( this, wxID_ANY, wxDefaultPosition, wxSize( 350,350 ), wxFULL_REPAINT_ON_RESIZE|wxSIMPLE_BORDER );
+	m_panelGuess->SetMinSize( wxSize( 350,350 ) );
+	
+	fgSizer1->Add( m_panelGuess, 0, wxALL, 5 );
+	
+	m_panelTrue = new GamePanel( this, wxID_ANY, wxDefaultPosition, wxSize( 350,350 ), wxFULL_REPAINT_ON_RESIZE|wxSIMPLE_BORDER );
+	m_panelTrue->SetMinSize( wxSize( 350,350 ) );
+	
+	fgSizer1->Add( m_panelTrue, 0, wxALL, 5 );
 	
 	m_panelControls = new wxPanel( this, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL );
 	wxBoxSizer* bSizer1;
 	bSizer1 = new wxBoxSizer( wxVERTICAL );
 	
 	m_panelNumbers = new wxPanel( m_panelControls, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL );
+	m_panelNumbers->SetExtraStyle( wxWS_EX_PROCESS_UI_UPDATES );
+	
 	wxBoxSizer* bSizer2;
 	bSizer2 = new wxBoxSizer( wxHORIZONTAL );
 	
@@ -66,9 +87,11 @@ MainFrame::MainFrame( wxWindow* parent, wxWindowID id, const wxString& title, co
 	m_panelNumbers->SetSizer( bSizer2 );
 	m_panelNumbers->Layout();
 	bSizer2->Fit( m_panelNumbers );
-	bSizer1->Add( m_panelNumbers, 0, wxEXPAND | wxALL, 5 );
+	bSizer1->Add( m_panelNumbers, 0, wxALIGN_CENTER_HORIZONTAL|wxALL, 5 );
 	
 	m_panelSettings = new wxPanel( m_panelControls, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL );
+	m_panelSettings->SetExtraStyle( wxWS_EX_PROCESS_UI_UPDATES );
+	
 	wxBoxSizer* bSizer3;
 	bSizer3 = new wxBoxSizer( wxHORIZONTAL );
 	
@@ -84,23 +107,25 @@ MainFrame::MainFrame( wxWindow* parent, wxWindowID id, const wxString& title, co
 	m_panelSettings->SetSizer( bSizer3 );
 	m_panelSettings->Layout();
 	bSizer3->Fit( m_panelSettings );
-	bSizer1->Add( m_panelSettings, 0, wxEXPAND|wxALL|wxALIGN_CENTER_HORIZONTAL, 5 );
+	bSizer1->Add( m_panelSettings, 0, wxALL|wxALIGN_CENTER_HORIZONTAL, 5 );
 	
 	m_panelControls->SetSizer( bSizer1 );
 	m_panelControls->Layout();
 	bSizer1->Fit( m_panelControls );
-	gSizer1->Add( m_panelControls, 0, wxEXPAND | wxALL, 5 );
+	fgSizer1->Add( m_panelControls, 0, wxALIGN_CENTER_HORIZONTAL|wxALL|wxEXPAND, 5 );
 	
 	m_panelDebug = new wxPanel( this, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL );
-	gSizer1->Add( m_panelDebug, 0, wxEXPAND | wxALL, 5 );
+	fgSizer1->Add( m_panelDebug, 0, wxALL|wxEXPAND, 5 );
 	
-	this->SetSizer( gSizer1 );
+	this->SetSizer( fgSizer1 );
 	this->Layout();
 	
 	this->Centre( wxBOTH );
 	
 	// Connect Events
 	this->Connect( wxEVT_CLOSE_WINDOW, wxCloseEventHandler( MainFrame::OnClose ) );
+	this->Connect( wxEVT_PAINT, wxPaintEventHandler( MainFrame::OnPaint ) );
+	this->Connect( wxEVT_SET_FOCUS, wxFocusEventHandler( MainFrame::OnSetFocus ) );
 	m_panelGuess->Connect( wxEVT_CHAR, wxKeyEventHandler( MainFrame::OnChar ), NULL, this );
 	m_panelGuess->Connect( wxEVT_LEFT_UP, wxMouseEventHandler( MainFrame::OnLeftUp ), NULL, this );
 	m_panelGuess->Connect( wxEVT_PAINT, wxPaintEventHandler( MainFrame::OnPaint ), NULL, this );
@@ -125,6 +150,8 @@ MainFrame::~MainFrame()
 {
 	// Disconnect Events
 	this->Disconnect( wxEVT_CLOSE_WINDOW, wxCloseEventHandler( MainFrame::OnClose ) );
+	this->Disconnect( wxEVT_PAINT, wxPaintEventHandler( MainFrame::OnPaint ) );
+	this->Disconnect( wxEVT_SET_FOCUS, wxFocusEventHandler( MainFrame::OnSetFocus ) );
 	m_panelGuess->Disconnect( wxEVT_CHAR, wxKeyEventHandler( MainFrame::OnChar ), NULL, this );
 	m_panelGuess->Disconnect( wxEVT_LEFT_UP, wxMouseEventHandler( MainFrame::OnLeftUp ), NULL, this );
 	m_panelGuess->Disconnect( wxEVT_PAINT, wxPaintEventHandler( MainFrame::OnPaint ), NULL, this );

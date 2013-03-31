@@ -1,9 +1,9 @@
 /***************************************************************
  * Name:      DebugSudokuApp.cpp
  * Purpose:   Code for Application Class
- * Author:    Tim Sonnier ()
- * Created:   2013-03-29
- * Copyright: Tim Sonnier ()
+ * Author:    Timothy Sonnier (tisonnier2000@gmail.com)
+ * Created:   2013-03-30
+ * Copyright: Timothy Sonnier ()
  * License:
  **************************************************************/
 
@@ -16,15 +16,24 @@
 #endif //__BORLANDC__
 
 #include "DebugSudokuApp.h"
-#include "DebugSudokuMain.h"
+#include "debugMainFrame.h"
 
 IMPLEMENT_APP(DebugSudokuApp);
 
 bool DebugSudokuApp::OnInit()
 {
-    DebugSudokuFrame* frame = new DebugSudokuFrame(0L);
-    frame->SetIcon(wxICON(aaaa)); // To Set App Icon
-    frame->Show();
-    
-    return true;
+    bool wxsOK = true;
+    wxInitAllImageHandlers();
+    if(wxOK)
+    {
+        DebugSudokuMainFrame* frame = new DebugSudokuMainFrame(0L);
+        frame->SetIcon(wxICON(aaaa)); // To Set App Icon
+        frame->Show();
+        SetTopWindow(frame);
+        frame->Update();
+
+    }
+
+
+    return wxsOK;
 }

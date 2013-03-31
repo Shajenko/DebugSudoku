@@ -14,14 +14,13 @@
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
 					<Add option="-g" />
-					<Add option="-D__WXDEBUG__" />
-					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
+					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
 				</Compiler>
 				<ResourceCompiler>
-					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
+					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
 				</ResourceCompiler>
 				<Linker>
-					<Add library="libwxmsw28ud.a" />
+					<Add library="libwxmsw28u.a" />
 					<Add directory="$(#wx)/lib/gcc_dll" />
 				</Linker>
 			</Target>
@@ -70,22 +69,20 @@
 		<Unit filename="../sudokusolver/src/DebugPanel.h" />
 		<Unit filename="../sudokusolver/src/GameBoard.cpp" />
 		<Unit filename="../sudokusolver/src/GameBoard.h" />
-		<Unit filename="../sudokusolver/src/GameRow.cpp" />
-		<Unit filename="../sudokusolver/src/GameRow.h" />
 		<Unit filename="../sudokusolver/src/GameSquare.cpp" />
 		<Unit filename="../sudokusolver/src/GameSquare.h" />
 		<Unit filename="../sudokusolver/src/SudokuAlgorithms.cpp" />
 		<Unit filename="../sudokusolver/src/SudokuAlgorithms.h" />
 		<Unit filename="DSudoku.cpp" />
 		<Unit filename="DSudoku.h" />
-		<Unit filename="DebugSudoku.fbp" />
 		<Unit filename="DebugSudokuApp.cpp" />
 		<Unit filename="DebugSudokuApp.h" />
-		<Unit filename="DebugSudokuMain.cpp" />
-		<Unit filename="DebugSudokuMain.h" />
-		<Unit filename="DebugSudokuMainFrame.cpp" />
-		<Unit filename="DebugSudokuMainFrame.h" />
+		<Unit filename="GamePanel.cpp" />
+		<Unit filename="GamePanel.h" />
 		<Unit filename="WxWizFrame.fbp" />
+		<Unit filename="debugMainFrame.cpp" />
+		<Unit filename="debugMainFrame.h" />
+		<Unit filename="enums.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
@@ -98,6 +95,11 @@
 			<envvars />
 			<debugger />
 			<lib_finder disable_auto="1" />
+			<wxsmith version="1">
+				<resources>
+					<wxPanel wxs="wxsmith/GamePanel.wxs" src="GamePanel.cpp" hdr="GamePanel.h" fwddecl="0" i18n="1" name="GamePanel" language="CPP" />
+				</resources>
+			</wxsmith>
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>

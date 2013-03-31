@@ -8,17 +8,20 @@
 #ifndef __DSudoku__
 #define __DSudoku__
 
-class GamePanel;
-
-#include <wx/panel.h>
+#include <wx/string.h>
+#include <wx/bitmap.h>
+#include <wx/image.h>
+#include <wx/icon.h>
+#include <wx/menu.h>
 #include <wx/gdicmn.h>
 #include <wx/font.h>
 #include <wx/colour.h>
 #include <wx/settings.h>
-#include <wx/string.h>
+#include <wx/panel.h>
 #include <wx/button.h>
 #include <wx/sizer.h>
 #include <wx/frame.h>
+#include "GamePanel.h"
 
 ///////////////////////////////////////////////////////////////////////////
 
@@ -26,11 +29,14 @@ class GamePanel;
 ///////////////////////////////////////////////////////////////////////////////
 /// Class MainFrame
 ///////////////////////////////////////////////////////////////////////////////
-class MainFrame : public wxFrame 
+class MainFrame : public wxFrame
 {
 	private:
-	
+
 	protected:
+		wxMenuBar* m_menubar1;
+		wxMenu* m_menuFile;
+		wxMenu* m_menuAbout;
 		GamePanel* m_panelGuess;
 		GamePanel* m_panelTrue;
 		wxPanel* m_panelControls;
@@ -49,23 +55,24 @@ class MainFrame : public wxFrame
 		wxButton* m_buttonNote;
 		wxButton* m_buttonClear;
 		wxPanel* m_panelDebug;
-		
+
 		// Virtual event handlers, overide them in your derived class
 		virtual void OnClose( wxCloseEvent& event ) { event.Skip(); }
+		virtual void OnPaint( wxPaintEvent& event ) { event.Skip(); }
+		virtual void OnSetFocus( wxFocusEvent& event ) { event.Skip(); }
 		virtual void OnChar( wxKeyEvent& event ) { event.Skip(); }
 		virtual void OnLeftUp( wxMouseEvent& event ) { event.Skip(); }
-		virtual void OnPaint( wxPaintEvent& event ) { event.Skip(); }
 		virtual void OnNumButtonClick( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnSetButtonClick( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnNoteButtonClick( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnClearButtonClick( wxCommandEvent& event ) { event.Skip(); }
-		
-	
+
+
 	public:
-		
-		MainFrame( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = wxEmptyString, const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 719,492 ), long style = wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL );
+
+		MainFrame( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = wxEmptyString, const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 732,511 ), long style = wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL );
 		~MainFrame();
-	
+
 };
 
 #endif //__DSudoku__
