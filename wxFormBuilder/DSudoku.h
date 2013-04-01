@@ -26,13 +26,28 @@ class GamePanel;
 
 ///////////////////////////////////////////////////////////////////////////
 
+#define ID_GUIFRAME 1000
 
 ///////////////////////////////////////////////////////////////////////////////
 /// Class MainFrame
 ///////////////////////////////////////////////////////////////////////////////
 class MainFrame : public wxFrame 
 {
+	DECLARE_EVENT_TABLE()
 	private:
+		
+		// Private event handlers
+		void _wxFB_OnPaint( wxPaintEvent& event ){ OnPaint( event ); }
+		void _wxFB_OnSetFocus( wxFocusEvent& event ){ OnSetFocus( event ); }
+		void _wxFB_OnQuit( wxCommandEvent& event ){ OnQuit( event ); }
+		void _wxFB_OnAbout( wxCommandEvent& event ){ OnAbout( event ); }
+		void _wxFB_OnChar( wxKeyEvent& event ){ OnChar( event ); }
+		void _wxFB_OnLeftUp( wxMouseEvent& event ){ OnLeftUp( event ); }
+		void _wxFB_OnNumButtonClick( wxCommandEvent& event ){ OnNumButtonClick( event ); }
+		void _wxFB_OnSetButtonClick( wxCommandEvent& event ){ OnSetButtonClick( event ); }
+		void _wxFB_OnNoteButtonClick( wxCommandEvent& event ){ OnNoteButtonClick( event ); }
+		void _wxFB_OnClearButtonClick( wxCommandEvent& event ){ OnClearButtonClick( event ); }
+		
 	
 	protected:
 		wxMenuBar* m_menubar1;
@@ -58,9 +73,10 @@ class MainFrame : public wxFrame
 		wxPanel* m_panelDebug;
 		
 		// Virtual event handlers, overide them in your derived class
-		virtual void OnClose( wxCloseEvent& event ) { event.Skip(); }
 		virtual void OnPaint( wxPaintEvent& event ) { event.Skip(); }
 		virtual void OnSetFocus( wxFocusEvent& event ) { event.Skip(); }
+		virtual void OnQuit( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnAbout( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnChar( wxKeyEvent& event ) { event.Skip(); }
 		virtual void OnLeftUp( wxMouseEvent& event ) { event.Skip(); }
 		virtual void OnNumButtonClick( wxCommandEvent& event ) { event.Skip(); }
@@ -71,7 +87,7 @@ class MainFrame : public wxFrame
 	
 	public:
 		
-		MainFrame( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = wxEmptyString, const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 732,511 ), long style = wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL );
+		MainFrame( wxWindow* parent, wxWindowID id = ID_GUIFRAME, const wxString& title = wxEmptyString, const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 732,511 ), long style = wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL );
 		~MainFrame();
 	
 };

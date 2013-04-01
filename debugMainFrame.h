@@ -17,7 +17,7 @@ class DebugSudokuMainFrame : public MainFrame
 {
 	protected:
 		// Handlers for MainFrame events.
-		void OnClose( wxCloseEvent& event );
+		virtual void OnQuit( wxCommandEvent& event );
 		void OnChar( wxKeyEvent& event );
 		void OnLeftUp( wxMouseEvent& event );
 		void OnPaint( wxPaintEvent& event );
@@ -28,9 +28,13 @@ class DebugSudokuMainFrame : public MainFrame
 		void OnSetFocus(wxFocusEvent& event);
 	public:
 		/** Constructor */
-		DebugSudokuMainFrame( wxWindow* parent );
+		DebugSudokuMainFrame( wxFrame *frame );
+		virtual ~DebugSudokuMainFrame( );
+
 
     private:
+
+
 		wxButton * numButtons[9];
         unsigned int row, col;
         Controls ctrlSelect;

@@ -30,6 +30,8 @@ GamePanel::~GamePanel()
 {
 	//(*Destroy(GamePanel)
 	//*)
+
+	delete bd;
 }
 
 

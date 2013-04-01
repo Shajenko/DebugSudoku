@@ -1,8 +1,8 @@
 #include "debugMainFrame.h"
 
-DebugSudokuMainFrame::DebugSudokuMainFrame( wxWindow* parent )
+DebugSudokuMainFrame::DebugSudokuMainFrame( wxFrame *frame )
 :
-MainFrame( parent )
+MainFrame( frame )
 {
 
     numButtons[0] = m_button1;
@@ -24,21 +24,15 @@ MainFrame( parent )
     row = 9;
     col = 9;
 
-    Refresh();
-    m_panelTrue->Refresh();
-
 }
 
-void DebugSudokuMainFrame::OnClose( wxCloseEvent& event )
+DebugSudokuMainFrame::~DebugSudokuMainFrame()
 {
-// TODO: Implement OnClose
-    m_panelNumbers->Destroy();
-    m_panelSettings->Destroy();
-    m_panelDebug->Destroy();
-    m_panelControls->Destroy();
-    m_panelTrue->Destroy();
-    m_panelGuess->Destroy();
-    Destroy();
+}
+
+void DebugSudokuMainFrame::OnQuit( wxCommandEvent& event )
+{
+    Close();
 }
 
 void DebugSudokuMainFrame::OnChar( wxKeyEvent& event )
@@ -118,5 +112,5 @@ void DebugSudokuMainFrame::OnClearButtonClick( wxCommandEvent& event )
 
 void DebugSudokuMainFrame::OnSetFocus(wxFocusEvent& event)
 {
-    Update();
+
 }

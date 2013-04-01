@@ -11,22 +11,47 @@
 
 ///////////////////////////////////////////////////////////////////////////
 
+BEGIN_EVENT_TABLE( MainFrame, wxFrame )
+	EVT_PAINT( MainFrame::_wxFB_OnPaint )
+	EVT_SET_FOCUS( MainFrame::_wxFB_OnSetFocus )
+	EVT_MENU( wxID_ANY, MainFrame::_wxFB_OnQuit )
+	EVT_MENU( wxID_ANY, MainFrame::_wxFB_OnAbout )
+	#error wxKeyEvent does not propogate, so wxEVT_CHAR from m_panelGuess can only be handled with Connect()
+	#error wxMouseEvent does not propogate, so wxEVT_LEFT_UP from m_panelGuess can only be handled with Connect()
+	#error wxPaintEvent does not propogate, so wxEVT_PAINT from m_panelGuess can only be handled with Connect()
+	#error wxKeyEvent does not propogate, so wxEVT_CHAR from m_panelTrue can only be handled with Connect()
+	#error wxMouseEvent does not propogate, so wxEVT_LEFT_UP from m_panelTrue can only be handled with Connect()
+	#error wxPaintEvent does not propogate, so wxEVT_PAINT from m_panelTrue can only be handled with Connect()
+	EVT_BUTTON( wxID_ANY, MainFrame::_wxFB_OnNumButtonClick )
+	EVT_BUTTON( wxID_ANY, MainFrame::_wxFB_OnNumButtonClick )
+	EVT_BUTTON( wxID_ANY, MainFrame::_wxFB_OnNumButtonClick )
+	EVT_BUTTON( wxID_ANY, MainFrame::_wxFB_OnNumButtonClick )
+	EVT_BUTTON( wxID_ANY, MainFrame::_wxFB_OnNumButtonClick )
+	EVT_BUTTON( wxID_ANY, MainFrame::_wxFB_OnNumButtonClick )
+	EVT_BUTTON( wxID_ANY, MainFrame::_wxFB_OnNumButtonClick )
+	EVT_BUTTON( wxID_ANY, MainFrame::_wxFB_OnNumButtonClick )
+	EVT_BUTTON( wxID_ANY, MainFrame::_wxFB_OnNumButtonClick )
+	EVT_BUTTON( wxID_ANY, MainFrame::_wxFB_OnSetButtonClick )
+	EVT_BUTTON( wxID_ANY, MainFrame::_wxFB_OnNoteButtonClick )
+	EVT_BUTTON( wxID_ANY, MainFrame::_wxFB_OnClearButtonClick )
+END_EVENT_TABLE()
+
 MainFrame::MainFrame( wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos, const wxSize& size, long style ) : wxFrame( parent, id, title, pos, size, style )
 {
 	this->SetSizeHints( wxDefaultSize, wxDefaultSize );
 	
 	m_menubar1 = new wxMenuBar( 0 );
 	m_menuFile = new wxMenu();
-	wxMenuItem* m_menuItem1;
-	m_menuItem1 = new wxMenuItem( m_menuFile, wxID_ANY, wxString( wxT("MyMenuItem") ) , wxEmptyString, wxITEM_NORMAL );
-	m_menuFile->Append( m_menuItem1 );
+	wxMenuItem* m_menuItemQuit;
+	m_menuItemQuit = new wxMenuItem( m_menuFile, wxID_ANY, wxString( wxT("Quit") ) , wxEmptyString, wxITEM_NORMAL );
+	m_menuFile->Append( m_menuItemQuit );
 	
 	m_menubar1->Append( m_menuFile, wxT("&File") ); 
 	
 	m_menuAbout = new wxMenu();
-	wxMenuItem* m_menuItem2;
-	m_menuItem2 = new wxMenuItem( m_menuAbout, wxID_ANY, wxString( wxT("MyMenuItem") ) , wxEmptyString, wxITEM_NORMAL );
-	m_menuAbout->Append( m_menuItem2 );
+	wxMenuItem* m_menuItemAbout;
+	m_menuItemAbout = new wxMenuItem( m_menuAbout, wxID_ANY, wxString( wxT("About...") ) , wxEmptyString, wxITEM_NORMAL );
+	m_menuAbout->Append( m_menuItemAbout );
 	
 	m_menubar1->Append( m_menuAbout, wxT("&About") ); 
 	
@@ -121,54 +146,8 @@ MainFrame::MainFrame( wxWindow* parent, wxWindowID id, const wxString& title, co
 	this->Layout();
 	
 	this->Centre( wxBOTH );
-	
-	// Connect Events
-	this->Connect( wxEVT_CLOSE_WINDOW, wxCloseEventHandler( MainFrame::OnClose ) );
-	this->Connect( wxEVT_PAINT, wxPaintEventHandler( MainFrame::OnPaint ) );
-	this->Connect( wxEVT_SET_FOCUS, wxFocusEventHandler( MainFrame::OnSetFocus ) );
-	m_panelGuess->Connect( wxEVT_CHAR, wxKeyEventHandler( MainFrame::OnChar ), NULL, this );
-	m_panelGuess->Connect( wxEVT_LEFT_UP, wxMouseEventHandler( MainFrame::OnLeftUp ), NULL, this );
-	m_panelGuess->Connect( wxEVT_PAINT, wxPaintEventHandler( MainFrame::OnPaint ), NULL, this );
-	m_panelTrue->Connect( wxEVT_CHAR, wxKeyEventHandler( MainFrame::OnChar ), NULL, this );
-	m_panelTrue->Connect( wxEVT_LEFT_UP, wxMouseEventHandler( MainFrame::OnLeftUp ), NULL, this );
-	m_panelTrue->Connect( wxEVT_PAINT, wxPaintEventHandler( MainFrame::OnPaint ), NULL, this );
-	m_button1->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MainFrame::OnNumButtonClick ), NULL, this );
-	m_button2->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MainFrame::OnNumButtonClick ), NULL, this );
-	m_button3->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MainFrame::OnNumButtonClick ), NULL, this );
-	m_button4->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MainFrame::OnNumButtonClick ), NULL, this );
-	m_button5->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MainFrame::OnNumButtonClick ), NULL, this );
-	m_button6->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MainFrame::OnNumButtonClick ), NULL, this );
-	m_button7->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MainFrame::OnNumButtonClick ), NULL, this );
-	m_button8->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MainFrame::OnNumButtonClick ), NULL, this );
-	m_button9->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MainFrame::OnNumButtonClick ), NULL, this );
-	m_buttonSet->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MainFrame::OnSetButtonClick ), NULL, this );
-	m_buttonNote->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MainFrame::OnNoteButtonClick ), NULL, this );
-	m_buttonClear->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MainFrame::OnClearButtonClick ), NULL, this );
 }
 
 MainFrame::~MainFrame()
 {
-	// Disconnect Events
-	this->Disconnect( wxEVT_CLOSE_WINDOW, wxCloseEventHandler( MainFrame::OnClose ) );
-	this->Disconnect( wxEVT_PAINT, wxPaintEventHandler( MainFrame::OnPaint ) );
-	this->Disconnect( wxEVT_SET_FOCUS, wxFocusEventHandler( MainFrame::OnSetFocus ) );
-	m_panelGuess->Disconnect( wxEVT_CHAR, wxKeyEventHandler( MainFrame::OnChar ), NULL, this );
-	m_panelGuess->Disconnect( wxEVT_LEFT_UP, wxMouseEventHandler( MainFrame::OnLeftUp ), NULL, this );
-	m_panelGuess->Disconnect( wxEVT_PAINT, wxPaintEventHandler( MainFrame::OnPaint ), NULL, this );
-	m_panelTrue->Disconnect( wxEVT_CHAR, wxKeyEventHandler( MainFrame::OnChar ), NULL, this );
-	m_panelTrue->Disconnect( wxEVT_LEFT_UP, wxMouseEventHandler( MainFrame::OnLeftUp ), NULL, this );
-	m_panelTrue->Disconnect( wxEVT_PAINT, wxPaintEventHandler( MainFrame::OnPaint ), NULL, this );
-	m_button1->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MainFrame::OnNumButtonClick ), NULL, this );
-	m_button2->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MainFrame::OnNumButtonClick ), NULL, this );
-	m_button3->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MainFrame::OnNumButtonClick ), NULL, this );
-	m_button4->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MainFrame::OnNumButtonClick ), NULL, this );
-	m_button5->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MainFrame::OnNumButtonClick ), NULL, this );
-	m_button6->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MainFrame::OnNumButtonClick ), NULL, this );
-	m_button7->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MainFrame::OnNumButtonClick ), NULL, this );
-	m_button8->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MainFrame::OnNumButtonClick ), NULL, this );
-	m_button9->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MainFrame::OnNumButtonClick ), NULL, this );
-	m_buttonSet->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MainFrame::OnSetButtonClick ), NULL, this );
-	m_buttonNote->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MainFrame::OnNoteButtonClick ), NULL, this );
-	m_buttonClear->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MainFrame::OnClearButtonClick ), NULL, this );
-	
 }

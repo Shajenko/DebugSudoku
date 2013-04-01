@@ -1,9 +1,9 @@
 /***************************************************************
  * Name:      DebugSudokuApp.h
  * Purpose:   Defines Application Class
- * Author:    Timothy Sonnier (tisonnier2000@gmail.com)
- * Created:   2013-03-30
- * Copyright: Timothy Sonnier ()
+ * Author:    Tim Sonnier ()
+ * Created:   2013-03-31
+ * Copyright: Tim Sonnier ()
  * License:
  **************************************************************/
 

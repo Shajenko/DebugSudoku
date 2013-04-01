@@ -1869,7 +1869,7 @@
 
 1364676132 c:\users\tim\documents\github\debugsudoku\enums.h
 
-1364759464 source:c:\users\shaj\documents\github\debugsudoku\wx_pch.h
+1364775756 source:c:\users\shaj\documents\github\debugsudoku\wx_pch.h
 	<wx/wxprec.h>
 	<wx/wx.h>
 
@@ -3669,15 +3669,15 @@
 	"GameBoard.h"
 	<cstdlib>
 
-1364760313 source:c:\users\shaj\documents\github\debugsudoku\debugmainframe.cpp
+1364773013 source:c:\users\shaj\documents\github\debugsudoku\debugmainframe.cpp
 	"debugMainFrame.h"
 
-1364759464 c:\users\shaj\documents\github\debugsudoku\debugmainframe.h
+1364775153 c:\users\shaj\documents\github\debugsudoku\debugmainframe.h
 	"DSudoku.h"
 	"enums.h"
 	"..\sudokusolver\src\GameBoard.h"
 
-1364759464 c:\users\shaj\documents\github\debugsudoku\dsudoku.h
+1364774594 c:\users\shaj\documents\github\debugsudoku\dsudoku.h
 	<wx/string.h>
 	<wx/bitmap.h>
 	<wx/image.h>
@@ -3698,27 +3698,27 @@
 
 1364759464 c:\users\shaj\documents\github\debugsudoku\enums.h
 
-1364759464 source:c:\users\shaj\documents\github\debugsudoku\debugsudokuapp.cpp
+1364775755 source:c:\users\shaj\documents\github\debugsudoku\debugsudokuapp.cpp
 	"wx_pch.h"
 	"DebugSudokuApp.h"
-	"debugMainFrame.h"
+	"DebugSudokuMain.h"
 
-1364759464 c:\users\shaj\documents\github\debugsudoku\wx_pch.h
+1364775756 c:\users\shaj\documents\github\debugsudoku\wx_pch.h
 	<wx/wxprec.h>
 	<wx/wx.h>
 
-1364759464 c:\users\shaj\documents\github\debugsudoku\debugsudokuapp.h
+1364775754 c:\users\shaj\documents\github\debugsudoku\debugsudokuapp.h
 	<wx/app.h>
 
-1364759464 source:c:\users\shaj\documents\github\debugsudoku\dsudoku.cpp
+1364774617 source:c:\users\shaj\documents\github\debugsudoku\dsudoku.cpp
 	"GamePanel.h"
 	"DSudoku.h"
 
-1364759464 source:c:\users\shaj\documents\github\debugsudoku\gamepanel.cpp
+1364772477 source:c:\users\shaj\documents\github\debugsudoku\gamepanel.cpp
 	"wx_pch.h"
 	"GamePanel.h"
 
-1364759464 source:c:\users\shaj\documents\github\debugsudoku\resource.rc
+1353754660 source:c:\users\shaj\documents\github\debugsudoku\resource.rc
 	"wx/msw/wx.rc"
 
 1186432852 c:\programming\wxwidgets-2.8.12\include\wx\msw\wx.rc
@@ -3738,4 +3738,32 @@
 1186432848 c:\programming\wxwidgets-2.8.12\include\wx\msw\wince\resources.h
 
 1186432852 c:\programming\wxwidgets-2.8.12\include\wx\msw\rcdefs.h
+
+1364777344 c:\users\shaj\documents\github\debugsudoku\debugsudokumain.h
+	"DebugSudokuApp.h"
+	"GUIFrame.h"
+
+1364777314 c:\users\shaj\documents\github\debugsudoku\guiframe.h
+	<wx/string.h>
+	<wx/bitmap.h>
+	<wx/image.h>
+	<wx/icon.h>
+	<wx/menu.h>
+	<wx/gdicmn.h>
+	<wx/font.h>
+	<wx/colour.h>
+	<wx/settings.h>
+	<wx/panel.h>
+	<wx/button.h>
+	<wx/sizer.h>
+	<wx/frame.h>
+	"GamePanel.h"
+
+1364776337 source:c:\users\shaj\documents\github\debugsudoku\debugsudokumain.cpp
+	"wx_pch.h"
+	"DebugSudokuMain.h"
+
+1364777257 source:c:\users\shaj\documents\github\debugsudoku\guiframe.cpp
+	"GamePanel.h"
+	"GUIFrame.h"
 

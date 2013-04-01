@@ -65,24 +65,13 @@
 		<Linker>
 			<Add option="-mthreads" />
 		</Linker>
-		<Unit filename="../sudokusolver/src/DebugPanel.cpp" />
-		<Unit filename="../sudokusolver/src/DebugPanel.h" />
-		<Unit filename="../sudokusolver/src/GameBoard.cpp" />
-		<Unit filename="../sudokusolver/src/GameBoard.h" />
-		<Unit filename="../sudokusolver/src/GameSquare.cpp" />
-		<Unit filename="../sudokusolver/src/GameSquare.h" />
-		<Unit filename="../sudokusolver/src/SudokuAlgorithms.cpp" />
-		<Unit filename="../sudokusolver/src/SudokuAlgorithms.h" />
-		<Unit filename="DSudoku.cpp" />
-		<Unit filename="DSudoku.h" />
 		<Unit filename="DebugSudokuApp.cpp" />
 		<Unit filename="DebugSudokuApp.h" />
-		<Unit filename="GamePanel.cpp" />
-		<Unit filename="GamePanel.h" />
+		<Unit filename="DebugSudokuMain.cpp" />
+		<Unit filename="DebugSudokuMain.h" />
+		<Unit filename="GUIFrame.cpp" />
+		<Unit filename="GUIFrame.h" />
 		<Unit filename="WxWizFrame.fbp" />
-		<Unit filename="debugMainFrame.cpp" />
-		<Unit filename="debugMainFrame.h" />
-		<Unit filename="enums.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
@@ -94,12 +83,6 @@
 			<code_completion />
 			<envvars />
 			<debugger />
-			<lib_finder disable_auto="1" />
-			<wxsmith version="1">
-				<resources>
-					<wxPanel wxs="wxsmith/GamePanel.wxs" src="GamePanel.cpp" hdr="GamePanel.h" fwddecl="0" i18n="1" name="GamePanel" language="CPP" />
-				</resources>
-			</wxsmith>
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>
