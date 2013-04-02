@@ -142,7 +142,9 @@ void DebugSudokuFrame::OnHiddenSingle( wxCommandEvent& event )
 
 void DebugSudokuFrame::OnRemovePossibles( wxCommandEvent& event )
 {
-    unsigned int i,j,k;
+    mGuessGB->ResetCols();
+    mGuessGB->ResetRows();
+    mGuessGB->ResetSectors();
     mGuessGB->RemoveAllPossibles();
     m_panelGuess->CopyBoard(*mGuessGB);
 

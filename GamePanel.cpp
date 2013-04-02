@@ -100,7 +100,7 @@ void GamePanel::DrawBoardNumbers(wxPaintDC &dc)
     unsigned int smallSide;
     unsigned int i,j,k, pVal;
     wxString debugString;
-    wxString pString;
+    wxString pString, dString;
     wxColour redC, greenC, blackC;
 
     redC.Set(200,0,0);
@@ -149,14 +149,18 @@ void GamePanel::DrawBoardNumbers(wxPaintDC &dc)
             }
             else // Draw all possibles
             {
+                dString.clear();
+                dString << _("Possibles for i = ") << i << _(" j = ") << j << _(" ");
                 for(k=1;k<=9;k++)
                 {
                     dc.SetFont(SmallFont);
                     pString.clear();
                     pString << k;
+
                     if(bd->GetPossibles(i, j, k))
                     {
-                        switch (k)
+                        dString << k << _(" ");
+                        switch (k) // Draw each possible in the correct position
                         {
                             case 1:
                                 dc.DrawText(pString, spSq*j + spSq/12, spSq*i + spSq/12);
@@ -190,6 +194,7 @@ void GamePanel::DrawBoardNumbers(wxPaintDC &dc)
                         }
                     }
                 }
+                //wxMessageBox(dString);
             }
         }
     }
