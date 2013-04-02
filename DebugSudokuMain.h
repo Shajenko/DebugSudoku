@@ -13,7 +13,7 @@
 
 
 #include "DebugSudokuApp.h"
-
+#include "..\sudokusolver\src\GameBoard.h"
 
 #include "GUIFrame.h"
 
@@ -27,6 +27,18 @@ class DebugSudokuFrame: public GUIFrame
         virtual void OnQuit(wxCommandEvent& event);
         virtual void OnAbout(wxCommandEvent& event);
         virtual void OnPaint(wxPaintEvent& event);
+        virtual void OnNewPuzzle( wxCommandEvent& event );
+        virtual void OnNumButtonClick( wxCommandEvent& event );
+		virtual void OnSetButtonClick( wxCommandEvent& event );
+		virtual void OnNoteButtonClick( wxCommandEvent& event );
+		virtual void OnClearButtonClick( wxCommandEvent& event );
+		virtual void OnSolve( wxCommandEvent& event );
+		virtual void OnNakedSingle( wxCommandEvent& event );
+		virtual void OnHiddenSingle( wxCommandEvent& event );
+		virtual void OnRemovePossibles( wxCommandEvent& event );
+
+		GameBoard * mGuessGB;
+		GameBoard * mTrueGB;
 };
 
 #endif // DEBUGSUDOKUMAIN_H

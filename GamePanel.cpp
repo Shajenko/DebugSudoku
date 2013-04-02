@@ -155,41 +155,52 @@ void GamePanel::DrawBoardNumbers(wxPaintDC &dc)
                     pString.clear();
                     pString << k;
                     if(bd->GetPossibles(i, j, k))
-                    switch (k)
                     {
-                        case 1:
-                            dc.DrawText(pString, spSq*j + spSq/12, spSq*i + spSq/12);
-                            break;
-                        case 2:
-                            dc.DrawText(pString, spSq*j + spSq*5/12, spSq*i + spSq/12);
-                            break;
-                        case 3:
-                            dc.DrawText(pString, spSq*j + spSq*9/12, spSq*i + spSq/12);
-                            break;
-                        case 4:
-                            dc.DrawText(pString, spSq*j + spSq/12, spSq*i + spSq*9/24);
-                            break;
-                        case 5:
-                            dc.DrawText(pString, spSq*j + spSq*5/12, spSq*i + spSq*9/24);
-                            break;
-                        case 6:
-                            dc.DrawText(pString, spSq*j + spSq*9/12, spSq*i + spSq*9/24);
-                            break;
-                        case 7:
-                            dc.DrawText(pString, spSq*j + spSq*1/12, spSq*i + spSq*8/12);
-                            break;
-                        case 8:
-                            dc.DrawText(pString, spSq*j + spSq*5/12, spSq*i + spSq*8/12);
-                            break;
-                        case 9:
-                            dc.DrawText(pString, spSq*j + spSq*9/12, spSq*i + spSq*8/12);
-                            break;
-                        default:
-                            break;
+                        switch (k)
+                        {
+                            case 1:
+                                dc.DrawText(pString, spSq*j + spSq/12, spSq*i + spSq/12);
+                                break;
+                            case 2:
+                                dc.DrawText(pString, spSq*j + spSq*5/12, spSq*i + spSq/12);
+                                break;
+                            case 3:
+                                dc.DrawText(pString, spSq*j + spSq*9/12, spSq*i + spSq/12);
+                                break;
+                            case 4:
+                                dc.DrawText(pString, spSq*j + spSq/12, spSq*i + spSq*9/24);
+                                break;
+                            case 5:
+                                dc.DrawText(pString, spSq*j + spSq*5/12, spSq*i + spSq*9/24);
+                                break;
+                            case 6:
+                                dc.DrawText(pString, spSq*j + spSq*9/12, spSq*i + spSq*9/24);
+                                break;
+                            case 7:
+                                dc.DrawText(pString, spSq*j + spSq*1/12, spSq*i + spSq*8/12);
+                                break;
+                            case 8:
+                                dc.DrawText(pString, spSq*j + spSq*5/12, spSq*i + spSq*8/12);
+                                break;
+                            case 9:
+                                dc.DrawText(pString, spSq*j + spSq*9/12, spSq*i + spSq*8/12);
+                                break;
+                            default:
+                                break;
+                        }
                     }
-
                 }
             }
         }
     }
+}
+
+void GamePanel::CopyBoard(GameBoard &gb)
+{
+    bd->Copy(gb);
+}
+
+void GamePanel::WriteBoard(GameBoard &gb)
+{
+    gb.Copy(*bd);
 }

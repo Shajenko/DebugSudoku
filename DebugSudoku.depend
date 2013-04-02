@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1364652359 source:c:\users\tim\documents\github\debugsudoku\wx_pch.h
+1364779896 source:c:\users\tim\documents\github\debugsudoku\wx_pch.h
 	<wx/wxprec.h>
 	<wx/wx.h>
 
@@ -1772,14 +1772,14 @@
 	<wx/panel.h>
 	<wx/button.h>
 
-1364576732 source:c:\users\tim\documents\github\sudokusolver\src\gameboard.cpp
+1364870736 source:c:\users\tim\documents\github\sudokusolver\src\gameboard.cpp
 	"GameBoard.h"
 	<cstdlib>
 	<ctime>
 	<algorithm>
 	<vector>
 
-1364576732 c:\users\tim\documents\github\sudokusolver\src\gameboard.h
+1364869844 c:\users\tim\documents\github\sudokusolver\src\gameboard.h
 	"GameSquare.h"
 	"GameRow.h"
 	<set>
@@ -1823,26 +1823,26 @@
 	<wx/frame.h>
 	"GamePanel.h"
 
-1364678454 source:c:\users\tim\documents\github\debugsudoku\debugsudokuapp.cpp
+1364779896 source:c:\users\tim\documents\github\debugsudoku\debugsudokuapp.cpp
 	"wx_pch.h"
 	"DebugSudokuApp.h"
-	"debugMainFrame.h"
+	"DebugSudokuMain.h"
 
-1364652359 c:\users\tim\documents\github\debugsudoku\wx_pch.h
+1364779896 c:\users\tim\documents\github\debugsudoku\wx_pch.h
 	<wx/wxprec.h>
 	<wx/wx.h>
 
-1364652359 c:\users\tim\documents\github\debugsudoku\debugsudokuapp.h
+1364779896 c:\users\tim\documents\github\debugsudoku\debugsudokuapp.h
 	<wx/app.h>
 
 1364685054 source:c:\users\tim\documents\github\debugsudoku\dsudoku.cpp
 	"GamePanel.h"
 	"DSudoku.h"
 
-1364683169 c:\users\tim\documents\github\debugsudoku\gamepanel.h
+1364868987 c:\users\tim\documents\github\debugsudoku\gamepanel.h
 	"..\sudokusolver\src\GameBoard.h"
 
-1364709319 source:c:\users\tim\documents\github\debugsudoku\gamepanel.cpp
+1364870049 source:c:\users\tim\documents\github\debugsudoku\gamepanel.cpp
 	"wx_pch.h"
 	"GamePanel.h"
 
@@ -3764,6 +3764,35 @@
 	"DebugSudokuMain.h"
 
 1364777257 source:c:\users\shaj\documents\github\debugsudoku\guiframe.cpp
+	"GamePanel.h"
+	"GUIFrame.h"
+
+1364868987 c:\users\tim\documents\github\debugsudoku\debugsudokumain.h
+	"DebugSudokuApp.h"
+	"..\sudokusolver\src\GameBoard.h"
+	"GUIFrame.h"
+
+1364868075 c:\users\tim\documents\github\debugsudoku\guiframe.h
+	<wx/string.h>
+	<wx/bitmap.h>
+	<wx/image.h>
+	<wx/icon.h>
+	<wx/menu.h>
+	<wx/gdicmn.h>
+	<wx/font.h>
+	<wx/colour.h>
+	<wx/settings.h>
+	<wx/panel.h>
+	<wx/button.h>
+	<wx/sizer.h>
+	<wx/frame.h>
+	"GamePanel.h"
+
+1364870880 source:c:\users\tim\documents\github\debugsudoku\debugsudokumain.cpp
+	"wx_pch.h"
+	"DebugSudokuMain.h"
+
+1364868018 source:c:\users\tim\documents\github\debugsudoku\guiframe.cpp
 	"GamePanel.h"
 	"GUIFrame.h"
 

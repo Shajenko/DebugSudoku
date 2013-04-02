@@ -21,6 +21,10 @@ GUIFrame::GUIFrame( wxWindow* parent, wxWindowID id, const wxString& title, cons
 	m_menuItemQuit = new wxMenuItem( m_menuFile, wxID_ANY, wxString( wxT("Quit") ) , wxEmptyString, wxITEM_NORMAL );
 	m_menuFile->Append( m_menuItemQuit );
 	
+	wxMenuItem* m_menuItemNewPuzzle;
+	m_menuItemNewPuzzle = new wxMenuItem( m_menuFile, wxID_ANY, wxString( wxT("New Puzzle") ) , wxEmptyString, wxITEM_NORMAL );
+	m_menuFile->Append( m_menuItemNewPuzzle );
+	
 	m_menubar1->Append( m_menuFile, wxT("&File") ); 
 	
 	m_menuAbout = new wxMenu();
@@ -115,6 +119,24 @@ GUIFrame::GUIFrame( wxWindow* parent, wxWindowID id, const wxString& title, cons
 	fgSizer1->Add( m_panelControls, 0, wxALIGN_CENTER_HORIZONTAL|wxALL|wxEXPAND, 5 );
 	
 	m_panelDebug = new wxPanel( this, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL );
+	wxGridSizer* gSizer1;
+	gSizer1 = new wxGridSizer( 3, 4, 0, 0 );
+	
+	m_buttonSolve = new wxButton( m_panelDebug, wxID_ANY, wxT("Solve"), wxDefaultPosition, wxDefaultSize, 0 );
+	gSizer1->Add( m_buttonSolve, 0, wxALL, 2 );
+	
+	m_buttonNakedSingle = new wxButton( m_panelDebug, wxID_ANY, wxT("Naked Single"), wxDefaultPosition, wxDefaultSize, 0 );
+	gSizer1->Add( m_buttonNakedSingle, 0, wxALL, 2 );
+	
+	m_buttonHiddenSingle = new wxButton( m_panelDebug, wxID_ANY, wxT("Hidden Single"), wxDefaultPosition, wxDefaultSize, 0 );
+	gSizer1->Add( m_buttonHiddenSingle, 0, wxALL, 2 );
+	
+	m_buttonRemovePoss = new wxButton( m_panelDebug, wxID_ANY, wxT("Remove Possibles"), wxDefaultPosition, wxDefaultSize, 0 );
+	gSizer1->Add( m_buttonRemovePoss, 0, wxALL, 2 );
+	
+	m_panelDebug->SetSizer( gSizer1 );
+	m_panelDebug->Layout();
+	gSizer1->Fit( m_panelDebug );
 	fgSizer1->Add( m_panelDebug, 0, wxALL|wxEXPAND, 5 );
 	
 	this->SetSizer( fgSizer1 );
@@ -125,6 +147,7 @@ GUIFrame::GUIFrame( wxWindow* parent, wxWindowID id, const wxString& title, cons
 	// Connect Events
 	this->Connect( wxEVT_SET_FOCUS, wxFocusEventHandler( GUIFrame::OnSetFocus ) );
 	this->Connect( m_menuItemQuit->GetId(), wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( GUIFrame::OnQuit ) );
+	this->Connect( m_menuItemNewPuzzle->GetId(), wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( GUIFrame::OnNewPuzzle ) );
 	this->Connect( m_menuItemAbout->GetId(), wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( GUIFrame::OnAbout ) );
 	m_panelGuess->Connect( wxEVT_CHAR, wxKeyEventHandler( GUIFrame::OnChar ), NULL, this );
 	m_panelGuess->Connect( wxEVT_LEFT_UP, wxMouseEventHandler( GUIFrame::OnLeftUp ), NULL, this );
@@ -144,6 +167,10 @@ GUIFrame::GUIFrame( wxWindow* parent, wxWindowID id, const wxString& title, cons
 	m_buttonSet->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( GUIFrame::OnSetButtonClick ), NULL, this );
 	m_buttonNote->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( GUIFrame::OnNoteButtonClick ), NULL, this );
 	m_buttonClear->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( GUIFrame::OnClearButtonClick ), NULL, this );
+	m_buttonSolve->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( GUIFrame::OnSolve ), NULL, this );
+	m_buttonNakedSingle->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( GUIFrame::OnNakedSingle ), NULL, this );
+	m_buttonHiddenSingle->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( GUIFrame::OnHiddenSingle ), NULL, this );
+	m_buttonRemovePoss->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( GUIFrame::OnRemovePossibles ), NULL, this );
 }
 
 GUIFrame::~GUIFrame()
@@ -151,6 +178,7 @@ GUIFrame::~GUIFrame()
 	// Disconnect Events
 	this->Disconnect( wxEVT_SET_FOCUS, wxFocusEventHandler( GUIFrame::OnSetFocus ) );
 	this->Disconnect( wxID_ANY, wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( GUIFrame::OnQuit ) );
+	this->Disconnect( wxID_ANY, wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( GUIFrame::OnNewPuzzle ) );
 	this->Disconnect( wxID_ANY, wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( GUIFrame::OnAbout ) );
 	m_panelGuess->Disconnect( wxEVT_CHAR, wxKeyEventHandler( GUIFrame::OnChar ), NULL, this );
 	m_panelGuess->Disconnect( wxEVT_LEFT_UP, wxMouseEventHandler( GUIFrame::OnLeftUp ), NULL, this );
@@ -170,5 +198,9 @@ GUIFrame::~GUIFrame()
 	m_buttonSet->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( GUIFrame::OnSetButtonClick ), NULL, this );
 	m_buttonNote->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( GUIFrame::OnNoteButtonClick ), NULL, this );
 	m_buttonClear->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( GUIFrame::OnClearButtonClick ), NULL, this );
+	m_buttonSolve->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( GUIFrame::OnSolve ), NULL, this );
+	m_buttonNakedSingle->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( GUIFrame::OnNakedSingle ), NULL, this );
+	m_buttonHiddenSingle->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( GUIFrame::OnHiddenSingle ), NULL, this );
+	m_buttonRemovePoss->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( GUIFrame::OnRemovePossibles ), NULL, this );
 	
 }

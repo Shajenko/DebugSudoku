@@ -49,7 +49,8 @@ wxString wxbuildinfo(wxbuildinfoformat format)
 DebugSudokuFrame::DebugSudokuFrame(wxFrame *frame)
     : GUIFrame(frame)
 {
-
+    mGuessGB = new GameBoard();
+    mTrueGB = new GameBoard();
 }
 
 DebugSudokuFrame::~DebugSudokuFrame()
@@ -83,4 +84,67 @@ void DebugSudokuFrame::OnPaint(wxPaintEvent& event)
     m_panelTrue->DrawBoardBackground(dc2);
 	m_panelTrue->DrawBoardNumbers(dc2);
 
+}
+
+void DebugSudokuFrame::OnNewPuzzle( wxCommandEvent& event )
+{
+    mTrueGB->GenBoard(0,0);
+    mGuessGB->Copy(*mTrueGB);
+    mGuessGB->RemoveSquares(EASY);
+    mGuessGB->ResetCols();
+    mGuessGB->ResetRows();
+    mGuessGB->ResetSectors();
+    mGuessGB->RemoveAllPossibles();
+
+    m_panelGuess->CopyBoard(*mGuessGB);
+    m_panelTrue->CopyBoard(*mTrueGB);
+
+    Refresh();
+}
+
+void DebugSudokuFrame::OnNumButtonClick( wxCommandEvent& event )
+{
+
+}
+
+void DebugSudokuFrame::OnSetButtonClick( wxCommandEvent& event )
+{
+
+}
+
+void DebugSudokuFrame::OnNoteButtonClick( wxCommandEvent& event )
+{
+
+}
+
+void DebugSudokuFrame::OnClearButtonClick( wxCommandEvent& event )
+{
+
+}
+
+void DebugSudokuFrame::OnSolve( wxCommandEvent& event )
+{
+    mGuessGB->Solve();
+    m_panelGuess->CopyBoard(*mGuessGB);
+
+    Refresh();
+}
+
+void DebugSudokuFrame::OnNakedSingle( wxCommandEvent& event )
+{
+
+}
+
+void DebugSudokuFrame::OnHiddenSingle( wxCommandEvent& event )
+{
+
+}
+
+void DebugSudokuFrame::OnRemovePossibles( wxCommandEvent& event )
+{
+    unsigned int i,j,k;
+    mGuessGB->RemoveAllPossibles();
+    m_panelGuess->CopyBoard(*mGuessGB);
+
+    Refresh();
 }

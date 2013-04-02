@@ -21,7 +21,6 @@
 #include <wx/button.h>
 #include <wx/sizer.h>
 #include <wx/frame.h>
-
 #include "GamePanel.h"
 
 ///////////////////////////////////////////////////////////////////////////
@@ -57,10 +56,15 @@ class GUIFrame : public wxFrame
 		wxButton* m_buttonNote;
 		wxButton* m_buttonClear;
 		wxPanel* m_panelDebug;
+		wxButton* m_buttonSolve;
+		wxButton* m_buttonNakedSingle;
+		wxButton* m_buttonHiddenSingle;
+		wxButton* m_buttonRemovePoss;
 
 		// Virtual event handlers, overide them in your derived class
 		virtual void OnSetFocus( wxFocusEvent& event ) { event.Skip(); }
 		virtual void OnQuit( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnNewPuzzle( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnAbout( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnChar( wxKeyEvent& event ) { event.Skip(); }
 		virtual void OnLeftUp( wxMouseEvent& event ) { event.Skip(); }
@@ -69,11 +73,15 @@ class GUIFrame : public wxFrame
 		virtual void OnSetButtonClick( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnNoteButtonClick( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnClearButtonClick( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnSolve( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnNakedSingle( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnHiddenSingle( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnRemovePossibles( wxCommandEvent& event ) { event.Skip(); }
 
 
 	public:
 
-		GUIFrame( wxWindow* parent, wxWindowID id = ID_GUIFRAME, const wxString& title = wxEmptyString, const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 732,511 ), long style = wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL );
+		GUIFrame( wxWindow* parent, wxWindowID id = ID_GUIFRAME, const wxString& title = wxEmptyString, const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 727,511 ), long style = wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL );
 		~GUIFrame();
 
 };

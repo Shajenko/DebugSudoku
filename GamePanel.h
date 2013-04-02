@@ -18,6 +18,8 @@ class GamePanel: public wxPanel
 		virtual ~GamePanel();
         void DrawBoardBackground(wxPaintDC &dc);
         void DrawBoardNumbers(wxPaintDC &dc);
+        void CopyBoard(GameBoard &gb);
+        void WriteBoard(GameBoard &gb);
 
 		//(*Declarations(GamePanel)
 		//*)
