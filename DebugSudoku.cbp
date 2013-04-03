@@ -77,6 +77,8 @@
 		<Unit filename="DebugSudokuMain.h" />
 		<Unit filename="GUIFrame.cpp" />
 		<Unit filename="GUIFrame.h" />
+		<Unit filename="GameBoardStep.cpp" />
+		<Unit filename="GameBoardStep.h" />
 		<Unit filename="GamePanel.cpp" />
 		<Unit filename="GamePanel.h" />
 		<Unit filename="WxWizFrame.fbp" />

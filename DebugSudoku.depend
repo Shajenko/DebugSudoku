@@ -3796,3 +3796,91 @@
 	"GamePanel.h"
 	"GUIFrame.h"
 
+1364912757 source:c:\documents and settings\tas3409.adm\my documents\github\debugsudoku\wx_pch.h
+	<wx/wxprec.h>
+	<wx/wx.h>
+
+1364938108 source:c:\documents and settings\tas3409.adm\my documents\github\sudokusolver\src\gameboard.cpp
+	"GameBoard.h"
+	<cstdlib>
+	<ctime>
+	<algorithm>
+	<vector>
+
+1365014728 c:\documents and settings\tas3409.adm\my documents\github\sudokusolver\src\gameboard.h
+	"GameSquare.h"
+	"GameRow.h"
+	<set>
+
+1364937458 c:\documents and settings\tas3409.adm\my documents\github\sudokusolver\src\gamesquare.h
+	"GameSquare.h"
+	<set>
+
+1364224015 c:\documents and settings\tas3409.adm\my documents\github\sudokusolver\src\gamerow.h
+	"GameSquare.h"
+	<set>
+
+1364937458 source:c:\documents and settings\tas3409.adm\my documents\github\sudokusolver\src\gamesquare.cpp
+	"GameSquare.h"
+
+1364507084 source:c:\documents and settings\tas3409.adm\my documents\github\sudokusolver\src\sudokualgorithms.cpp
+	"GameBoard.h"
+	<cstdlib>
+
+1364912757 source:c:\documents and settings\tas3409.adm\my documents\github\debugsudoku\debugsudokuapp.cpp
+	"wx_pch.h"
+	"DebugSudokuApp.h"
+	"DebugSudokuMain.h"
+
+1364912757 c:\documents and settings\tas3409.adm\my documents\github\debugsudoku\wx_pch.h
+	<wx/wxprec.h>
+	<wx/wx.h>
+
+1364912757 c:\documents and settings\tas3409.adm\my documents\github\debugsudoku\debugsudokuapp.h
+	<wx/app.h>
+
+1364912757 c:\documents and settings\tas3409.adm\my documents\github\debugsudoku\debugsudokumain.h
+	"DebugSudokuApp.h"
+	"..\sudokusolver\src\GameBoard.h"
+	"GUIFrame.h"
+
+1364912757 c:\documents and settings\tas3409.adm\my documents\github\debugsudoku\guiframe.h
+	<wx/string.h>
+	<wx/bitmap.h>
+	<wx/image.h>
+	<wx/icon.h>
+	<wx/menu.h>
+	<wx/gdicmn.h>
+	<wx/font.h>
+	<wx/colour.h>
+	<wx/settings.h>
+	<wx/panel.h>
+	<wx/button.h>
+	<wx/sizer.h>
+	<wx/frame.h>
+	"GamePanel.h"
+
+1364912757 c:\documents and settings\tas3409.adm\my documents\github\debugsudoku\gamepanel.h
+	"..\sudokusolver\src\GameBoard.h"
+
+1364912757 source:c:\documents and settings\tas3409.adm\my documents\github\debugsudoku\gamepanel.cpp
+	"wx_pch.h"
+	"GamePanel.h"
+
+1364912757 source:c:\documents and settings\tas3409.adm\my documents\github\debugsudoku\guiframe.cpp
+	"GamePanel.h"
+	"GUIFrame.h"
+
+1364912757 source:c:\documents and settings\tas3409.adm\my documents\github\debugsudoku\resource.rc
+	"wx/msw/wx.rc"
+
+1365013751 source:c:\documents and settings\tas3409.adm\my documents\github\debugsudoku\debugsudokumain.cpp
+	"wx_pch.h"
+	"DebugSudokuMain.h"
+
+1365014682 source:c:\documents and settings\tas3409.adm\my documents\github\debugsudoku\gameboardstep.cpp
+	"GameBoardStep.h"
+
+1365014682 c:\documents and settings\tas3409.adm\my documents\github\debugsudoku\gameboardstep.h
+	"..\sudokusolver\src\GameBoard.h"
+

@@ -88,17 +88,16 @@ void DebugSudokuFrame::OnPaint(wxPaintEvent& event)
 
 void DebugSudokuFrame::OnNewPuzzle( wxCommandEvent& event )
 {
+	mTrueGB->Binit();
+	mGuessGB->Binit();
+
     mTrueGB->GenBoard(0,0);
+    m_panelTrue->CopyBoard(*mTrueGB);
+    Refresh();
+
     mGuessGB->Copy(*mTrueGB);
     mGuessGB->RemoveSquares(EASY);
-    mGuessGB->ResetCols();
-    mGuessGB->ResetRows();
-    mGuessGB->ResetSectors();
-    mGuessGB->RemoveAllPossibles();
-
     m_panelGuess->CopyBoard(*mGuessGB);
-    m_panelTrue->CopyBoard(*mTrueGB);
-
     Refresh();
 }
 
