@@ -1,6 +1,6 @@
 #include "GameBoardStep.h"
 
-GameBoardStep::GameBoardStep()
+GameBoardStep::GameBoardStep() : GameBoard()
 {
 	//ctor
 }

@@ -131,12 +131,58 @@ void DebugSudokuFrame::OnSolve( wxCommandEvent& event )
 
 void DebugSudokuFrame::OnNakedSingle( wxCommandEvent& event )
 {
+	unsigned int i,j, val;
+	bool found=false;
+	wxString dString;
 
+	dString.clear();
+
+	for(i=0;i<9;i++)
+		for(j=0;j<9;j++)
+		{
+			val = mGuessGB->GetVal(i,j);
+			if( val == 0)
+			{
+				found = mGuessGB->NakedSingle(i,j);
+				if(found)
+				{
+					dString.clear();
+					dString << _("Found at row ") << i << _(" col ") << j;
+					//wxMessageBox(dString);
+					m_panelGuess->CopyBoard(*mGuessGB);
+					Refresh();
+					return;
+				}
+			}
+		}
 }
 
 void DebugSudokuFrame::OnHiddenSingle( wxCommandEvent& event )
 {
+	unsigned int i,j, val;
+	bool found=false;
+	wxString dString;
 
+	dString.clear();
+
+	for(i=0;i<9;i++)
+		for(j=0;j<9;j++)
+		{
+			val = mGuessGB->GetVal(i,j);
+			if( val == 0)
+			{
+				found = mGuessGB->HiddenSingle(i,j);
+				if(found)
+				{
+					dString.clear();
+					dString << _("Found at row ") << i << _(" col ") << j;
+					//wxMessageBox(dString);
+					m_panelGuess->CopyBoard(*mGuessGB);
+					Refresh();
+					return;
+				}
+			}
+		}
 }
 
 void DebugSudokuFrame::OnRemovePossibles( wxCommandEvent& event )
