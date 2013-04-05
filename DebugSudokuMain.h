@@ -17,6 +17,8 @@
 
 #include "GUIFrame.h"
 
+enum Controls { SET, NOTE, CLEAR};
+
 class DebugSudokuFrame: public GUIFrame
 {
     public:
@@ -39,6 +41,8 @@ class DebugSudokuFrame: public GUIFrame
 
 		GameBoard * mGuessGB;
 		GameBoard * mTrueGB;
+		Difficulty diff;
+		Controls ctrlSelect;
 };
 
 #endif // DEBUGSUDOKUMAIN_H

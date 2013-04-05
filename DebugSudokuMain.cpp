@@ -103,17 +103,30 @@ void DebugSudokuFrame::OnNewPuzzle( wxCommandEvent& event )
 
 void DebugSudokuFrame::OnNumButtonClick( wxCommandEvent& event )
 {
-
 }
 
 void DebugSudokuFrame::OnSetButtonClick( wxCommandEvent& event )
 {
+	m_buttonSet->SetBackgroundColour(*wxBLUE);
+    m_buttonSet->SetForegroundColour(*wxWHITE);
+    m_buttonNote->SetBackgroundColour(wxNullColour);
+    m_buttonNote->SetForegroundColour(*wxBLACK);
+    m_buttonClear->SetBackgroundColour(wxNullColour);
+    m_buttonClear->SetForegroundColour(*wxBLACK);
 
+	ctrlSelect = SET;
 }
 
 void DebugSudokuFrame::OnNoteButtonClick( wxCommandEvent& event )
 {
+	m_buttonSet->SetBackgroundColour(wxNullColour);
+    m_buttonSet->SetForegroundColour(*wxBLACK);
+    m_buttonNote->SetBackgroundColour(*wxBLUE);
+    m_buttonNote->SetForegroundColour(*wxWHITE);
+    m_buttonClear->SetBackgroundColour(wxNullColour);
+    m_buttonClear->SetForegroundColour(*wxBLACK);
 
+	ctrlSelect = NOTE;
 }
 
 void DebugSudokuFrame::OnClearButtonClick( wxCommandEvent& event )
