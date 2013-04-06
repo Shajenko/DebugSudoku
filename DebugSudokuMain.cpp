@@ -150,8 +150,6 @@ void DebugSudokuFrame::OnNakedSingle( wxCommandEvent& event )
 
 	dString.clear();
 
-	mGuessGB->RemoveAllPossibles();
-
 	for(i=0;i<9;i++)
 		for(j=0;j<9;j++)
 		{
@@ -179,8 +177,6 @@ void DebugSudokuFrame::OnHiddenSingle( wxCommandEvent& event )
 	wxString dString;
 
 	dString.clear();
-
-	mGuessGB->RemoveAllPossibles();
 
 	for(i=0;i<9;i++)
 		for(j=0;j<9;j++)

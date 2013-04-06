@@ -1,54 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
-	<File name="..\sudokusolver\src\GameBoard.cpp" open="1" top="1" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3689" topLine="105" />
-		</Cursor>
-		<Folding>
-			<Collapse line="7" />
-			<Collapse line="30" />
-			<Collapse line="57" />
-			<Collapse line="62" />
-			<Collapse line="177" />
-		</Folding>
-	</File>
-	<File name="..\sudokusolver\src\GameBoard.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2560" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="..\sudokusolver\src\GameSquare.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="421" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="..\sudokusolver\src\GameSquare.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="625" topLine="7" />
-		</Cursor>
-	</File>
-	<File name="..\sudokusolver\src\SudokuAlgorithms.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="7745" topLine="146" />
-		</Cursor>
-		<Folding>
-			<Collapse line="7" />
-			<Collapse line="23" />
-			<Collapse line="38" />
-			<Collapse line="82" />
-			<Collapse line="122" />
-			<Collapse line="140" />
-			<Collapse line="183" />
-			<Collapse line="201" />
-			<Collapse line="222" />
-		</Folding>
-	</File>
-	<File name="DebugSudokuMain.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3326" topLine="144" />
-		</Cursor>
-	</File>
 	<File name="DebugSudokuMain.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="1437" topLine="18" />
@@ -59,7 +11,7 @@
 			<Cursor1 position="1400" topLine="174" />
 		</Cursor>
 	</File>
-	<File name="GUIFrame.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="GUIFrame.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="2585" topLine="29" />
 		</Cursor>
@@ -83,6 +35,65 @@
 	<File name="GamePanel.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="522" topLine="8" />
+		</Cursor>
+	</File>
+	<File name="..\sudokusolver\src\GameBoard.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6533" topLine="137" />
+		</Cursor>
+		<Folding>
+			<Collapse line="7" />
+			<Collapse line="30" />
+			<Collapse line="57" />
+			<Collapse line="62" />
+			<Collapse line="82" />
+			<Collapse line="123" />
+			<Collapse line="155" />
+			<Collapse line="232" />
+			<Collapse line="349" />
+			<Collapse line="367" />
+			<Collapse line="410" />
+			<Collapse line="428" />
+			<Collapse line="443" />
+			<Collapse line="516" />
+			<Collapse line="537" />
+			<Collapse line="560" />
+			<Collapse line="583" />
+		</Folding>
+	</File>
+	<File name="..\sudokusolver\src\GameBoard.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2560" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="..\sudokusolver\src\GameSquare.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="421" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="..\sudokusolver\src\GameSquare.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1482" topLine="7" />
+		</Cursor>
+	</File>
+	<File name="..\sudokusolver\src\SudokuAlgorithms.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="10942" topLine="279" />
+		</Cursor>
+		<Folding>
+			<Collapse line="7" />
+			<Collapse line="23" />
+			<Collapse line="38" />
+			<Collapse line="121" />
+			<Collapse line="139" />
+			<Collapse line="182" />
+			<Collapse line="447" />
+			<Collapse line="520" />
+		</Folding>
+	</File>
+	<File name="DebugSudokuMain.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2033" topLine="62" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
