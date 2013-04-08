@@ -69,6 +69,8 @@
 		<Unit filename="../sudokusolver/src/GameBoard.h" />
 		<Unit filename="../sudokusolver/src/GameSquare.cpp" />
 		<Unit filename="../sudokusolver/src/GameSquare.h" />
+		<Unit filename="../sudokusolver/src/GenPuzzle.cpp" />
+		<Unit filename="../sudokusolver/src/Solve.cpp" />
 		<Unit filename="../sudokusolver/src/SudokuAlgorithms.cpp" />
 		<Unit filename="../sudokusolver/src/SudokuAlgorithms.h" />
 		<Unit filename="DebugSudokuApp.cpp" />
