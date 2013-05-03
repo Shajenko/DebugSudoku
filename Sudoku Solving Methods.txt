@@ -1,0 +1,8 @@
+Naked Single
+	if a cell has only one possibility, it's that possibility
+Hidden single
+	if a cell has a possibility that doesn't appear in any of the cells in its row/column/box, 	it's that possibility
+Naked pair
+	if a pair of cells in a row/column/box have the exact same remaining two 	possibilities, every other cell in that row/column/box cannot have those possibilities
+Hidden pair
+	if a pair of cells in a row/column/box are the only cells in that row/column/box 	with the same two possibilities left, then those cells cannot have any other possibilities

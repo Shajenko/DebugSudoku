@@ -14,8 +14,14 @@
 
 #include "DebugSudokuApp.h"
 #include "..\sudokusolver\src\GameBoard.h"
+#include <wx/file.h>
+#include <wx/datetime.h>
+#include <iostream>
+#include <fstream>
 
 #include "GUIFrame.h"
+
+void writetoLog( const wxString &text );
 
 enum Controls { SET, NOTE, CLEAR};
 

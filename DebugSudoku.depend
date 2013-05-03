@@ -3800,30 +3800,30 @@
 	<wx/wxprec.h>
 	<wx/wx.h>
 
-1365188088 source:c:\documents and settings\tas3409.adm\my documents\github\sudokusolver\src\gameboard.cpp
+1365455939 source:c:\documents and settings\tas3409.adm\my documents\github\sudokusolver\src\gameboard.cpp
 	"GameBoard.h"
 	<cstdlib>
 	<ctime>
 	<algorithm>
 	<vector>
 
-1365185931 c:\documents and settings\tas3409.adm\my documents\github\sudokusolver\src\gameboard.h
+1367617650 c:\documents and settings\tas3409.adm\my documents\github\sudokusolver\src\gameboard.h
 	"GameSquare.h"
 	"GameRow.h"
 	<set>
 
-1364937458 c:\documents and settings\tas3409.adm\my documents\github\sudokusolver\src\gamesquare.h
+1365456734 c:\documents and settings\tas3409.adm\my documents\github\sudokusolver\src\gamesquare.h
 	"GameSquare.h"
 	<set>
 
-1364224015 c:\documents and settings\tas3409.adm\my documents\github\sudokusolver\src\gamerow.h
+1365456734 c:\documents and settings\tas3409.adm\my documents\github\sudokusolver\src\gamerow.h
 	"GameSquare.h"
 	<set>
 
-1364937458 source:c:\documents and settings\tas3409.adm\my documents\github\sudokusolver\src\gamesquare.cpp
+1365456734 source:c:\documents and settings\tas3409.adm\my documents\github\sudokusolver\src\gamesquare.cpp
 	"GameSquare.h"
 
-1365190936 source:c:\documents and settings\tas3409.adm\my documents\github\sudokusolver\src\sudokualgorithms.cpp
+1365456911 source:c:\documents and settings\tas3409.adm\my documents\github\sudokusolver\src\sudokualgorithms.cpp
 	"GameBoard.h"
 	<cstdlib>
 	<ctime>
@@ -3842,9 +3842,13 @@
 1364912757 c:\documents and settings\tas3409.adm\my documents\github\debugsudoku\debugsudokuapp.h
 	<wx/app.h>
 
-1365186728 c:\documents and settings\tas3409.adm\my documents\github\debugsudoku\debugsudokumain.h
+1367613595 c:\documents and settings\tas3409.adm\my documents\github\debugsudoku\debugsudokumain.h
 	"DebugSudokuApp.h"
 	"..\sudokusolver\src\GameBoard.h"
+	<wx/file.h>
+	<wx/datetime.h>
+	<iostream>
+	<fstream>
 	"GUIFrame.h"
 
 1364912757 c:\documents and settings\tas3409.adm\my documents\github\debugsudoku\guiframe.h
@@ -3877,7 +3881,7 @@
 1364912757 source:c:\documents and settings\tas3409.adm\my documents\github\debugsudoku\resource.rc
 	"wx/msw/wx.rc"
 
-1365186906 source:c:\documents and settings\tas3409.adm\my documents\github\debugsudoku\debugsudokumain.cpp
+1367616547 source:c:\documents and settings\tas3409.adm\my documents\github\debugsudoku\debugsudokumain.cpp
 	"wx_pch.h"
 	"DebugSudokuMain.h"
 
@@ -3886,4 +3890,30 @@
 
 1365014682 c:\documents and settings\tas3409.adm\my documents\github\debugsudoku\gameboardstep.h
 	"..\sudokusolver\src\GameBoard.h"
+
+1365455939 source:c:\documents and settings\tas3409.adm\my documents\github\sudokusolver\src\genpuzzle.cpp
+	"GameBoard.h"
+	<cstdlib>
+	<ctime>
+	<algorithm>
+	<vector>
+
+1365455939 source:c:\documents and settings\tas3409.adm\my documents\github\sudokusolver\src\solve.cpp
+	"GameBoard.h"
+
+1264699566 c:\wxwidgets-2.8.12\include\wx\ffile.h
+	"wx/defs.h"
+	"wx/string.h"
+	"wx/filefn.h"
+	"wx/convauto.h"
+	<stdio.h>
+
+1186436492 c:\wxwidgets-2.8.12\include\wx\convauto.h
+	"wx/strconv.h"
+
+1186436494 c:\wxwidgets-2.8.12\include\wx\file.h
+	"wx/defs.h"
+	"wx/string.h"
+	"wx/filefn.h"
+	"wx/strconv.h"
 
