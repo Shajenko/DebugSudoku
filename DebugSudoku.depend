@@ -1772,19 +1772,19 @@
 	<wx/panel.h>
 	<wx/button.h>
 
-1364874535 source:c:\users\tim\documents\github\sudokusolver\src\gameboard.cpp
+1368575424 source:c:\users\tim\documents\github\sudokusolver\src\gameboard.cpp
 	"GameBoard.h"
 	<cstdlib>
 	<ctime>
 	<algorithm>
 	<vector>
 
-1364869844 c:\users\tim\documents\github\sudokusolver\src\gameboard.h
+1368978028 c:\users\tim\documents\github\sudokusolver\src\gameboard.h
 	"GameSquare.h"
 	"GameRow.h"
 	<set>
 
-1364329023 c:\users\tim\documents\github\sudokusolver\src\gamesquare.h
+1365201607 c:\users\tim\documents\github\sudokusolver\src\gamesquare.h
 	"GameSquare.h"
 	<set>
 
@@ -1792,12 +1792,15 @@
 	"GameSquare.h"
 	<set>
 
-1364874108 source:c:\users\tim\documents\github\sudokusolver\src\gamesquare.cpp
+1365201607 source:c:\users\tim\documents\github\sudokusolver\src\gamesquare.cpp
 	"GameSquare.h"
 
-1364576732 source:c:\users\tim\documents\github\sudokusolver\src\sudokualgorithms.cpp
+1368575424 source:c:\users\tim\documents\github\sudokusolver\src\sudokualgorithms.cpp
 	"GameBoard.h"
 	<cstdlib>
+	<ctime>
+	<algorithm>
+	<vector>
 
 1364708349 source:c:\users\tim\documents\github\debugsudoku\debugmainframe.cpp
 	"debugMainFrame.h"
@@ -3767,12 +3770,16 @@
 	"GamePanel.h"
 	"GUIFrame.h"
 
-1364868987 c:\users\tim\documents\github\debugsudoku\debugsudokumain.h
+1368979507 c:\users\tim\documents\github\debugsudoku\debugsudokumain.h
 	"DebugSudokuApp.h"
 	"..\sudokusolver\src\GameBoard.h"
+	<wx/file.h>
+	<wx/datetime.h>
+	<iostream>
+	<fstream>
 	"GUIFrame.h"
 
-1364868075 c:\users\tim\documents\github\debugsudoku\guiframe.h
+1368979352 c:\users\tim\documents\github\debugsudoku\guiframe.h
 	<wx/string.h>
 	<wx/bitmap.h>
 	<wx/image.h>
@@ -3788,12 +3795,11 @@
 	<wx/frame.h>
 	"GamePanel.h"
 
-1364870880 source:c:\users\tim\documents\github\debugsudoku\debugsudokumain.cpp
+1368574067 source:c:\users\tim\documents\github\debugsudoku\debugsudokumain.cpp
 	"wx_pch.h"
 	"DebugSudokuMain.h"
 
-1364868018 source:c:\users\tim\documents\github\debugsudoku\guiframe.cpp
-	"GamePanel.h"
+1368979352 source:c:\users\tim\documents\github\debugsudoku\guiframe.cpp
 	"GUIFrame.h"
 
 1364912757 source:c:\documents and settings\tas3409.adm\my documents\github\debugsudoku\wx_pch.h
@@ -3916,4 +3922,20 @@
 	"wx/string.h"
 	"wx/filefn.h"
 	"wx/strconv.h"
+
+1365201587 source:c:\users\tim\documents\github\debugsudoku\gameboardstep.cpp
+	"GameBoardStep.h"
+
+1365201587 c:\users\tim\documents\github\debugsudoku\gameboardstep.h
+	"..\sudokusolver\src\GameBoard.h"
+
+1368978042 source:c:\users\tim\documents\github\sudokusolver\src\genpuzzle.cpp
+	"GameBoard.h"
+	<cstdlib>
+	<ctime>
+	<algorithm>
+	<vector>
+
+1368575424 source:c:\users\tim\documents\github\sudokusolver\src\solve.cpp
+	"GameBoard.h"
 

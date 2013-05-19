@@ -60,11 +60,12 @@ class GUIFrame : public wxFrame
 		wxButton* m_buttonNakedSingle;
 		wxButton* m_buttonHiddenSingle;
 		wxButton* m_buttonRemovePoss;
+		wxButton* m_buttonScramble;
 
 		// Virtual event handlers, overide them in your derived class
 		virtual void OnSetFocus( wxFocusEvent& event ) { event.Skip(); }
-		virtual void OnQuit( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnNewPuzzle( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnQuit( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnAbout( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnChar( wxKeyEvent& event ) { event.Skip(); }
 		virtual void OnLeftUp( wxMouseEvent& event ) { event.Skip(); }
@@ -77,6 +78,7 @@ class GUIFrame : public wxFrame
 		virtual void OnNakedSingle( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnHiddenSingle( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnRemovePossibles( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnScrambleBoards( wxCommandEvent& event ) { event.Skip(); }
 
 
 	public:

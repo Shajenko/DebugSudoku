@@ -17,13 +17,13 @@ GUIFrame::GUIFrame( wxWindow* parent, wxWindowID id, const wxString& title, cons
 	
 	m_menubar1 = new wxMenuBar( 0 );
 	m_menuFile = new wxMenu();
-	wxMenuItem* m_menuItemQuit;
-	m_menuItemQuit = new wxMenuItem( m_menuFile, wxID_ANY, wxString( wxT("Quit") ) , wxEmptyString, wxITEM_NORMAL );
-	m_menuFile->Append( m_menuItemQuit );
-	
 	wxMenuItem* m_menuItemNewPuzzle;
 	m_menuItemNewPuzzle = new wxMenuItem( m_menuFile, wxID_ANY, wxString( wxT("New Puzzle") ) , wxEmptyString, wxITEM_NORMAL );
 	m_menuFile->Append( m_menuItemNewPuzzle );
+	
+	wxMenuItem* m_menuItemQuit;
+	m_menuItemQuit = new wxMenuItem( m_menuFile, wxID_ANY, wxString( wxT("Quit") ) , wxEmptyString, wxITEM_NORMAL );
+	m_menuFile->Append( m_menuItemQuit );
 	
 	m_menubar1->Append( m_menuFile, wxT("&File") ); 
 	
@@ -134,6 +134,9 @@ GUIFrame::GUIFrame( wxWindow* parent, wxWindowID id, const wxString& title, cons
 	m_buttonRemovePoss = new wxButton( m_panelDebug, wxID_ANY, wxT("Remove Possibles"), wxDefaultPosition, wxDefaultSize, 0 );
 	gSizer1->Add( m_buttonRemovePoss, 0, wxALL, 2 );
 	
+	m_buttonScramble = new wxButton( m_panelDebug, wxID_ANY, wxT("Scramble Boards"), wxDefaultPosition, wxDefaultSize, 0 );
+	gSizer1->Add( m_buttonScramble, 0, wxALL, 5 );
+	
 	m_panelDebug->SetSizer( gSizer1 );
 	m_panelDebug->Layout();
 	gSizer1->Fit( m_panelDebug );
@@ -146,8 +149,8 @@ GUIFrame::GUIFrame( wxWindow* parent, wxWindowID id, const wxString& title, cons
 	
 	// Connect Events
 	this->Connect( wxEVT_SET_FOCUS, wxFocusEventHandler( GUIFrame::OnSetFocus ) );
-	this->Connect( m_menuItemQuit->GetId(), wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( GUIFrame::OnQuit ) );
 	this->Connect( m_menuItemNewPuzzle->GetId(), wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( GUIFrame::OnNewPuzzle ) );
+	this->Connect( m_menuItemQuit->GetId(), wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( GUIFrame::OnQuit ) );
 	this->Connect( m_menuItemAbout->GetId(), wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( GUIFrame::OnAbout ) );
 	m_panelGuess->Connect( wxEVT_CHAR, wxKeyEventHandler( GUIFrame::OnChar ), NULL, this );
 	m_panelGuess->Connect( wxEVT_LEFT_UP, wxMouseEventHandler( GUIFrame::OnLeftUp ), NULL, this );
@@ -171,14 +174,15 @@ GUIFrame::GUIFrame( wxWindow* parent, wxWindowID id, const wxString& title, cons
 	m_buttonNakedSingle->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( GUIFrame::OnNakedSingle ), NULL, this );
 	m_buttonHiddenSingle->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( GUIFrame::OnHiddenSingle ), NULL, this );
 	m_buttonRemovePoss->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( GUIFrame::OnRemovePossibles ), NULL, this );
+	m_buttonScramble->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( GUIFrame::OnScrambleBoards ), NULL, this );
 }
 
 GUIFrame::~GUIFrame()
 {
 	// Disconnect Events
 	this->Disconnect( wxEVT_SET_FOCUS, wxFocusEventHandler( GUIFrame::OnSetFocus ) );
-	this->Disconnect( wxID_ANY, wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( GUIFrame::OnQuit ) );
 	this->Disconnect( wxID_ANY, wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( GUIFrame::OnNewPuzzle ) );
+	this->Disconnect( wxID_ANY, wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( GUIFrame::OnQuit ) );
 	this->Disconnect( wxID_ANY, wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( GUIFrame::OnAbout ) );
 	m_panelGuess->Disconnect( wxEVT_CHAR, wxKeyEventHandler( GUIFrame::OnChar ), NULL, this );
 	m_panelGuess->Disconnect( wxEVT_LEFT_UP, wxMouseEventHandler( GUIFrame::OnLeftUp ), NULL, this );
@@ -202,5 +206,6 @@ GUIFrame::~GUIFrame()
 	m_buttonNakedSingle->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( GUIFrame::OnNakedSingle ), NULL, this );
 	m_buttonHiddenSingle->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( GUIFrame::OnHiddenSingle ), NULL, this );
 	m_buttonRemovePoss->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( GUIFrame::OnRemovePossibles ), NULL, this );
+	m_buttonScramble->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( GUIFrame::OnScrambleBoards ), NULL, this );
 	
 }

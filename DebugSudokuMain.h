@@ -44,6 +44,7 @@ class DebugSudokuFrame: public GUIFrame
 		virtual void OnNakedSingle( wxCommandEvent& event );
 		virtual void OnHiddenSingle( wxCommandEvent& event );
 		virtual void OnRemovePossibles( wxCommandEvent& event );
+		virtual void OnScrambleBoards( wxCommandEvent& event );
 
 		GameBoard * mGuessGB;
 		GameBoard * mTrueGB;

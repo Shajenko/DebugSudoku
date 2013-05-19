@@ -248,3 +248,17 @@ void DebugSudokuFrame::OnRemovePossibles( wxCommandEvent& event )
 
     Refresh();
 }
+
+void DebugSudokuFrame::OnScrambleBoards( wxCommandEvent& event )
+{
+    mGuessGB->ScrambleBoard(*mTrueGB);
+    mGuessGB->ResetCols();
+    mGuessGB->ResetRows();
+    mGuessGB->ResetSectors();
+    mGuessGB->RemoveAllPossibles();
+    m_panelTrue->CopyBoard(*mTrueGB);
+    m_panelGuess->CopyBoard(*mGuessGB);
+
+
+    Refresh();
+}

@@ -9284,3 +9284,819 @@ Repainting
 Found at row 3 col 0
 Repainting
 Closing Sudokusolver
+-------------------------------------------
+Sudokusolver opened 05/19/13 10:47:05
+
+Repainting
+Initialized boards
+Generated board
+-------------------------------------------
+Sudokusolver opened 05/19/13 10:47:44
+
+Repainting
+Initialized boards
+Generated board
+-------------------------------------------
+Sudokusolver opened 05/19/13 10:49:05
+
+Repainting
+Initialized boards
+Generated board
+-------------------------------------------
+Sudokusolver opened 05/19/13 10:49:46
+
+Repainting
+Initialized boards
+Generated board
+-------------------------------------------
+Sudokusolver opened 05/19/13 10:51:02
+
+Repainting
+Repainting
+Repainting
+Initialized boards
+Generated board
+Repainting
+-------------------------------------------
+Sudokusolver opened 05/19/13 10:59:59
+
+Repainting
+Initialized boards
+Generated board
+Repainting
+Repainting
+Initialized boards
+Generated board
+Repainting
+-------------------------------------------
+Sudokusolver opened 05/19/13 11:05:48
+
+Repainting
+Initialized boards
+Generated board
+Repainting
+Repainting
+Repainting
+Repainting
+Repainting
+Repainting
+Repainting
+Repainting
+Repainting
+Repainting
+Repainting
+Repainting
+Repainting
+Repainting
+-------------------------------------------
+Sudokusolver opened 05/19/13 11:08:55
+
+Repainting
+Initialized boards
+Generated board
+Repainting
+Repainting
+Repainting
+-------------------------------------------
+Sudokusolver opened 05/19/13 11:09:52
+
+Repainting
+Initialized boards
+Generated board
+Repainting
+Repainting
+Repainting
+Repainting
+Repainting
+Repainting
+Repainting
+Repainting
+Repainting
+Repainting
+Repainting
+Repainting
+Repainting
+Not found at row 0 col 0
+Not found at row 0 col 1
+Not found at row 0 col 2
+Not found at row 0 col 3
+Not found at row 0 col 4
+Not found at row 0 col 5
+Not found at row 1 col 0
+Not found at row 1 col 1
+Not found at row 1 col 2
+Not found at row 1 col 3
+Not found at row 1 col 4
+Not found at row 1 col 6
+Not found at row 2 col 0
+Not found at row 2 col 1
+Not found at row 2 col 2
+Not found at row 2 col 3
+Not found at row 2 col 4
+Not found at row 2 col 5
+Not found at row 2 col 6
+Not found at row 2 col 7
+Not found at row 2 col 8
+Not found at row 3 col 0
+Not found at row 3 col 1
+Not found at row 3 col 4
+Not found at row 3 col 5
+Not found at row 3 col 8
+Not found at row 4 col 0
+Not found at row 4 col 1
+Not found at row 4 col 3
+Not found at row 4 col 4
+Not found at row 4 col 5
+Not found at row 4 col 6
+Not found at row 4 col 7
+Not found at row 5 col 0
+Not found at row 5 col 1
+Not found at row 5 col 2
+Not found at row 5 col 4
+Not found at row 5 col 6
+Not found at row 5 col 7
+Found at row 5 col 8
+Repainting
+Not found at row 0 col 0
+Not found at row 0 col 1
+Not found at row 0 col 2
+Not found at row 0 col 3
+Not found at row 0 col 4
+Not found at row 0 col 5
+Not found at row 1 col 0
+Not found at row 1 col 1
+Not found at row 1 col 2
+Not found at row 1 col 3
+Not found at row 1 col 4
+Not found at row 1 col 6
+Not found at row 2 col 0
+Not found at row 2 col 1
+Not found at row 2 col 2
+Not found at row 2 col 3
+Not found at row 2 col 4
+Not found at row 2 col 5
+Not found at row 2 col 6
+Not found at row 2 col 7
+Not found at row 2 col 8
+Not found at row 3 col 0
+Not found at row 3 col 1
+Not found at row 3 col 4
+Not found at row 3 col 5
+Not found at row 3 col 8
+Not found at row 4 col 0
+Not found at row 4 col 1
+Not found at row 4 col 3
+Not found at row 4 col 4
+Not found at row 4 col 5
+Not found at row 4 col 6
+Not found at row 4 col 7
+Not found at row 5 col 0
+Not found at row 5 col 1
+Not found at row 5 col 2
+Not found at row 5 col 4
+Not found at row 5 col 6
+Not found at row 5 col 7
+Not found at row 6 col 0
+Not found at row 6 col 1
+Not found at row 6 col 2
+Not found at row 6 col 4
+Not found at row 6 col 5
+Not found at row 6 col 7
+Not found at row 7 col 0
+Not found at row 7 col 5
+Not found at row 7 col 6
+Not found at row 7 col 7
+Not found at row 7 col 8
+Not found at row 8 col 0
+Not found at row 8 col 1
+Not found at row 8 col 4
+Not found at row 8 col 6
+Found at row 8 col 7
+Repainting
+Not found at row 0 col 0
+Not found at row 0 col 1
+Not found at row 0 col 2
+Not found at row 0 col 3
+Not found at row 0 col 4
+Not found at row 0 col 5
+Not found at row 1 col 0
+Not found at row 1 col 1
+Not found at row 1 col 2
+Not found at row 1 col 3
+Not found at row 1 col 4
+Not found at row 1 col 6
+Not found at row 2 col 0
+Not found at row 2 col 1
+Not found at row 2 col 2
+Not found at row 2 col 3
+Not found at row 2 col 4
+Not found at row 2 col 5
+Not found at row 2 col 6
+Not found at row 2 col 7
+Not found at row 2 col 8
+Not found at row 3 col 0
+Not found at row 3 col 1
+Not found at row 3 col 4
+Not found at row 3 col 5
+Not found at row 3 col 8
+Not found at row 4 col 0
+Not found at row 4 col 1
+Not found at row 4 col 3
+Not found at row 4 col 4
+Not found at row 4 col 5
+Not found at row 4 col 6
+Not found at row 4 col 7
+Not found at row 5 col 0
+Not found at row 5 col 1
+Not found at row 5 col 2
+Not found at row 5 col 4
+Not found at row 5 col 6
+Not found at row 5 col 7
+Not found at row 6 col 0
+Not found at row 6 col 1
+Not found at row 6 col 2
+Not found at row 6 col 4
+Not found at row 6 col 5
+Not found at row 6 col 7
+Not found at row 7 col 0
+Not found at row 7 col 5
+Not found at row 7 col 6
+Not found at row 7 col 7
+Not found at row 7 col 8
+Not found at row 8 col 0
+Not found at row 8 col 1
+Not found at row 8 col 4
+Not found at row 8 col 6
+Not found at row 0 col 0
+Not found at row 0 col 1
+Not found at row 0 col 2
+Not found at row 0 col 3
+Not found at row 0 col 4
+Not found at row 0 col 5
+Not found at row 1 col 0
+Not found at row 1 col 1
+Not found at row 1 col 2
+Not found at row 1 col 3
+Not found at row 1 col 4
+Not found at row 1 col 6
+Not found at row 2 col 0
+Not found at row 2 col 1
+Not found at row 2 col 2
+Not found at row 2 col 3
+Not found at row 2 col 4
+Not found at row 2 col 5
+Not found at row 2 col 6
+Not found at row 2 col 7
+Not found at row 2 col 8
+Not found at row 3 col 0
+Not found at row 3 col 1
+Not found at row 3 col 4
+Not found at row 3 col 5
+Not found at row 3 col 8
+Not found at row 4 col 0
+Not found at row 4 col 1
+Not found at row 4 col 3
+Not found at row 4 col 4
+Not found at row 4 col 5
+Not found at row 4 col 6
+Not found at row 4 col 7
+Not found at row 5 col 0
+Not found at row 5 col 1
+Not found at row 5 col 2
+Not found at row 5 col 4
+Not found at row 5 col 6
+Not found at row 5 col 7
+Not found at row 6 col 0
+Not found at row 6 col 1
+Not found at row 6 col 2
+Not found at row 6 col 4
+Not found at row 6 col 5
+Not found at row 6 col 7
+Not found at row 7 col 0
+Not found at row 7 col 5
+Not found at row 7 col 6
+Not found at row 7 col 7
+Not found at row 7 col 8
+Not found at row 8 col 0
+Not found at row 8 col 1
+Not found at row 8 col 4
+Not found at row 8 col 6
+Not found at row 0 col 0
+Not found at row 0 col 1
+Not found at row 0 col 2
+Not found at row 0 col 3
+Not found at row 0 col 4
+Not found at row 0 col 5
+Not found at row 1 col 0
+Not found at row 1 col 1
+Not found at row 1 col 2
+Not found at row 1 col 3
+Not found at row 1 col 4
+Not found at row 1 col 6
+Not found at row 2 col 0
+Not found at row 2 col 1
+Not found at row 2 col 2
+Not found at row 2 col 3
+Not found at row 2 col 4
+Not found at row 2 col 5
+Not found at row 2 col 6
+Not found at row 2 col 7
+Not found at row 2 col 8
+Not found at row 3 col 0
+Not found at row 3 col 1
+Not found at row 3 col 4
+Not found at row 3 col 5
+Not found at row 3 col 8
+Not found at row 4 col 0
+Not found at row 4 col 1
+Not found at row 4 col 3
+Not found at row 4 col 4
+Not found at row 4 col 5
+Not found at row 4 col 6
+Not found at row 4 col 7
+Not found at row 5 col 0
+Not found at row 5 col 1
+Not found at row 5 col 2
+Not found at row 5 col 4
+Not found at row 5 col 6
+Not found at row 5 col 7
+Not found at row 6 col 0
+Not found at row 6 col 1
+Not found at row 6 col 2
+Not found at row 6 col 4
+Not found at row 6 col 5
+Not found at row 6 col 7
+Not found at row 7 col 0
+Not found at row 7 col 5
+Not found at row 7 col 6
+Not found at row 7 col 7
+Not found at row 7 col 8
+Not found at row 8 col 0
+Not found at row 8 col 1
+Not found at row 8 col 4
+Not found at row 8 col 6
+Not found at row 0 col 0
+Not found at row 0 col 1
+Not found at row 0 col 2
+Not found at row 0 col 3
+Not found at row 0 col 4
+Not found at row 0 col 5
+Not found at row 1 col 0
+Not found at row 1 col 1
+Not found at row 1 col 2
+Not found at row 1 col 3
+Not found at row 1 col 4
+Not found at row 1 col 6
+Not found at row 2 col 0
+Not found at row 2 col 1
+Not found at row 2 col 2
+Not found at row 2 col 3
+Not found at row 2 col 4
+Not found at row 2 col 5
+Not found at row 2 col 6
+Not found at row 2 col 7
+Not found at row 2 col 8
+Not found at row 3 col 0
+Not found at row 3 col 1
+Not found at row 3 col 4
+Not found at row 3 col 5
+Not found at row 3 col 8
+Not found at row 4 col 0
+Not found at row 4 col 1
+Not found at row 4 col 3
+Not found at row 4 col 4
+Not found at row 4 col 5
+Not found at row 4 col 6
+Not found at row 4 col 7
+Not found at row 5 col 0
+Not found at row 5 col 1
+Not found at row 5 col 2
+Not found at row 5 col 4
+Not found at row 5 col 6
+Not found at row 5 col 7
+Not found at row 6 col 0
+Not found at row 6 col 1
+Not found at row 6 col 2
+Not found at row 6 col 4
+Not found at row 6 col 5
+Not found at row 6 col 7
+Not found at row 7 col 0
+Not found at row 7 col 5
+Not found at row 7 col 6
+Not found at row 7 col 7
+Not found at row 7 col 8
+Not found at row 8 col 0
+Not found at row 8 col 1
+Not found at row 8 col 4
+Not found at row 8 col 6
+Not found at row 0 col 0
+Not found at row 0 col 1
+Not found at row 0 col 2
+Not found at row 0 col 3
+Not found at row 0 col 4
+Not found at row 0 col 5
+Not found at row 1 col 0
+Not found at row 1 col 1
+Not found at row 1 col 2
+Not found at row 1 col 3
+Not found at row 1 col 4
+Not found at row 1 col 6
+Not found at row 2 col 0
+Not found at row 2 col 1
+Not found at row 2 col 2
+Not found at row 2 col 3
+Not found at row 2 col 4
+Not found at row 2 col 5
+Not found at row 2 col 6
+Not found at row 2 col 7
+Not found at row 2 col 8
+Not found at row 3 col 0
+Not found at row 3 col 1
+Not found at row 3 col 4
+Not found at row 3 col 5
+Not found at row 3 col 8
+Not found at row 4 col 0
+Not found at row 4 col 1
+Not found at row 4 col 3
+Not found at row 4 col 4
+Not found at row 4 col 5
+Not found at row 4 col 6
+Not found at row 4 col 7
+Not found at row 5 col 0
+Not found at row 5 col 1
+Not found at row 5 col 2
+Not found at row 5 col 4
+Not found at row 5 col 6
+Not found at row 5 col 7
+Not found at row 6 col 0
+Not found at row 6 col 1
+Not found at row 6 col 2
+Not found at row 6 col 4
+Not found at row 6 col 5
+Not found at row 6 col 7
+Not found at row 7 col 0
+Not found at row 7 col 5
+Not found at row 7 col 6
+Not found at row 7 col 7
+Not found at row 7 col 8
+Not found at row 8 col 0
+Not found at row 8 col 1
+Not found at row 8 col 4
+Not found at row 8 col 6
+Not found at row 0 col 0
+Not found at row 0 col 1
+Not found at row 0 col 2
+Not found at row 0 col 3
+Not found at row 0 col 4
+Not found at row 0 col 5
+Not found at row 1 col 0
+Not found at row 1 col 1
+Not found at row 1 col 2
+Not found at row 1 col 3
+Not found at row 1 col 4
+Not found at row 1 col 6
+Not found at row 2 col 0
+Not found at row 2 col 1
+Not found at row 2 col 2
+Not found at row 2 col 3
+Not found at row 2 col 4
+Not found at row 2 col 5
+Not found at row 2 col 6
+Not found at row 2 col 7
+Not found at row 2 col 8
+Not found at row 3 col 0
+Not found at row 3 col 1
+Not found at row 3 col 4
+Not found at row 3 col 5
+Not found at row 3 col 8
+Not found at row 4 col 0
+Not found at row 4 col 1
+Not found at row 4 col 3
+Not found at row 4 col 4
+Not found at row 4 col 5
+Not found at row 4 col 6
+Not found at row 4 col 7
+Not found at row 5 col 0
+Not found at row 5 col 1
+Not found at row 5 col 2
+Not found at row 5 col 4
+Not found at row 5 col 6
+Not found at row 5 col 7
+Not found at row 6 col 0
+Not found at row 6 col 1
+Not found at row 6 col 2
+Not found at row 6 col 4
+Not found at row 6 col 5
+Not found at row 6 col 7
+Not found at row 7 col 0
+Not found at row 7 col 5
+Not found at row 7 col 6
+Not found at row 7 col 7
+Not found at row 7 col 8
+Not found at row 8 col 0
+Not found at row 8 col 1
+Not found at row 8 col 4
+Not found at row 8 col 6
+Not found at row 0 col 0
+Not found at row 0 col 1
+Not found at row 0 col 2
+Not found at row 0 col 3
+Not found at row 0 col 4
+Not found at row 0 col 5
+Not found at row 1 col 0
+Not found at row 1 col 1
+Not found at row 1 col 2
+Not found at row 1 col 3
+Not found at row 1 col 4
+Not found at row 1 col 6
+Not found at row 2 col 0
+Not found at row 2 col 1
+Not found at row 2 col 2
+Not found at row 2 col 3
+Not found at row 2 col 4
+Not found at row 2 col 5
+Not found at row 2 col 6
+Not found at row 2 col 7
+Not found at row 2 col 8
+Not found at row 3 col 0
+Not found at row 3 col 1
+Not found at row 3 col 4
+Not found at row 3 col 5
+Not found at row 3 col 8
+Not found at row 4 col 0
+Not found at row 4 col 1
+Not found at row 4 col 3
+Not found at row 4 col 4
+Not found at row 4 col 5
+Not found at row 4 col 6
+Not found at row 4 col 7
+Not found at row 5 col 0
+Not found at row 5 col 1
+Not found at row 5 col 2
+Not found at row 5 col 4
+Not found at row 5 col 6
+Not found at row 5 col 7
+Not found at row 6 col 0
+Not found at row 6 col 1
+Not found at row 6 col 2
+Not found at row 6 col 4
+Not found at row 6 col 5
+Not found at row 6 col 7
+Not found at row 7 col 0
+Not found at row 7 col 5
+Not found at row 7 col 6
+Not found at row 7 col 7
+Not found at row 7 col 8
+Not found at row 8 col 0
+Not found at row 8 col 1
+Not found at row 8 col 4
+Not found at row 8 col 6
+Repainting
+Repainting
+-------------------------------------------
+Sudokusolver opened 05/19/13 11:11:42
+
+Repainting
+Initialized boards
+Generated board
+Repainting
+Repainting
+Repainting
+Repainting
+Repainting
+Initialized boards
+Generated board
+Repainting
+Repainting
+Repainting
+Repainting
+Repainting
+Not found at row 0 col 0
+Not found at row 0 col 1
+Not found at row 0 col 2
+Not found at row 0 col 5
+Not found at row 0 col 7
+Not found at row 1 col 0
+Not found at row 1 col 1
+Not found at row 1 col 2
+Not found at row 1 col 3
+Not found at row 1 col 4
+Not found at row 1 col 5
+Not found at row 1 col 6
+Not found at row 1 col 7
+Not found at row 1 col 8
+Not found at row 2 col 0
+Not found at row 2 col 1
+Not found at row 2 col 2
+Not found at row 2 col 3
+Not found at row 2 col 4
+Not found at row 2 col 5
+Not found at row 3 col 0
+Not found at row 3 col 1
+Not found at row 3 col 2
+Not found at row 3 col 4
+Not found at row 3 col 5
+Not found at row 3 col 6
+Not found at row 4 col 0
+Not found at row 4 col 1
+Not found at row 4 col 3
+Not found at row 4 col 4
+Not found at row 4 col 5
+Not found at row 4 col 6
+Not found at row 4 col 7
+Not found at row 4 col 8
+Not found at row 5 col 1
+Not found at row 5 col 2
+Not found at row 5 col 4
+Not found at row 5 col 8
+Not found at row 6 col 1
+Not found at row 6 col 4
+Not found at row 6 col 5
+Not found at row 6 col 7
+Not found at row 7 col 0
+Not found at row 7 col 1
+Not found at row 7 col 2
+Not found at row 7 col 3
+Not found at row 7 col 4
+Not found at row 7 col 5
+Not found at row 7 col 6
+Not found at row 7 col 7
+Not found at row 7 col 8
+Not found at row 8 col 1
+Not found at row 8 col 3
+Not found at row 8 col 5
+Not found at row 8 col 7
+Not found at row 8 col 8
+Not found at row 0 col 0
+Not found at row 0 col 1
+Not found at row 0 col 2
+Not found at row 0 col 5
+Not found at row 0 col 7
+Not found at row 1 col 0
+Not found at row 1 col 1
+Not found at row 1 col 2
+Not found at row 1 col 3
+Not found at row 1 col 4
+Not found at row 1 col 5
+Not found at row 1 col 6
+Not found at row 1 col 7
+Not found at row 1 col 8
+Not found at row 2 col 0
+Not found at row 2 col 1
+Not found at row 2 col 2
+Not found at row 2 col 3
+Not found at row 2 col 4
+Not found at row 2 col 5
+Not found at row 3 col 0
+Not found at row 3 col 1
+Not found at row 3 col 2
+Not found at row 3 col 4
+Not found at row 3 col 5
+Not found at row 3 col 6
+Not found at row 4 col 0
+Not found at row 4 col 1
+Not found at row 4 col 3
+Not found at row 4 col 4
+Not found at row 4 col 5
+Not found at row 4 col 6
+Not found at row 4 col 7
+Not found at row 4 col 8
+Not found at row 5 col 1
+Not found at row 5 col 2
+Not found at row 5 col 4
+Not found at row 5 col 8
+Not found at row 6 col 1
+Not found at row 6 col 4
+Not found at row 6 col 5
+Not found at row 6 col 7
+Not found at row 7 col 0
+Not found at row 7 col 1
+Not found at row 7 col 2
+Not found at row 7 col 3
+Not found at row 7 col 4
+Not found at row 7 col 5
+Not found at row 7 col 6
+Not found at row 7 col 7
+Not found at row 7 col 8
+Not found at row 8 col 1
+Not found at row 8 col 3
+Not found at row 8 col 5
+Not found at row 8 col 7
+Not found at row 8 col 8
+Not found at row 0 col 0
+Not found at row 0 col 1
+Not found at row 0 col 2
+Not found at row 0 col 5
+Not found at row 0 col 7
+Not found at row 1 col 0
+Not found at row 1 col 1
+Not found at row 1 col 2
+Not found at row 1 col 3
+Not found at row 1 col 4
+Not found at row 1 col 5
+Not found at row 1 col 6
+Not found at row 1 col 7
+Not found at row 1 col 8
+Not found at row 2 col 0
+Not found at row 2 col 1
+Not found at row 2 col 2
+Not found at row 2 col 3
+Not found at row 2 col 4
+Not found at row 2 col 5
+Not found at row 3 col 0
+Not found at row 3 col 1
+Not found at row 3 col 2
+Not found at row 3 col 4
+Not found at row 3 col 5
+Not found at row 3 col 6
+Not found at row 4 col 0
+Not found at row 4 col 1
+Not found at row 4 col 3
+Not found at row 4 col 4
+Not found at row 4 col 5
+Not found at row 4 col 6
+Not found at row 4 col 7
+Not found at row 4 col 8
+Not found at row 5 col 1
+Not found at row 5 col 2
+Not found at row 5 col 4
+Not found at row 5 col 8
+Not found at row 6 col 1
+Not found at row 6 col 4
+Not found at row 6 col 5
+Not found at row 6 col 7
+Not found at row 7 col 0
+Not found at row 7 col 1
+Not found at row 7 col 2
+Not found at row 7 col 3
+Not found at row 7 col 4
+Not found at row 7 col 5
+Not found at row 7 col 6
+Not found at row 7 col 7
+Not found at row 7 col 8
+Not found at row 8 col 1
+Not found at row 8 col 3
+Not found at row 8 col 5
+Not found at row 8 col 7
+Not found at row 8 col 8
+Not found at row 0 col 0
+Not found at row 0 col 1
+Found at row 0 col 2
+Repainting
+Not found at row 0 col 0
+Not found at row 0 col 1
+Not found at row 0 col 5
+Not found at row 0 col 7
+Not found at row 1 col 0
+Not found at row 1 col 1
+Not found at row 1 col 2
+Not found at row 1 col 3
+Not found at row 1 col 4
+Not found at row 1 col 5
+Found at row 1 col 6
+Repainting
+Repainting
+Not found at row 0 col 0
+Not found at row 0 col 1
+Not found at row 0 col 5
+Not found at row 0 col 7
+Not found at row 1 col 0
+Not found at row 1 col 1
+Not found at row 1 col 2
+Not found at row 1 col 3
+Not found at row 1 col 4
+Not found at row 1 col 5
+Not found at row 1 col 7
+Found at row 1 col 8
+Repainting
+Repainting
+Repainting
+Repainting
+Repainting
+Repainting
+Repainting
+Repainting
+Repainting
+-------------------------------------------
+Sudokusolver opened 05/19/13 11:13:51
+
+Repainting
+Initialized boards
+Generated board
+Repainting
+Repainting
+Repainting
+-------------------------------------------
+Sudokusolver opened 05/19/13 11:14:48
+
+Repainting
+Initialized boards
+Generated board
+Repainting
+Repainting
+Repainting
+Repainting
+Repainting
+Repainting
+Repainting
+Repainting
