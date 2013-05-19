@@ -3645,19 +3645,23 @@
 	<wx/panel.h>
 	<wx/button.h>
 
-1364599292 source:c:\users\shaj\documents\github\sudokusolver\src\gameboard.cpp
+1368995477 source:c:\users\shaj\documents\github\sudokusolver\src\gameboard.cpp
 	"GameBoard.h"
 	<cstdlib>
 	<ctime>
 	<algorithm>
 	<vector>
 
-1364599292 c:\users\shaj\documents\github\sudokusolver\src\gameboard.h
+1368995477 c:\users\shaj\documents\github\sudokusolver\src\gameboard.h
 	"GameSquare.h"
 	"GameRow.h"
 	<set>
+	<wx/file.h>
+	<wx/datetime.h>
+	<iostream>
+	<fstream>
 
-1364599292 c:\users\shaj\documents\github\sudokusolver\src\gamesquare.h
+1365376818 c:\users\shaj\documents\github\sudokusolver\src\gamesquare.h
 	"GameSquare.h"
 	<set>
 
@@ -3665,12 +3669,15 @@
 	"GameSquare.h"
 	<set>
 
-1363907599 source:c:\users\shaj\documents\github\sudokusolver\src\gamesquare.cpp
+1365376818 source:c:\users\shaj\documents\github\sudokusolver\src\gamesquare.cpp
 	"GameSquare.h"
 
-1364599292 source:c:\users\shaj\documents\github\sudokusolver\src\sudokualgorithms.cpp
+1368984573 source:c:\users\shaj\documents\github\sudokusolver\src\sudokualgorithms.cpp
 	"GameBoard.h"
 	<cstdlib>
+	<ctime>
+	<algorithm>
+	<vector>
 
 1364773013 source:c:\users\shaj\documents\github\debugsudoku\debugmainframe.cpp
 	"debugMainFrame.h"
@@ -3696,7 +3703,7 @@
 	<wx/frame.h>
 	"GamePanel.h"
 
-1364760355 c:\users\shaj\documents\github\debugsudoku\gamepanel.h
+1365377211 c:\users\shaj\documents\github\debugsudoku\gamepanel.h
 	"..\sudokusolver\src\GameBoard.h"
 
 1364759464 c:\users\shaj\documents\github\debugsudoku\enums.h
@@ -3717,7 +3724,7 @@
 	"GamePanel.h"
 	"DSudoku.h"
 
-1364772477 source:c:\users\shaj\documents\github\debugsudoku\gamepanel.cpp
+1365377211 source:c:\users\shaj\documents\github\debugsudoku\gamepanel.cpp
 	"wx_pch.h"
 	"GamePanel.h"
 
@@ -3742,11 +3749,16 @@
 
 1186432852 c:\programming\wxwidgets-2.8.12\include\wx\msw\rcdefs.h
 
-1364777344 c:\users\shaj\documents\github\debugsudoku\debugsudokumain.h
+1368982944 c:\users\shaj\documents\github\debugsudoku\debugsudokumain.h
 	"DebugSudokuApp.h"
+	"..\sudokusolver\src\GameBoard.h"
+	<wx/file.h>
+	<wx/datetime.h>
+	<iostream>
+	<fstream>
 	"GUIFrame.h"
 
-1364777314 c:\users\shaj\documents\github\debugsudoku\guiframe.h
+1368982944 c:\users\shaj\documents\github\debugsudoku\guiframe.h
 	<wx/string.h>
 	<wx/bitmap.h>
 	<wx/image.h>
@@ -3762,12 +3774,11 @@
 	<wx/frame.h>
 	"GamePanel.h"
 
-1364776337 source:c:\users\shaj\documents\github\debugsudoku\debugsudokumain.cpp
+1368995247 source:c:\users\shaj\documents\github\debugsudoku\debugsudokumain.cpp
 	"wx_pch.h"
 	"DebugSudokuMain.h"
 
-1364777257 source:c:\users\shaj\documents\github\debugsudoku\guiframe.cpp
-	"GamePanel.h"
+1368982944 source:c:\users\shaj\documents\github\debugsudoku\guiframe.cpp
 	"GUIFrame.h"
 
 1368979507 c:\users\tim\documents\github\debugsudoku\debugsudokumain.h
@@ -3937,5 +3948,27 @@
 	<vector>
 
 1368575424 source:c:\users\tim\documents\github\sudokusolver\src\solve.cpp
+	"GameBoard.h"
+
+1186432894 c:\programming\wxwidgets-2.8.12\include\wx\file.h
+	"wx/defs.h"
+	"wx/string.h"
+	"wx/filefn.h"
+	"wx/strconv.h"
+
+1365377211 source:c:\users\shaj\documents\github\debugsudoku\gameboardstep.cpp
+	"GameBoardStep.h"
+
+1365377211 c:\users\shaj\documents\github\debugsudoku\gameboardstep.h
+	"..\sudokusolver\src\GameBoard.h"
+
+1368984573 source:c:\users\shaj\documents\github\sudokusolver\src\genpuzzle.cpp
+	"GameBoard.h"
+	<cstdlib>
+	<ctime>
+	<algorithm>
+	<vector>
+
+1368984573 source:c:\users\shaj\documents\github\sudokusolver\src\solve.cpp
 	"GameBoard.h"
 

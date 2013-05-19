@@ -10100,3 +10100,47 @@ Repainting
 Repainting
 Repainting
 Repainting
+-------------------------------------------
+Sudokusolver opened 05/19/13 12:48:11
+
+Repainting
+Initialized boards
+Generated board
+Repainting
+Repainting
+Repainting
+Repainting
+Repainting
+Repainting
+Repainting
+Repainting
+Repainting
+Repainting
+-------------------------------------------
+Sudokusolver opened 05/19/13 13:11:46
+
+Repainting
+Initialized boards
+Generated board
+Repainting
+-------------------------------------------
+Sudokusolver opened 05/19/13 13:29:51
+
+Repainting
+Initialized boards
+Generated board
+-------------------------------------------
+Sudokusolver opened 05/19/13 13:33:41
+
+Repainting
+Initialized boards
+Generated board
+Copied board to True Panel
+Copied board to GuessGB
+Full puzzle generated
+Copied board to Guess Panel
+Repainting
+Repainting
+Repainting
+Repainting
+Repainting

@@ -17,15 +17,7 @@
 
 #include "DebugSudokuMain.h"
 
-void writetoLog( const wxString &text )
-{
-	wxFile log_file(_("log_file.txt"), wxFile::write_append );
-	if(!log_file.IsOpened())
-		log_file.Create(_("log_file.txt"));
-    log_file.Write(text);
-    log_file.Write(_("\n"));
-    log_file.Close();
-}
+
 
 //helper functions
 enum wxbuildinfoformat {
@@ -68,9 +60,9 @@ DebugSudokuFrame::DebugSudokuFrame(wxFrame *frame)
     mGuessGB = new GameBoard();
     mTrueGB = new GameBoard();
 
-	writetoLog(_("-------------------------------------------"));
-	writetoLog(dateStr);
-	writetoLog(_(""));
+	writetoLog(_("-------------------------------------------"), _("DebugSudoku.log"));
+	writetoLog(dateStr, _("DebugSudoku.log"));
+	writetoLog(_(""), _("DebugSudoku.log"));
 }
 
 DebugSudokuFrame::~DebugSudokuFrame()
@@ -79,13 +71,13 @@ DebugSudokuFrame::~DebugSudokuFrame()
 
 void DebugSudokuFrame::OnClose(wxCloseEvent &event)
 {
-	writetoLog(_("Closing Sudokusolver"));
+	writetoLog(_("Closing Sudokusolver"), _("DebugSudoku.log"));
     Destroy();
 }
 
 void DebugSudokuFrame::OnQuit(wxCommandEvent &event)
 {
-	writetoLog(_("Closing Sudokusolver"));
+	writetoLog(_("Closing Sudokusolver"), _("DebugSudoku.log"));
     Destroy();
 }
 
@@ -106,7 +98,7 @@ void DebugSudokuFrame::OnPaint(wxPaintEvent& event)
     m_panelTrue->DrawBoardBackground(dc2);
 	m_panelTrue->DrawBoardNumbers(dc2);
 
-	writetoLog(_("Repainting"));
+	writetoLog(_("Repainting"), _("DebugSudoku.log"));
 
 }
 
@@ -115,17 +107,24 @@ void DebugSudokuFrame::OnNewPuzzle( wxCommandEvent& event )
 	mTrueGB->Binit();
 	mGuessGB->Binit();
 
-	writetoLog(_("Initialized boards"));
+	writetoLog(_("Initialized boards"), _("DebugSudoku.log"));
 
     mTrueGB->GenBoard(0,0);
-    writetoLog(_("Generated board"));
+    writetoLog(_("Generated board"), _("DebugSudoku.log"));
 
     m_panelTrue->CopyBoard(*mTrueGB);
     Refresh();
+    writetoLog(_("Copied board to True Panel"), _("DebugSudoku.log"));
 
     mGuessGB->Copy(*mTrueGB);
+    writetoLog(_("Copied board to GuessGB"), _("DebugSudoku.log"));
+
     mGuessGB->RemoveSquares(EASY);
+    writetoLog(_("Full puzzle generated"), _("DebugSudoku.log"));
+
     m_panelGuess->CopyBoard(*mGuessGB);
+    writetoLog(_("Copied board to Guess Panel"), _("DebugSudoku.log"));
+
     Refresh();
 }
 
@@ -189,7 +188,7 @@ void DebugSudokuFrame::OnNakedSingle( wxCommandEvent& event )
 				{
 					dString.clear();
 					dString << _("Found at row ") << i << _(" col ") << j;
-					writetoLog(dString);
+					writetoLog(dString, _("DebugSudoku.log"));
 					m_panelGuess->CopyBoard(*mGuessGB);
 					Refresh();
 					return;
@@ -198,7 +197,7 @@ void DebugSudokuFrame::OnNakedSingle( wxCommandEvent& event )
 				{
 					dString.clear();
 					dString << _("Not found at row ") << i << _(" col ") << j;
-					writetoLog(dString);
+					writetoLog(dString, _("DebugSudoku.log"));
 				}
 			}
 		}
@@ -223,7 +222,7 @@ void DebugSudokuFrame::OnHiddenSingle( wxCommandEvent& event )
 				{
 					dString.clear();
 					dString << _("Found at row ") << i << _(" col ") << j;
-					writetoLog(dString);
+					writetoLog(dString, _("DebugSudoku.log"));
 					m_panelGuess->CopyBoard(*mGuessGB);
 					Refresh();
 					return;
@@ -232,7 +231,7 @@ void DebugSudokuFrame::OnHiddenSingle( wxCommandEvent& event )
 				{
 					dString.clear();
 					dString << _("Not found at row ") << i << _(" col ") << j;
-					writetoLog(dString);
+					writetoLog(dString, _("DebugSudoku.log"));
 				}
 			}
 		}
