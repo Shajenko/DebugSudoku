@@ -104,8 +104,42 @@ void DebugSudokuFrame::OnPaint(wxPaintEvent& event)
 
 void DebugSudokuFrame::OnNewPuzzle( wxCommandEvent& event )
 {
+	wxDateTime start, finish;
+	wxTimeSpan totaltime;
+	wxString timestr;
+
+	start.SetToCurrent();
+
+    mGuessGB->Copy(*mTrueGB);
+    writetoLog(_("Copied board to GuessGB"), _("DebugSudoku.log"));
+
+    mGuessGB->RemoveSquares(EASY);
+    writetoLog(_("Full puzzle generated"), _("DebugSudoku.log"));
+
+    finish.SetToCurrent();
+
+    totaltime = finish - start;
+    timestr << _("Total time taken - ") << totaltime.GetSeconds() << _(" seconds ") << totaltime.GetMilliseconds() << _(" milliseconds");
+
+    writetoLog( timestr, _("DebugSudoku.log"));
+
+    m_panelGuess->CopyBoard(*mGuessGB);
+    writetoLog(_("Copied board to Guess Panel"), _("DebugSudoku.log"));
+
+    Refresh();
+}
+
+void DebugSudokuFrame::OnNewBase( wxCommandEvent& event )
+{
+	wxDateTime start, finish;
+	wxTimeSpan totaltime;
+	wxString timestr;
+
 	mTrueGB->Binit();
 	mGuessGB->Binit();
+
+
+	start.SetToCurrent();
 
 	writetoLog(_("Initialized boards"), _("DebugSudoku.log"));
 
@@ -114,18 +148,17 @@ void DebugSudokuFrame::OnNewPuzzle( wxCommandEvent& event )
 
     m_panelTrue->CopyBoard(*mTrueGB);
     Refresh();
+
+    finish.SetToCurrent();
+
+    totaltime = finish - start;
+    timestr << _("Total time taken - ") << totaltime.GetSeconds() << _(" seconds ") << totaltime.GetMilliseconds() << _(" milliseconds");
+
+    writetoLog( timestr, _("DebugSudoku.log"));
     writetoLog(_("Copied board to True Panel"), _("DebugSudoku.log"));
 
-    mGuessGB->Copy(*mTrueGB);
-    writetoLog(_("Copied board to GuessGB"), _("DebugSudoku.log"));
-
-    mGuessGB->RemoveSquares(EASY);
-    writetoLog(_("Full puzzle generated"), _("DebugSudoku.log"));
-
-    m_panelGuess->CopyBoard(*mGuessGB);
-    writetoLog(_("Copied board to Guess Panel"), _("DebugSudoku.log"));
-
     Refresh();
+
 }
 
 void DebugSudokuFrame::OnNumButtonClick( wxCommandEvent& event )
@@ -239,13 +272,33 @@ void DebugSudokuFrame::OnHiddenSingle( wxCommandEvent& event )
 
 void DebugSudokuFrame::OnRemovePossibles( wxCommandEvent& event )
 {
-    mGuessGB->ResetCols();
-    mGuessGB->ResetRows();
-    mGuessGB->ResetSectors();
     mGuessGB->RemoveAllPossibles();
     m_panelGuess->CopyBoard(*mGuessGB);
 
     Refresh();
+}
+
+void DebugSudokuFrame::OnResetPossibles( wxCommandEvent& event)
+{
+
+	Refresh();
+}
+
+void DebugSudokuFrame::OnResetRowColSec(wxCommandEvent& event)
+{
+	mGuessGB->ResetCols();
+	mGuessGB->ResetRows();
+	mGuessGB->ResetSectors();
+
+	Refresh();
+}
+
+
+
+
+void DebugSudokuFrame::OnRemoveLayer( wxCommandEvent& event )
+{
+
 }
 
 void DebugSudokuFrame::OnScrambleBoards( wxCommandEvent& event )

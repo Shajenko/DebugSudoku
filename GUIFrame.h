@@ -1,12 +1,15 @@
 ///////////////////////////////////////////////////////////////////////////
-// C++ code generated with wxFormBuilder (version Sep  8 2010)
+// C++ code generated with wxFormBuilder (version Jun 30 2011)
 // http://www.wxformbuilder.org/
 //
 // PLEASE DO "NOT" EDIT THIS FILE!
 ///////////////////////////////////////////////////////////////////////////
 
-#ifndef __GUIFrame__
-#define __GUIFrame__
+#ifndef __GUIFRAME_H__
+#define __GUIFRAME_H__
+
+#include <wx/artprov.h>
+#include <wx/xrc/xmlres.h>
 
 #include <wx/string.h>
 #include <wx/bitmap.h>
@@ -38,6 +41,7 @@ class GUIFrame : public wxFrame
 		wxMenuBar* m_menubar1;
 		wxMenu* m_menuFile;
 		wxMenu* m_menuAbout;
+		wxMenu* m_menuPuzzle;
 		GamePanel* m_panelGuess;
 		GamePanel* m_panelTrue;
 		wxPanel* m_panelControls;
@@ -59,14 +63,18 @@ class GUIFrame : public wxFrame
 		wxButton* m_buttonSolve;
 		wxButton* m_buttonNakedSingle;
 		wxButton* m_buttonHiddenSingle;
-		wxButton* m_buttonRemovePoss;
-		wxButton* m_buttonScramble;
 
 		// Virtual event handlers, overide them in your derived class
 		virtual void OnSetFocus( wxFocusEvent& event ) { event.Skip(); }
 		virtual void OnNewPuzzle( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnNewBase( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnQuit( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnAbout( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnScrambleBoards( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnRemoveLayer( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnResetPossibles( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnRemovePossibles( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnResetRowColSec( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnChar( wxKeyEvent& event ) { event.Skip(); }
 		virtual void OnLeftUp( wxMouseEvent& event ) { event.Skip(); }
 		virtual void OnPaint( wxPaintEvent& event ) { event.Skip(); }
@@ -77,15 +85,14 @@ class GUIFrame : public wxFrame
 		virtual void OnSolve( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnNakedSingle( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnHiddenSingle( wxCommandEvent& event ) { event.Skip(); }
-		virtual void OnRemovePossibles( wxCommandEvent& event ) { event.Skip(); }
-		virtual void OnScrambleBoards( wxCommandEvent& event ) { event.Skip(); }
 
 
 	public:
 
 		GUIFrame( wxWindow* parent, wxWindowID id = ID_GUIFRAME, const wxString& title = wxEmptyString, const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 727,511 ), long style = wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL );
+
 		~GUIFrame();
 
 };
 
-#endif //__GUIFrame__
+#endif //__GUIFRAME_H__

@@ -36,6 +36,12 @@ class DebugSudokuFrame: public GUIFrame
         virtual void OnAbout(wxCommandEvent& event);
         virtual void OnPaint(wxPaintEvent& event);
         virtual void OnNewPuzzle( wxCommandEvent& event );
+		virtual void OnNewBase( wxCommandEvent& event );
+		virtual void OnRemoveLayer( wxCommandEvent& event );
+		virtual void OnResetPossibles( wxCommandEvent& event );
+		virtual void OnRemovePossibles( wxCommandEvent& event );
+		virtual void OnResetRowColSec( wxCommandEvent& event );
+
         virtual void OnNumButtonClick( wxCommandEvent& event );
 		virtual void OnSetButtonClick( wxCommandEvent& event );
 		virtual void OnNoteButtonClick( wxCommandEvent& event );
@@ -43,7 +49,6 @@ class DebugSudokuFrame: public GUIFrame
 		virtual void OnSolve( wxCommandEvent& event );
 		virtual void OnNakedSingle( wxCommandEvent& event );
 		virtual void OnHiddenSingle( wxCommandEvent& event );
-		virtual void OnRemovePossibles( wxCommandEvent& event );
 		virtual void OnScrambleBoards( wxCommandEvent& event );
 
 		GameBoard * mGuessGB;
