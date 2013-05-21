@@ -1772,17 +1772,21 @@
 	<wx/panel.h>
 	<wx/button.h>
 
-1368575424 source:c:\users\tim\documents\github\sudokusolver\src\gameboard.cpp
+1369093194 source:c:\users\tim\documents\github\sudokusolver\src\gameboard.cpp
 	"GameBoard.h"
 	<cstdlib>
 	<ctime>
 	<algorithm>
 	<vector>
 
-1368978028 c:\users\tim\documents\github\sudokusolver\src\gameboard.h
+1369093194 c:\users\tim\documents\github\sudokusolver\src\gameboard.h
 	"GameSquare.h"
 	"GameRow.h"
 	<set>
+	<wx/file.h>
+	<wx/datetime.h>
+	<iostream>
+	<fstream>
 
 1365201607 c:\users\tim\documents\github\sudokusolver\src\gamesquare.h
 	"GameSquare.h"
@@ -3781,7 +3785,7 @@
 1368982944 source:c:\users\shaj\documents\github\debugsudoku\guiframe.cpp
 	"GUIFrame.h"
 
-1368979507 c:\users\tim\documents\github\debugsudoku\debugsudokumain.h
+1369093090 c:\users\tim\documents\github\debugsudoku\debugsudokumain.h
 	"DebugSudokuApp.h"
 	"..\sudokusolver\src\GameBoard.h"
 	<wx/file.h>
@@ -3790,7 +3794,9 @@
 	<fstream>
 	"GUIFrame.h"
 
-1368979352 c:\users\tim\documents\github\debugsudoku\guiframe.h
+1369093090 c:\users\tim\documents\github\debugsudoku\guiframe.h
+	<wx/artprov.h>
+	<wx/xrc/xmlres.h>
 	<wx/string.h>
 	<wx/bitmap.h>
 	<wx/image.h>
@@ -3806,11 +3812,11 @@
 	<wx/frame.h>
 	"GamePanel.h"
 
-1368574067 source:c:\users\tim\documents\github\debugsudoku\debugsudokumain.cpp
+1369093090 source:c:\users\tim\documents\github\debugsudoku\debugsudokumain.cpp
 	"wx_pch.h"
 	"DebugSudokuMain.h"
 
-1368979352 source:c:\users\tim\documents\github\debugsudoku\guiframe.cpp
+1369093090 source:c:\users\tim\documents\github\debugsudoku\guiframe.cpp
 	"GUIFrame.h"
 
 1364912757 source:c:\documents and settings\tas3409.adm\my documents\github\debugsudoku\wx_pch.h
@@ -3945,14 +3951,14 @@
 1365201587 c:\users\tim\documents\github\debugsudoku\gameboardstep.h
 	"..\sudokusolver\src\GameBoard.h"
 
-1368978042 source:c:\users\tim\documents\github\sudokusolver\src\genpuzzle.cpp
+1369097464 source:c:\users\tim\documents\github\sudokusolver\src\genpuzzle.cpp
 	"GameBoard.h"
 	<cstdlib>
 	<ctime>
 	<algorithm>
 	<vector>
 
-1368575424 source:c:\users\tim\documents\github\sudokusolver\src\solve.cpp
+1369093194 source:c:\users\tim\documents\github\sudokusolver\src\solve.cpp
 	"GameBoard.h"
 
 1186432894 c:\programming\wxwidgets-2.8.12\include\wx\file.h
