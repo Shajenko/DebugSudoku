@@ -13,7 +13,7 @@
 
 
 #include "DebugSudokuApp.h"
-#include "..\sudokusolver\src\GameBoard.h"
+#include "..\Solving and Generating\GameBoard.h"
 #include <wx/file.h>
 #include <wx/datetime.h>
 #include <iostream>
@@ -30,6 +30,8 @@ class DebugSudokuFrame: public GUIFrame
     public:
         DebugSudokuFrame(wxFrame *frame);
         ~DebugSudokuFrame();
+        void SetRow(unsigned int val) { row = val;}
+        void SetCol(unsigned int val) { col = val;}
     private:
         virtual void OnClose(wxCloseEvent& event);
         virtual void OnQuit(wxCommandEvent& event);
@@ -51,10 +53,21 @@ class DebugSudokuFrame: public GUIFrame
 		virtual void OnHiddenSingle( wxCommandEvent& event );
 		virtual void OnScrambleBoards( wxCommandEvent& event );
 
+		virtual void OnGuessPanelEraseBG( wxEraseEvent& event );
+		virtual void OnGuessPanelKeyUp( wxKeyEvent& event );
+		virtual void OnGuessPanelLeftUp( wxMouseEvent& event );
+		virtual void OnGuessPanelPaint( wxPaintEvent& event );
+
+		virtual void OnTruePanelEraseBG( wxEraseEvent& event );
+		virtual void OnTruePanelPaint( wxPaintEvent& event );
+
 		GameBoard * mGuessGB;
 		GameBoard * mTrueGB;
 		Difficulty diff;
 		Controls ctrlSelect;
+        wxButton * numButtons[9];
+
+		unsigned int row, col;
 };
 
 #endif // DEBUGSUDOKUMAIN_H

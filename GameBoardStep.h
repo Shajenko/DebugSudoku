@@ -1,7 +1,7 @@
 #ifndef GAMEBOARDSTEP_H
 #define GAMEBOARDSTEP_H
 
-#include "..\sudokusolver\src\GameBoard.h"
+#include "..\Solving and Generating\GameBoard.h"
 
 
 class GameBoardStep : public GameBoard

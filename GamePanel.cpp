@@ -39,19 +39,28 @@ void GamePanel::OnPaint( wxPaintEvent& event )
 {
 }
 
-void GamePanel::DrawBoardBackground(wxPaintDC &dc)
+void GamePanel::DrawBoardBackground(wxBufferedDC &dc)
 {
 	unsigned int spSq = 0;
     unsigned int smallSide;
     unsigned int i,j;
 
-    wxColour LGray;
-    wxBrush LGrayBr;
+    wxColour LGray, White;
+    wxBrush LGrayBr, WhiteBr;
 
     LGray.Set(210,210,210);
     LGrayBr.SetColour(LGray);
 
+    White.Set(255,255,255);
+    WhiteBr.SetColour(White);
+
     wxSize sz = this->GetClientSize();
+
+    dc.SetBrush( WhiteBr );
+    dc.SetPen(*wxWHITE_PEN );
+
+    dc.DrawRectangle( 0, 0, sz.x, sz.y );
+
     if (sz.x < sz.y)
         smallSide = sz.x;
     else
@@ -94,7 +103,7 @@ void GamePanel::DrawBoardBackground(wxPaintDC &dc)
 
 }
 
-void GamePanel::DrawBoardNumbers(wxPaintDC &dc)
+void GamePanel::DrawBoardNumbers(wxBufferedDC &dc)
 {
 	unsigned int spSq = 0;
     unsigned int smallSide;

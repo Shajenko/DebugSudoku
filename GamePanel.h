@@ -1,7 +1,8 @@
 #ifndef GAMEPANEL_H
 #define GAMEPANEL_H
 
-#include "..\sudokusolver\src\GameBoard.h"
+#include "..\Solving and Generating\GameBoard.h"
+#include "wx/dcbuffer.h"
 
 #ifndef WX_PRECOMP
 	//(*HeadersPCH(GamePanel)
@@ -16,10 +17,11 @@ class GamePanel: public wxPanel
 
 		GamePanel(wxWindow* parent,wxWindowID id=wxID_ANY,const wxPoint& pos=wxDefaultPosition,const wxSize& size=wxDefaultSize, long style = wxTAB_TRAVERSAL|wxNO_BORDER);
 		virtual ~GamePanel();
-        void DrawBoardBackground(wxPaintDC &dc);
-        void DrawBoardNumbers(wxPaintDC &dc);
+        void DrawBoardBackground(wxBufferedDC &dc);
+        void DrawBoardNumbers(wxBufferedDC &dc);
         void CopyBoard(GameBoard &gb);
         void WriteBoard(GameBoard &gb);
+        void SetGuess(bool gsbd) {guess = gsbd;}
 
 		//(*Declarations(GamePanel)
 		//*)
@@ -31,7 +33,8 @@ class GamePanel: public wxPanel
 		//*)
 
 	private:
-        GameBoard * bd;
+        GameBoard * bd, trueBd;
+        bool guess;
         unsigned int row, col;
 		//(*Handlers(GamePanel)
 		//*)

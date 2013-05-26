@@ -10,6 +10,7 @@
 
 #include <wx/artprov.h>
 #include <wx/xrc/xmlres.h>
+class GamePanel;
 
 #include <wx/string.h>
 #include <wx/bitmap.h>
@@ -25,8 +26,6 @@
 #include <wx/sizer.h>
 #include <wx/frame.h>
 
-#include "GamePanel.h"
-
 ///////////////////////////////////////////////////////////////////////////
 
 #define ID_GUIFRAME 1000
@@ -34,10 +33,10 @@
 ///////////////////////////////////////////////////////////////////////////////
 /// Class GUIFrame
 ///////////////////////////////////////////////////////////////////////////////
-class GUIFrame : public wxFrame
+class GUIFrame : public wxFrame 
 {
 	private:
-
+	
 	protected:
 		wxMenuBar* m_menubar1;
 		wxMenu* m_menuFile;
@@ -64,7 +63,7 @@ class GUIFrame : public wxFrame
 		wxButton* m_buttonSolve;
 		wxButton* m_buttonNakedSingle;
 		wxButton* m_buttonHiddenSingle;
-
+		
 		// Virtual event handlers, overide them in your derived class
 		virtual void OnSetFocus( wxFocusEvent& event ) { event.Skip(); }
 		virtual void OnNewPuzzle( wxCommandEvent& event ) { event.Skip(); }
@@ -90,14 +89,14 @@ class GUIFrame : public wxFrame
 		virtual void OnSolve( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnNakedSingle( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnHiddenSingle( wxCommandEvent& event ) { event.Skip(); }
-
-
+		
+	
 	public:
-
+		
 		GUIFrame( wxWindow* parent, wxWindowID id = ID_GUIFRAME, const wxString& title = wxEmptyString, const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 727,511 ), long style = wxDEFAULT_FRAME_STYLE );
-
+		
 		~GUIFrame();
-
+	
 };
 
 #endif //__GUIFRAME_H__

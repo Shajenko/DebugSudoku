@@ -65,32 +65,42 @@
 		<Linker>
 			<Add option="-mthreads" />
 		</Linker>
-		<Unit filename="../sudokusolver/src/GameBoard.cpp" />
-		<Unit filename="../sudokusolver/src/GameBoard.h" />
-		<Unit filename="../sudokusolver/src/GameSquare.cpp" />
-		<Unit filename="../sudokusolver/src/GameSquare.h" />
-		<Unit filename="../sudokusolver/src/GenPuzzle.cpp" />
-		<Unit filename="../sudokusolver/src/Solve.cpp" />
-		<Unit filename="../sudokusolver/src/SudokuAlgorithms.cpp" />
-		<Unit filename="../sudokusolver/src/SudokuAlgorithms.h" />
+		<Unit filename="../Solving and Generating/GameBoard.cpp" />
+		<Unit filename="../Solving and Generating/GameBoard.h" />
+		<Unit filename="../Solving and Generating/GameSquare.cpp" />
+		<Unit filename="../Solving and Generating/GameSquare.h" />
+		<Unit filename="../Solving and Generating/GenPuzzle.cpp" />
+		<Unit filename="../Solving and Generating/Solve.cpp" />
+		<Unit filename="../Solving and Generating/SudokuAlgorithms.cpp" />
+		<Unit filename="../Solving and Generating/SudokuAlgorithms.h" />
+		<Unit filename="Buttons.cpp" />
+		<Unit filename="DSudoku.cpp" />
+		<Unit filename="DSudoku.h" />
+		<Unit filename="DebugSudoku.depend" />
+		<Unit filename="DebugSudoku.layout" />
+		<Unit filename="DebugSudoku.log" />
 		<Unit filename="DebugSudokuApp.cpp" />
 		<Unit filename="DebugSudokuApp.h" />
 		<Unit filename="DebugSudokuMain.cpp" />
 		<Unit filename="DebugSudokuMain.h" />
 		<Unit filename="GUIFrame.cpp" />
 		<Unit filename="GUIFrame.h" />
+		<Unit filename="GameBoard.log" />
 		<Unit filename="GameBoardStep.cpp" />
 		<Unit filename="GameBoardStep.h" />
 		<Unit filename="GamePanel.cpp" />
 		<Unit filename="GamePanel.h" />
+		<Unit filename="KeyboardInput.cpp" />
+		<Unit filename="Menus.cpp" />
+		<Unit filename="Paint.cpp" />
+		<Unit filename="Sudoku Solving Methods.txt" />
 		<Unit filename="WxWizFrame.fbp" />
+		<Unit filename="debugMainFrame.h" />
+		<Unit filename="enums.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
-		<Unit filename="wx_pch.h">
-			<Option compile="1" />
-			<Option weight="0" />
-		</Unit>
+		<Unit filename="wx_pch.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
