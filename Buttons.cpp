@@ -19,32 +19,33 @@
 
 void DebugSudokuFrame::OnNumButtonClick( wxCommandEvent& event )
 {
-    unsigned int i;
+    unsigned int i, inNum;
     wxString defaultStr;
 
     defaultStr.clear();
     for(i=0;i<9;i++)
         if(numButtons[i]->GetId() == event.GetId())
+            inNum = i+1;
+    if(ctrlSelect==SET)
+    {
+        if(row<9&&row>=0&&col<9&&col>=0&&!mGuessGB->GetShown(row, col))
         {
-            if(ctrlSelect==SET)
-            {
-                if(row<9&&row>=0&&col<9&&col>=0&&!mGuessGB->GetShown(row, col))
-                {
-                    mGuessGB->SetVal(row, col, i+1);
-                    // todo - remove possibles from other squares
-                }
-
-
-
-            }
-            else if (ctrlSelect==NOTE)
-            {
-                if(mGuessGB->GetPossibles(row, col, i+1))
-                    mGuessGB->RemovePossibles(row, col, i+1);
-                else
-                    mGuessGB->SetPossibles(row, col, i+1);
-            }
+            mGuessGB->SetVal(row, col, inNum);
+            // todo - remove possibles from other squares
         }
+
+
+
+    }
+    else if (ctrlSelect==NOTE)
+    {
+        if(mGuessGB->GetPossibles(row, col, inNum))
+            mGuessGB->RemovePossibles(row, col, inNum);
+        else
+            mGuessGB->SetPossibles(row, col, inNum);
+    }
+
+    m_panelGuess->CopyBoard(*mGuessGB);
     Refresh();
 }
 

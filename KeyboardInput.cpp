@@ -38,7 +38,10 @@ void DebugSudokuFrame::OnGuessPanelKeyUp(wxKeyEvent &event)
         }
         else if (ctrlSelect==NOTE)
         {
-            mGuessGB->SetPossibles(row, col, inNum);
+            if(mGuessGB->GetPossibles(row, col, inNum))
+                mGuessGB->RemovePossibles(row, col, inNum);
+            else
+                mGuessGB->SetPossibles(row, col, inNum);
             m_panelGuess->CopyBoard(*mGuessGB);
         }
     }

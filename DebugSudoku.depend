@@ -4276,7 +4276,7 @@
 1369265012 c:\users\tim\documents\github\sudoku\debugsudoku\gameboardstep.h
 	"..\Solving and Generating\GameBoard.h"
 
-1369528051 source:c:\users\tim\documents\github\sudoku\debugsudoku\gamepanel.cpp
+1369675072 source:c:\users\tim\documents\github\sudoku\debugsudoku\gamepanel.cpp
 	"wx_pch.h"
 	"GamePanel.h"
 
@@ -4286,11 +4286,11 @@
 1369518229 source:c:\users\tim\documents\github\sudoku\debugsudoku\guiframe.cpp
 	"GUIFrame.h"
 
-1369519519 source:c:\users\tim\documents\github\sudoku\debugsudoku\buttons.cpp
+1369675713 source:c:\users\tim\documents\github\sudoku\debugsudoku\buttons.cpp
 	"wx_pch.h"
 	"DebugSudokuMain.h"
 
-1369522133 source:c:\users\tim\documents\github\sudoku\debugsudoku\menus.cpp
+1369675321 source:c:\users\tim\documents\github\sudoku\debugsudoku\menus.cpp
 	"wx_pch.h"
 	"DebugSudokuMain.h"
 
@@ -4299,7 +4299,7 @@
 	"DebugSudokuMain.h"
 	"wx/dcbuffer.h"
 
-1369666174 source:c:\users\tim\documents\github\sudoku\debugsudoku\keyboardinput.cpp
+1369675713 source:c:\users\tim\documents\github\sudoku\debugsudoku\keyboardinput.cpp
 	"wx_pch.h"
 	"DebugSudokuMain.h"
 

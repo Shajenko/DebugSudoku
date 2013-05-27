@@ -45,14 +45,17 @@ void GamePanel::DrawBoardBackground(wxBufferedDC &dc)
     unsigned int smallSide;
     unsigned int i,j;
 
-    wxColour LGray, White;
-    wxBrush LGrayBr, WhiteBr;
+    wxColour LGray, White, Blue;
+    wxBrush LGrayBr, WhiteBr, BlueBr;
 
     LGray.Set(210,210,210);
     LGrayBr.SetColour(LGray);
 
     White.Set(255,255,255);
     WhiteBr.SetColour(White);
+
+    Blue.Set(0,150,255);
+    BlueBr.SetColour(Blue);
 
     wxSize sz = this->GetClientSize();
 
@@ -78,7 +81,7 @@ void GamePanel::DrawBoardBackground(wxBufferedDC &dc)
         for(j=0;j<9;j++)
         {
             if(i == col && j == row)
-                dc.SetBrush(*wxBLUE_BRUSH);
+                dc.SetBrush(BlueBr);
             else
                 dc.SetBrush(LGrayBr);
             dc.DrawRectangle( 0 + spSq*i, 0 + spSq*j, spSq - 5, spSq - 5 );
@@ -145,10 +148,10 @@ void GamePanel::DrawBoardNumbers(wxBufferedDC &dc)
                 pVal = bd->GetVal(i, j);
                 if(bd->GetShown(i, j))
                     dc.SetTextForeground(blackC);
-/*                else if(mGuessGB->GetVal(i, j) == mMainGB->GetVal(i, j))
+                else if(bd->GetVal(i, j) == trueBd.GetVal(i, j))
                     dc.SetTextForeground(greenC);
                 else
-                    dc.SetTextForeground(redC);*/
+                    dc.SetTextForeground(redC);
 
 
                 pString.clear();
@@ -157,6 +160,8 @@ void GamePanel::DrawBoardNumbers(wxBufferedDC &dc)
             }
             else // Draw all possibles
             {
+                dc.SetTextForeground(blackC);
+
                 dString.clear();
                 dString << _("Possibles for i = ") << i << _(" j = ") << j << _(" ");
                 for(k=1;k<=9;k++)

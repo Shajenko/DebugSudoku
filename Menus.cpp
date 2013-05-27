@@ -140,7 +140,10 @@ void DebugSudokuFrame::OnRemovePossibles( wxCommandEvent& event )
 
 void DebugSudokuFrame::OnResetPossibles( wxCommandEvent& event)
 {
-
+    for(int i=0;i<9;i++)
+        for(int j=0;j<9;j++)
+            mGuessGB->ResetPossibles(i,j);
+    m_panelGuess->CopyBoard(*mGuessGB);
 	Refresh();
 }
 

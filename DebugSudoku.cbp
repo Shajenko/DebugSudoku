@@ -74,7 +74,6 @@
 		<Unit filename="../Solving and Generating/SudokuAlgorithms.cpp" />
 		<Unit filename="../Solving and Generating/SudokuAlgorithms.h" />
 		<Unit filename="Buttons.cpp" />
-		<Unit filename="DSudoku.cpp" />
 		<Unit filename="DSudoku.h" />
 		<Unit filename="DebugSudoku.depend" />
 		<Unit filename="DebugSudoku.layout" />
@@ -86,7 +85,6 @@
 		<Unit filename="GUIFrame.cpp" />
 		<Unit filename="GUIFrame.h" />
 		<Unit filename="GameBoard.log" />
-		<Unit filename="GameBoardStep.cpp" />
 		<Unit filename="GameBoardStep.h" />
 		<Unit filename="GamePanel.cpp" />
 		<Unit filename="GamePanel.h" />
