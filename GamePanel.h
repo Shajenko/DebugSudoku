@@ -20,8 +20,11 @@ class GamePanel: public wxPanel
         void DrawBoardBackground(wxBufferedDC &dc);
         void DrawBoardNumbers(wxBufferedDC &dc);
         void CopyBoard(GameBoard &gb);
+        void CopyToTrue();
         void WriteBoard(GameBoard &gb);
         void SetGuess(bool gsbd) {guess = gsbd;}
+        void SetRow(unsigned int r) {row = r;}
+        void SetCol(unsigned int c) {col = c;}
 
 		//(*Declarations(GamePanel)
 		//*)

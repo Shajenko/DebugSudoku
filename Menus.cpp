@@ -87,7 +87,10 @@ void DebugSudokuFrame::OnNewPuzzle( wxCommandEvent& event )
 
     writetoLog( timestr, _("DebugSudoku.log"));
 
+    m_panelGuess->CopyBoard(*mTrueGB);
+    m_panelGuess->CopyToTrue();
     m_panelGuess->CopyBoard(*mGuessGB);
+    m_panelGuess->SetGuess(true);
     writetoLog(_("Copied board to Guess Panel"), _("DebugSudoku.log"));
 
     Refresh();
@@ -111,6 +114,7 @@ void DebugSudokuFrame::OnNewBase( wxCommandEvent& event )
     writetoLog(_("Generated board"), _("DebugSudoku.log"));
 
     m_panelTrue->CopyBoard(*mTrueGB);
+    m_panelTrue->SetGuess(false);
     Refresh();
 
     finish.SetToCurrent();

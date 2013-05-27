@@ -72,8 +72,7 @@ void GamePanel::DrawBoardBackground(wxBufferedDC &dc)
         // Set the Brush and Pen to red
     dc.SetBrush( LGrayBr );
     dc.SetPen(*wxBLACK_PEN );
-    // Draw rectangle 40 pixels wide and 40 high
-    // with upper left corner at 10 , 10.
+
 
     for(i=0;i<9;i++)
         for(j=0;j<9;j++)
@@ -212,6 +211,11 @@ void GamePanel::DrawBoardNumbers(wxBufferedDC &dc)
 void GamePanel::CopyBoard(GameBoard &gb)
 {
     bd->Copy(gb);
+}
+
+void GamePanel::CopyToTrue()
+{
+    trueBd.Copy(*bd);
 }
 
 void GamePanel::WriteBoard(GameBoard &gb)
