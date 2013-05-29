@@ -33,9 +33,6 @@ void DebugSudokuFrame::OnNumButtonClick( wxCommandEvent& event )
             mGuessGB->SetVal(row, col, inNum);
             // todo - remove possibles from other squares
         }
-
-
-
     }
     else if (ctrlSelect==NOTE)
     {
@@ -75,7 +72,11 @@ void DebugSudokuFrame::OnNoteButtonClick( wxCommandEvent& event )
 
 void DebugSudokuFrame::OnClearButtonClick( wxCommandEvent& event )
 {
+    mGuessGB->ClearPossibles(row, col);
+    mGuessGB->SetSquare(0, row, col);
+    m_panelGuess->CopyBoard(*mGuessGB);
 
+    Refresh();
 }
 
 void DebugSudokuFrame::OnSolve( wxCommandEvent& event )

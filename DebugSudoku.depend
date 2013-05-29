@@ -4161,7 +4161,7 @@
 	<algorithm>
 	<vector>
 
-1369264950 c:\users\tim\documents\github\sudoku\solving and generating\gameboard.h
+1369800421 c:\users\tim\documents\github\sudoku\solving and generating\gameboard.h
 	"GameSquare.h"
 	<set>
 	<wx/file.h>
@@ -4183,10 +4183,10 @@
 	<algorithm>
 	<vector>
 
-1369093194 source:c:\users\tim\documents\github\sudoku\solving and generating\solve.cpp
+1369800525 source:c:\users\tim\documents\github\sudoku\solving and generating\solve.cpp
 	"GameBoard.h"
 
-1368575424 source:c:\users\tim\documents\github\sudoku\solving and generating\sudokualgorithms.cpp
+1369800421 source:c:\users\tim\documents\github\sudoku\solving and generating\sudokualgorithms.cpp
 	"GameBoard.h"
 	<cstdlib>
 	<ctime>
@@ -4276,7 +4276,7 @@
 1369265012 c:\users\tim\documents\github\sudoku\debugsudoku\gameboardstep.h
 	"..\Solving and Generating\GameBoard.h"
 
-1369675072 source:c:\users\tim\documents\github\sudoku\debugsudoku\gamepanel.cpp
+1369676017 source:c:\users\tim\documents\github\sudoku\debugsudoku\gamepanel.cpp
 	"wx_pch.h"
 	"GamePanel.h"
 
