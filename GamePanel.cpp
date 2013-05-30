@@ -24,6 +24,8 @@ GamePanel::GamePanel(wxWindow* parent,wxWindowID id,const wxPoint& pos,const wxS
 	bd = new GameBoard;
 	row = 9;
 	col = 9;
+	redSquares.clear();
+	greenSquares.clear();
 }
 
 GamePanel::~GamePanel()
@@ -113,6 +115,7 @@ void GamePanel::DrawBoardNumbers(wxBufferedDC &dc)
     wxString debugString;
     wxString pString, dString;
     wxColour redC, greenC, blackC;
+    std::vector<GameSquare> testColor;
 
     redC.Set(200,0,0);
     greenC.Set(0,200,0);
@@ -205,6 +208,10 @@ void GamePanel::DrawBoardNumbers(wxBufferedDC &dc)
                             default:
                                 break;
                         }
+
+                        // draw red and green squares according to greenSquare and redSquare
+                        testColor = greenSquares;
+                            // draw a rectangle over each possibility in each square in this vector
                     }
                 }
                 //wxMessageBox(dString);
