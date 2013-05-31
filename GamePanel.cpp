@@ -211,10 +211,11 @@ void GamePanel::DrawBoardNumbers(wxBufferedDC &dc)
 
                         // draw red and green squares according to greenSquare and redSquare
                         testColor = greenSquares;
+
+
                             // draw a rectangle over each possibility in each square in this vector
                     }
                 }
-                //wxMessageBox(dString);
             }
         }
     }
