@@ -68,6 +68,8 @@ class DebugSudokuFrame: public GUIFrame
         wxButton * numButtons[9];
 
 		unsigned int row, col;
+
+		bool showChange;
 };
 
 #endif // DEBUGSUDOKUMAIN_H

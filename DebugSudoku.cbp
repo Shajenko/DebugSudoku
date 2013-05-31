@@ -93,7 +93,6 @@
 		<Unit filename="Paint.cpp" />
 		<Unit filename="Sudoku Solving Methods.txt" />
 		<Unit filename="WxWizFrame.fbp" />
-		<Unit filename="debugMainFrame.h" />
 		<Unit filename="enums.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />

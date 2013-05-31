@@ -51,7 +51,7 @@ DebugSudokuFrame::DebugSudokuFrame(wxFrame *frame)
 	row = 9;
 	col = 9;
 
-	// Set a square in greenSquares to test
+	showChange = false;
 }
 
 DebugSudokuFrame::~DebugSudokuFrame()

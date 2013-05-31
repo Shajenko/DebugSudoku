@@ -38,6 +38,7 @@ class DebugSudokuMainFrame : public MainFrame
         Controls ctrlSelect;
         GameBoard * mGuessGB;
         GameBoard * mTrueGB;
+        bool showChange;
 	//// end generated class members
 
 };

@@ -90,10 +90,30 @@ void DebugSudokuFrame::OnSolve( wxCommandEvent& event )
 void DebugSudokuFrame::OnNakedSingle( wxCommandEvent& event )
 {
 	unsigned int i,j, val;
-	bool found=false;
 	wxString dString;
+	std::vector<GameSquare> vec;
+	std::vector<GameSquare>::iterator it;
+	GameSquare sq, *tempsq;
 
 	dString.clear();
+
+	if(showChange)  // already found the next square, implement it
+	{
+		vec = m_panelGuess->GetGreenSquares();
+		it = vec.begin();
+		sq.Copy(*it);
+		i = sq.GetRow();
+		j = sq.GetCol();
+		val = sq.GetVal();
+		mGuessGB->SetVal(i,j,val);
+		m_panelGuess->CopyBoard(*mGuessGB);
+		Refresh();
+		m_panelGuess->ClearGreenSquares();
+		showChange = false;
+		return;
+
+	}
+
 
 	for(i=0;i<9;i++)
 		for(j=0;j<9;j++)
@@ -101,14 +121,17 @@ void DebugSudokuFrame::OnNakedSingle( wxCommandEvent& event )
 			val = mGuessGB->GetVal(i,j);
 			if( val == 0)
 			{
-				found = mGuessGB->NakedSingle(i,j);
-				if(found)
+				tempsq = mGuessGB->NakedSingle(i,j);
+				sq.Copy(*tempsq);
+				if(sq.GetVal() != 0)
 				{
+					m_panelGuess->PushGreenSquares(sq);
 					dString.clear();
 					dString << _("Found at row ") << i << _(" col ") << j;
 					writetoLog(dString, _("DebugSudoku.log"));
 					m_panelGuess->CopyBoard(*mGuessGB);
 					Refresh();
+					showChange = true;
 					return;
 				}
 				else
@@ -124,10 +147,30 @@ void DebugSudokuFrame::OnNakedSingle( wxCommandEvent& event )
 void DebugSudokuFrame::OnHiddenSingle( wxCommandEvent& event )
 {
 	unsigned int i,j, val;
-	bool found=false;
 	wxString dString;
 
+	std::vector<GameSquare> vec;
+	std::vector<GameSquare>::iterator it;
+	GameSquare sq, *tempsq;
+
 	dString.clear();
+
+	if(showChange)  // already found the next square, implement it
+	{
+		vec = m_panelGuess->GetGreenSquares();
+		it = vec.begin();
+		sq.Copy(*it);
+		i = sq.GetRow();
+		j = sq.GetCol();
+		val = sq.GetVal();
+		mGuessGB->SetVal(i,j,val);
+		m_panelGuess->CopyBoard(*mGuessGB);
+		Refresh();
+		m_panelGuess->ClearGreenSquares();
+		showChange = false;
+		return;
+
+	}
 
 	for(i=0;i<9;i++)
 		for(j=0;j<9;j++)
@@ -135,14 +178,17 @@ void DebugSudokuFrame::OnHiddenSingle( wxCommandEvent& event )
 			val = mGuessGB->GetVal(i,j);
 			if( val == 0)
 			{
-				found = mGuessGB->HiddenSingle(i,j);
-				if(found)
+				tempsq = mGuessGB->HiddenSingle(i,j);
+				sq.Copy(*tempsq);
+				if(sq.GetVal() != 0)
 				{
+					m_panelGuess->PushGreenSquares(sq);
 					dString.clear();
 					dString << _("Found at row ") << i << _(" col ") << j;
 					writetoLog(dString, _("DebugSudoku.log"));
 					m_panelGuess->CopyBoard(*mGuessGB);
 					Refresh();
+					showChange = true;
 					return;
 				}
 				else

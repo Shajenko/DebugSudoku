@@ -116,6 +116,20 @@ void GamePanel::DrawBoardNumbers(wxBufferedDC &dc)
     wxString pString, dString;
     wxColour redC, greenC, blackC;
     std::vector<GameSquare> testColor;
+    std::vector<GameSquare>::iterator it;
+    GameSquare sq;
+
+	wxColour Green, Red;
+    wxBrush GreenBr, RedBr;
+    wxPen GreenPn, RedPn;
+
+    Green.Set(0,200,0);
+    GreenBr.SetColour(Green);
+    GreenPn.SetColour(Green);
+
+    Red.Set(200,0,0);
+    RedBr.SetColour(Red);
+    RedPn.SetColour(Red);
 
     redC.Set(200,0,0);
     greenC.Set(0,200,0);
@@ -129,6 +143,99 @@ void GamePanel::DrawBoardNumbers(wxBufferedDC &dc)
 
     spSq = smallSide / 9;
     smallSide -= 10;
+
+	// draw red and green squares according to greenSquare and redSquare
+	testColor = greenSquares;
+
+	for(it = testColor.begin(); it != testColor.end(); ++it)
+	{
+		// draw a rectangle over each possibility in each square in this vector
+		sq.Copy(*it);
+		i = sq.GetRow();
+		j = sq.GetCol();
+		k = sq.GetVal();
+		dc.SetBrush( GreenBr );
+		dc.SetPen(GreenPn);
+		switch (k) // Draw rectanbles over each possible in the correct position
+		{
+			case 1:
+				dc.DrawRectangle(spSq*j + spSq/12 -1, spSq*i + spSq/12 -1, spSq/6, spSq/3-2);
+				break;
+			case 2:
+				dc.DrawRectangle(spSq*j + spSq*5/12 -1, spSq*i + spSq/12-1, spSq/6, spSq/3-2);
+				break;
+			case 3:
+				dc.DrawRectangle( spSq*j + spSq*9/12-2, spSq*i + spSq/12-1, spSq/6, spSq/3-2);
+				break;
+			case 4:
+				dc.DrawRectangle( spSq*j + spSq/12-1, spSq*i + spSq*9/24-1, spSq/6, spSq/3-2);
+				break;
+			case 5:
+				dc.DrawRectangle( spSq*j + spSq*5/12-1, spSq*i + spSq*9/24-1, spSq/6, spSq/3-2);
+				break;
+			case 6:
+				dc.DrawRectangle( spSq*j + spSq*9/12-2, spSq*i + spSq*9/24-1, spSq/6, spSq/3-2);
+				break;
+			case 7:
+				dc.DrawRectangle( spSq*j + spSq*1/12-1, spSq*i + spSq*8/12-1, spSq/6, spSq/4-1);
+				break;
+			case 8:
+				dc.DrawRectangle( spSq*j + spSq*5/12-1, spSq*i + spSq*8/12-1, spSq/6, spSq/4-1);
+				break;
+			case 9:
+				dc.DrawRectangle( spSq*j + spSq*9/12-2, spSq*i + spSq*8/12-1, spSq/6, spSq/4-1);
+				break;
+			default:
+				break;
+		}
+
+	}
+
+	testColor = redSquares;
+
+	for(it = testColor.begin(); it != testColor.end(); ++it)
+	{
+		// draw a rectangle over each possibility in each square in this vector
+		sq.Copy(*it);
+		i = sq.GetRow();
+		j = sq.GetCol();
+		k = sq.GetVal();
+		dc.SetBrush( RedBr );
+		dc.SetPen(RedPn);
+		switch (k) // Draw rectanbles over each possible in the correct position
+		{
+			case 1:
+				dc.DrawRectangle(spSq*j + spSq/12 -1, spSq*i + spSq/12 -1, spSq/6, spSq/3-2);
+				break;
+			case 2:
+				dc.DrawRectangle(spSq*j + spSq*5/12 -1, spSq*i + spSq/12-1, spSq/6, spSq/3-2);
+				break;
+			case 3:
+				dc.DrawRectangle( spSq*j + spSq*9/12-2, spSq*i + spSq/12-1, spSq/6, spSq/3-2);
+				break;
+			case 4:
+				dc.DrawRectangle( spSq*j + spSq/12-1, spSq*i + spSq*9/24-1, spSq/6, spSq/3-2);
+				break;
+			case 5:
+				dc.DrawRectangle( spSq*j + spSq*5/12-1, spSq*i + spSq*9/24-1, spSq/6, spSq/3-2);
+				break;
+			case 6:
+				dc.DrawRectangle( spSq*j + spSq*9/12-2, spSq*i + spSq*9/24-1, spSq/6, spSq/3-2);
+				break;
+			case 7:
+				dc.DrawRectangle( spSq*j + spSq*1/12-1, spSq*i + spSq*8/12-1, spSq/6, spSq/4-1);
+				break;
+			case 8:
+				dc.DrawRectangle( spSq*j + spSq*5/12-1, spSq*i + spSq*8/12-1, spSq/6, spSq/4-1);
+				break;
+			case 9:
+				dc.DrawRectangle( spSq*j + spSq*9/12-2, spSq*i + spSq*8/12-1, spSq/6, spSq/4-1);
+				break;
+			default:
+				break;
+		}
+
+	}
 
         // Create a 16 point, serif font, that is not bold,
     //   not italic, and not underlined.
@@ -208,12 +315,6 @@ void GamePanel::DrawBoardNumbers(wxBufferedDC &dc)
                             default:
                                 break;
                         }
-
-                        // draw red and green squares according to greenSquare and redSquare
-                        testColor = greenSquares;
-
-
-                            // draw a rectangle over each possibility in each square in this vector
                     }
                 }
             }
