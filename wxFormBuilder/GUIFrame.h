@@ -68,6 +68,8 @@ class GUIFrame : public wxFrame
 		virtual void OnSetFocus( wxFocusEvent& event ) { event.Skip(); }
 		virtual void OnNewPuzzle( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnNewBase( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnSavePuzzle( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnLoadPuzzle( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnQuit( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnAbout( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnScrambleBoards( wxCommandEvent& event ) { event.Skip(); }

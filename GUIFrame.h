@@ -10,6 +10,7 @@
 
 #include <wx/artprov.h>
 #include <wx/xrc/xmlres.h>
+#include "GamePanel.h"
 
 #include <wx/string.h>
 #include <wx/bitmap.h>
@@ -24,8 +25,6 @@
 #include <wx/button.h>
 #include <wx/sizer.h>
 #include <wx/frame.h>
-
-#include "GamePanel.h"
 
 ///////////////////////////////////////////////////////////////////////////
 
@@ -69,6 +68,8 @@ class GUIFrame : public wxFrame
 		virtual void OnSetFocus( wxFocusEvent& event ) { event.Skip(); }
 		virtual void OnNewPuzzle( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnNewBase( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnSavePuzzle( wxCommandEvent& event ) { event.Skip(); }
+		virtual void OnLoadPuzzle( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnQuit( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnAbout( wxCommandEvent& event ) { event.Skip(); }
 		virtual void OnScrambleBoards( wxCommandEvent& event ) { event.Skip(); }

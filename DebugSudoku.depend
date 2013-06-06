@@ -4217,7 +4217,7 @@
 	<wx/frame.h>
 	"GamePanel.h"
 
-1369875739 c:\users\tim\documents\github\sudoku\debugsudoku\gamepanel.h
+1370024060 c:\users\tim\documents\github\sudoku\debugsudoku\gamepanel.h
 	"..\Solving and Generating\GameBoard.h"
 	"wx/dcbuffer.h"
 	<vector>
@@ -4236,7 +4236,7 @@
 1369264038 c:\users\tim\documents\github\sudoku\debugsudoku\debugsudokuapp.h
 	<wx/app.h>
 
-1369520481 c:\users\tim\documents\github\sudoku\debugsudoku\debugsudokumain.h
+1370480433 c:\users\tim\documents\github\sudoku\debugsudoku\debugsudokumain.h
 	"DebugSudokuApp.h"
 	"..\Solving and Generating\GameBoard.h"
 	<wx/file.h>
@@ -4245,9 +4245,10 @@
 	<fstream>
 	"GUIFrame.h"
 
-1369518229 c:\users\tim\documents\github\sudoku\debugsudoku\guiframe.h
+1370480313 c:\users\tim\documents\github\sudoku\debugsudoku\guiframe.h
 	<wx/artprov.h>
 	<wx/xrc/xmlres.h>
+	"GamePanel.h"
 	<wx/string.h>
 	<wx/bitmap.h>
 	<wx/image.h>
@@ -4261,9 +4262,8 @@
 	<wx/button.h>
 	<wx/sizer.h>
 	<wx/frame.h>
-	"GamePanel.h"
 
-1369522513 source:c:\users\tim\documents\github\sudoku\debugsudoku\debugsudokumain.cpp
+1370479826 source:c:\users\tim\documents\github\sudoku\debugsudoku\debugsudokumain.cpp
 	"wx_pch.h"
 	"DebugSudokuMain.h"
 
@@ -4277,17 +4277,17 @@
 1369265012 c:\users\tim\documents\github\sudoku\debugsudoku\gameboardstep.h
 	"..\Solving and Generating\GameBoard.h"
 
-1369875630 source:c:\users\tim\documents\github\sudoku\debugsudoku\gamepanel.cpp
+1370028398 source:c:\users\tim\documents\github\sudoku\debugsudoku\gamepanel.cpp
 	"wx_pch.h"
 	"GamePanel.h"
 
 1369264039 source:c:\users\tim\documents\github\sudoku\debugsudoku\resource.rc
 	"wx/msw/wx.rc"
 
-1369518229 source:c:\users\tim\documents\github\sudoku\debugsudoku\guiframe.cpp
+1370480313 source:c:\users\tim\documents\github\sudoku\debugsudoku\guiframe.cpp
 	"GUIFrame.h"
 
-1369801119 source:c:\users\tim\documents\github\sudoku\debugsudoku\buttons.cpp
+1370030212 source:c:\users\tim\documents\github\sudoku\debugsudoku\buttons.cpp
 	"wx_pch.h"
 	"DebugSudokuMain.h"
 

@@ -58,3 +58,28 @@ DebugSudokuFrame::~DebugSudokuFrame()
 {
 }
 
+void DebugSudokuFrame::OnSavePuzzle(wxCommandEvent& event)
+{
+    wxString text;
+	wxFile save_file(_("savefile.gb"), wxFile::write );
+	if(!save_file.IsOpened())
+		save_file.Create(_("savefile.gb"));
+
+    text.clear();
+
+    // Write the board to the file, one square at a time
+    for(int i = 0; i < 9; i++)
+        for(int j=0; j < 9; j++)
+        {
+            text << mTrueGB->GetVal(i, j) << _(",") << mGuessGB->GetShown(i, j) << _(";");
+        }
+    text << _("\n");
+    save_file.Write(text);
+    save_file.Close();
+
+}
+
+void DebugSudokuFrame::OnLoadPuzzle(wxCommandEvent& event)
+{
+
+}

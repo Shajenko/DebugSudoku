@@ -32,6 +32,8 @@ class DebugSudokuFrame: public GUIFrame
         ~DebugSudokuFrame();
         void SetRow(unsigned int val) { row = val;}
         void SetCol(unsigned int val) { col = val;}
+        void SaveBoard();
+        void LoadBoard();
     private:
         virtual void OnClose(wxCloseEvent& event);
         virtual void OnQuit(wxCommandEvent& event);
@@ -39,6 +41,9 @@ class DebugSudokuFrame: public GUIFrame
         virtual void OnPaint(wxPaintEvent& event);
         virtual void OnNewPuzzle( wxCommandEvent& event );
 		virtual void OnNewBase( wxCommandEvent& event );
+        virtual void OnSavePuzzle( wxCommandEvent& event );
+		virtual void OnLoadPuzzle( wxCommandEvent& event );
+
 		virtual void OnRemoveLayer( wxCommandEvent& event );
 		virtual void OnResetPossibles( wxCommandEvent& event );
 		virtual void OnRemovePossibles( wxCommandEvent& event );
