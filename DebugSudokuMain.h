@@ -16,6 +16,7 @@
 #include "..\Solving and Generating\GameBoard.h"
 #include <wx/file.h>
 #include <wx/datetime.h>
+#include <wx/tokenzr.h>
 #include <iostream>
 #include <fstream>
 

@@ -81,5 +81,52 @@ void DebugSudokuFrame::OnSavePuzzle(wxCommandEvent& event)
 
 void DebugSudokuFrame::OnLoadPuzzle(wxCommandEvent& event)
 {
+    wxString text, tok;
+    wxStringTokenizer txtTok;
+    unsigned int val, shown;
+	wxFile save_file(_("savefile.gb"), wxFile::read );
+	if(!save_file.IsOpened())
+	{
+		wxMessageBox(_("Error opening savefile.gb"));
+		return;
+	}
+	text.clear();
 
+	mTrueGB->Binit();
+	mGuessGB->Binit();
+
+	save_file.Read(&text, save_file.Length());
+    save_file.Close();
+
+    txtTok.SetString(text, _(",;"));
+
+    // Write the board from the file, one square at a time
+    for(int i = 0; i < 9; i++)
+        for(int j=0; j < 9; j++)
+        {
+        	tok = txtTok.GetNextToken();
+        	val = wxAtoi(tok);
+        	if(val > 9 || val < 0)
+        	{
+        		wxMessageBox(_("Error writing to val"));
+        		save_file.Close();
+        		return;
+        	}
+
+        	tok = txtTok.GetNextToken();
+			shown = wxAtoi(tok);
+        	if(shown != 0 || shown != 1)
+        	{
+        		wxMessageBox(_("Error writing to shown"));
+        		save_file.Close();
+        		return;
+        	}
+
+            mTrueGB->SetVal(i, j, val);
+            if(shown == 1)
+			{
+				mGuessGB->SetVal(i, j, val);
+				mGuessGB->SetShown(i, j, true);
+			}
+        }
 }
