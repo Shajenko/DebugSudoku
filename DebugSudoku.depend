@@ -4236,13 +4236,17 @@
 1369264038 c:\users\tim\documents\github\sudoku\debugsudoku\debugsudokuapp.h
 	<wx/app.h>
 
-1370480433 c:\users\tim\documents\github\sudoku\debugsudoku\debugsudokumain.h
+1370562446 c:\users\tim\documents\github\sudoku\debugsudoku\debugsudokumain.h
 	"DebugSudokuApp.h"
 	"..\Solving and Generating\GameBoard.h"
 	<wx/file.h>
 	<wx/datetime.h>
+	<wx/tokenzr.h>
+	<wx/textfile.h>
 	<iostream>
 	<fstream>
+	<cstdlib>
+	<ctime>
 	"GUIFrame.h"
 
 1370480313 c:\users\tim\documents\github\sudoku\debugsudoku\guiframe.h
@@ -4263,7 +4267,7 @@
 	<wx/sizer.h>
 	<wx/frame.h>
 
-1370479826 source:c:\users\tim\documents\github\sudoku\debugsudoku\debugsudokumain.cpp
+1370563060 source:c:\users\tim\documents\github\sudoku\debugsudoku\debugsudokumain.cpp
 	"wx_pch.h"
 	"DebugSudokuMain.h"
 
@@ -4277,7 +4281,7 @@
 1369265012 c:\users\tim\documents\github\sudoku\debugsudoku\gameboardstep.h
 	"..\Solving and Generating\GameBoard.h"
 
-1370028398 source:c:\users\tim\documents\github\sudoku\debugsudoku\gamepanel.cpp
+1370560807 source:c:\users\tim\documents\github\sudoku\debugsudoku\gamepanel.cpp
 	"wx_pch.h"
 	"GamePanel.h"
 
@@ -4291,7 +4295,7 @@
 	"wx_pch.h"
 	"DebugSudokuMain.h"
 
-1369675321 source:c:\users\tim\documents\github\sudoku\debugsudoku\menus.cpp
+1370560940 source:c:\users\tim\documents\github\sudoku\debugsudoku\menus.cpp
 	"wx_pch.h"
 	"DebugSudokuMain.h"
 
@@ -4428,4 +4432,16 @@
 	"wx/object.h"
 	"wx/string.h"
 	"wx/arrstr.h"
+
+1186436492 c:\wxwidgets-2.8.12\include\wx\textfile.h
+	"wx/defs.h"
+	"wx/textbuf.h"
+	"wx/file.h"
+
+1211205096 c:\wxwidgets-2.8.12\include\wx\textbuf.h
+	"wx/defs.h"
+	"wx/arrstr.h"
+	"wx/convauto.h"
+	"wx/string.h"
+	"wx/dynarray.h"
 

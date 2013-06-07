@@ -24,6 +24,7 @@ DebugSudokuFrame::DebugSudokuFrame(wxFrame *frame)
 	wxDateTime datetime;
 	wxString dateStr;
 
+
 	datetime.SetToCurrent();
 	dateStr << _("Sudokusolver Debugger opened ");
 	dateStr << datetime.Format();
@@ -52,6 +53,8 @@ DebugSudokuFrame::DebugSudokuFrame(wxFrame *frame)
 	col = 9;
 
 	showChange = false;
+
+	srand(time(NULL));
 }
 
 DebugSudokuFrame::~DebugSudokuFrame()
@@ -61,7 +64,7 @@ DebugSudokuFrame::~DebugSudokuFrame()
 void DebugSudokuFrame::OnSavePuzzle(wxCommandEvent& event)
 {
     wxString text;
-	wxFile save_file(_("savefile.gb"), wxFile::write );
+	wxFile save_file(_("savefile.gb"), wxFile::write_append );
 	if(!save_file.IsOpened())
 		save_file.Create(_("savefile.gb"));
 
@@ -83,8 +86,9 @@ void DebugSudokuFrame::OnLoadPuzzle(wxCommandEvent& event)
 {
     wxString text, tok;
     wxStringTokenizer txtTok;
-    unsigned int val, shown;
-	wxFile save_file(_("savefile.gb"), wxFile::read );
+    unsigned int val, shown, linePick, i, j;
+	wxTextFile save_file;
+	save_file.Open(_("savefile.gb"));
 	if(!save_file.IsOpened())
 	{
 		wxMessageBox(_("Error opening savefile.gb"));
@@ -92,17 +96,21 @@ void DebugSudokuFrame::OnLoadPuzzle(wxCommandEvent& event)
 	}
 	text.clear();
 
+	linePick = rand() % save_file.GetLineCount();
+
 	mTrueGB->Binit();
 	mGuessGB->Binit();
 
-	save_file.Read(&text, save_file.Length());
+    text = save_file.GetFirstLine();
+	for(i=1;i < linePick; i++)
+        text = save_file.GetNextLine();
     save_file.Close();
 
     txtTok.SetString(text, _(",;"));
 
     // Write the board from the file, one square at a time
-    for(int i = 0; i < 9; i++)
-        for(int j=0; j < 9; j++)
+    for(i = 0; i < 9; i++)
+        for(j=0; j < 9; j++)
         {
         	tok = txtTok.GetNextToken();
         	val = wxAtoi(tok);
@@ -115,7 +123,7 @@ void DebugSudokuFrame::OnLoadPuzzle(wxCommandEvent& event)
 
         	tok = txtTok.GetNextToken();
 			shown = wxAtoi(tok);
-        	if(shown != 0 || shown != 1)
+        	if(shown != 0 && shown != 1)
         	{
         		wxMessageBox(_("Error writing to shown"));
         		save_file.Close();
@@ -123,10 +131,22 @@ void DebugSudokuFrame::OnLoadPuzzle(wxCommandEvent& event)
         	}
 
             mTrueGB->SetVal(i, j, val);
+            mTrueGB->SetShown(i, j, true);
             if(shown == 1)
 			{
 				mGuessGB->SetVal(i, j, val);
 				mGuessGB->SetShown(i, j, true);
 			}
         }
+    m_panelTrue->CopyBoard(*mTrueGB);
+    m_panelTrue->CopyToTrue();
+    m_panelTrue->SetGuess(false);
+    Refresh();
+
+    m_panelGuess->CopyBoard(*mTrueGB);
+    m_panelGuess->CopyToTrue();
+    m_panelGuess->CopyBoard(*mGuessGB);
+    m_panelGuess->SetGuess(true);
+
+    Refresh();
 }

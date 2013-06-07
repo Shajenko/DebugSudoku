@@ -125,7 +125,6 @@ void DebugSudokuFrame::OnNewBase( wxCommandEvent& event )
     writetoLog( timestr, _("DebugSudoku.log"));
     writetoLog(_("Copied board to True Panel"), _("DebugSudoku.log"));
 
-    Refresh();
 
 }
 

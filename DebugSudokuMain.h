@@ -17,8 +17,11 @@
 #include <wx/file.h>
 #include <wx/datetime.h>
 #include <wx/tokenzr.h>
+#include <wx/textfile.h>
 #include <iostream>
 #include <fstream>
+#include <cstdlib>
+#include <ctime>
 
 #include "GUIFrame.h"
 
