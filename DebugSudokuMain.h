@@ -52,6 +52,7 @@ class DebugSudokuFrame: public GUIFrame
 		virtual void OnResetPossibles( wxCommandEvent& event );
 		virtual void OnRemovePossibles( wxCommandEvent& event );
 		virtual void OnResetRowColSec( wxCommandEvent& event );
+		virtual void OnGenPuzzles( wxCommandEvent& event );
 
         virtual void OnNumButtonClick( wxCommandEvent& event );
 		virtual void OnSetButtonClick( wxCommandEvent& event );

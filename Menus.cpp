@@ -124,8 +124,6 @@ void DebugSudokuFrame::OnNewBase( wxCommandEvent& event )
 
     writetoLog( timestr, _("DebugSudoku.log"));
     writetoLog(_("Copied board to True Panel"), _("DebugSudoku.log"));
-
-
 }
 
 
@@ -156,6 +154,15 @@ void DebugSudokuFrame::OnResetRowColSec(wxCommandEvent& event)
 }
 
 
+void DebugSudokuFrame::OnGenPuzzles( wxCommandEvent& event )
+{
+    for(int i=0; i < 1000; i++)
+    {
+        OnNewBase(event);
+        OnNewPuzzle(event);
+        SaveBoard();
+    }
+}
 
 
 void DebugSudokuFrame::OnRemoveLayer( wxCommandEvent& event )

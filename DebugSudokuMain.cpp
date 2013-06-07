@@ -63,6 +63,11 @@ DebugSudokuFrame::~DebugSudokuFrame()
 
 void DebugSudokuFrame::OnSavePuzzle(wxCommandEvent& event)
 {
+    SaveBoard();
+}
+
+void DebugSudokuFrame::SaveBoard()
+{
     wxString text;
 	wxFile save_file(_("savefile.gb"), wxFile::write_append );
 	if(!save_file.IsOpened())
@@ -79,10 +84,15 @@ void DebugSudokuFrame::OnSavePuzzle(wxCommandEvent& event)
     text << _("\n");
     save_file.Write(text);
     save_file.Close();
-
 }
 
 void DebugSudokuFrame::OnLoadPuzzle(wxCommandEvent& event)
+{
+    LoadBoard();
+    Refresh();
+}
+
+void DebugSudokuFrame::LoadBoard()
 {
     wxString text, tok;
     wxStringTokenizer txtTok;
@@ -141,12 +151,9 @@ void DebugSudokuFrame::OnLoadPuzzle(wxCommandEvent& event)
     m_panelTrue->CopyBoard(*mTrueGB);
     m_panelTrue->CopyToTrue();
     m_panelTrue->SetGuess(false);
-    Refresh();
 
     m_panelGuess->CopyBoard(*mTrueGB);
     m_panelGuess->CopyToTrue();
     m_panelGuess->CopyBoard(*mGuessGB);
     m_panelGuess->SetGuess(true);
-
-    Refresh();
 }

@@ -39,13 +39,6 @@ GUIFrame::GUIFrame( wxWindow* parent, wxWindowID id, const wxString& title, cons
 	
 	m_menubar1->Append( m_menuFile, wxT("&File") ); 
 	
-	m_menuAbout = new wxMenu();
-	wxMenuItem* m_menuItemAbout;
-	m_menuItemAbout = new wxMenuItem( m_menuAbout, wxID_ANY, wxString( wxT("About...") ) , wxEmptyString, wxITEM_NORMAL );
-	m_menuAbout->Append( m_menuItemAbout );
-	
-	m_menubar1->Append( m_menuAbout, wxT("&About") ); 
-	
 	m_menuPuzzle = new wxMenu();
 	wxMenuItem* m_menuScramble;
 	m_menuScramble = new wxMenuItem( m_menuPuzzle, wxID_ANY, wxString( wxT("Scramble Puzzle") ) , wxEmptyString, wxITEM_NORMAL );
@@ -67,7 +60,18 @@ GUIFrame::GUIFrame( wxWindow* parent, wxWindowID id, const wxString& title, cons
 	m_menuResetRowColSec = new wxMenuItem( m_menuPuzzle, wxID_ANY, wxString( wxT("Reset Rows, Columns, and Sectors") ) , wxEmptyString, wxITEM_NORMAL );
 	m_menuPuzzle->Append( m_menuResetRowColSec );
 	
+	wxMenuItem* m_menuGenPuzzles;
+	m_menuGenPuzzles = new wxMenuItem( m_menuPuzzle, wxID_ANY, wxString( wxT("Generate Puzzles") ) , wxEmptyString, wxITEM_NORMAL );
+	m_menuPuzzle->Append( m_menuGenPuzzles );
+	
 	m_menubar1->Append( m_menuPuzzle, wxT("Puzzle") ); 
+	
+	m_menuAbout = new wxMenu();
+	wxMenuItem* m_menuItemAbout;
+	m_menuItemAbout = new wxMenuItem( m_menuAbout, wxID_ANY, wxString( wxT("About...") ) , wxEmptyString, wxITEM_NORMAL );
+	m_menuAbout->Append( m_menuItemAbout );
+	
+	m_menubar1->Append( m_menuAbout, wxT("&About") ); 
 	
 	this->SetMenuBar( m_menubar1 );
 	
@@ -188,12 +192,13 @@ GUIFrame::GUIFrame( wxWindow* parent, wxWindowID id, const wxString& title, cons
 	this->Connect( m_menuItemSave->GetId(), wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( GUIFrame::OnSavePuzzle ) );
 	this->Connect( m_menuItemLoad->GetId(), wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( GUIFrame::OnLoadPuzzle ) );
 	this->Connect( m_menuItemQuit->GetId(), wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( GUIFrame::OnQuit ) );
-	this->Connect( m_menuItemAbout->GetId(), wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( GUIFrame::OnAbout ) );
 	this->Connect( m_menuScramble->GetId(), wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( GUIFrame::OnScrambleBoards ) );
 	this->Connect( m_menuRemoveLayer->GetId(), wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( GUIFrame::OnRemoveLayer ) );
 	this->Connect( m_menuResetPossibles->GetId(), wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( GUIFrame::OnResetPossibles ) );
 	this->Connect( m_menuRemovePossibles->GetId(), wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( GUIFrame::OnRemovePossibles ) );
 	this->Connect( m_menuResetRowColSec->GetId(), wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( GUIFrame::OnResetRowColSec ) );
+	this->Connect( m_menuGenPuzzles->GetId(), wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( GUIFrame::OnGenPuzzles ) );
+	this->Connect( m_menuItemAbout->GetId(), wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( GUIFrame::OnAbout ) );
 	m_panelGuess->Connect( wxEVT_CHAR, wxKeyEventHandler( GUIFrame::OnChar ), NULL, this );
 	m_panelGuess->Connect( wxEVT_ERASE_BACKGROUND, wxEraseEventHandler( GUIFrame::OnGuessPanelEraseBG ), NULL, this );
 	m_panelGuess->Connect( wxEVT_KEY_UP, wxKeyEventHandler( GUIFrame::OnGuessPanelKeyUp ), NULL, this );
@@ -228,12 +233,13 @@ GUIFrame::~GUIFrame()
 	this->Disconnect( wxID_ANY, wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( GUIFrame::OnSavePuzzle ) );
 	this->Disconnect( wxID_ANY, wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( GUIFrame::OnLoadPuzzle ) );
 	this->Disconnect( wxID_ANY, wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( GUIFrame::OnQuit ) );
-	this->Disconnect( wxID_ANY, wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( GUIFrame::OnAbout ) );
 	this->Disconnect( wxID_ANY, wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( GUIFrame::OnScrambleBoards ) );
 	this->Disconnect( wxID_ANY, wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( GUIFrame::OnRemoveLayer ) );
 	this->Disconnect( wxID_ANY, wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( GUIFrame::OnResetPossibles ) );
 	this->Disconnect( wxID_ANY, wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( GUIFrame::OnRemovePossibles ) );
 	this->Disconnect( wxID_ANY, wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( GUIFrame::OnResetRowColSec ) );
+	this->Disconnect( wxID_ANY, wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( GUIFrame::OnGenPuzzles ) );
+	this->Disconnect( wxID_ANY, wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( GUIFrame::OnAbout ) );
 	m_panelGuess->Disconnect( wxEVT_CHAR, wxKeyEventHandler( GUIFrame::OnChar ), NULL, this );
 	m_panelGuess->Disconnect( wxEVT_ERASE_BACKGROUND, wxEraseEventHandler( GUIFrame::OnGuessPanelEraseBG ), NULL, this );
 	m_panelGuess->Disconnect( wxEVT_KEY_UP, wxKeyEventHandler( GUIFrame::OnGuessPanelKeyUp ), NULL, this );
@@ -258,4 +264,29 @@ GUIFrame::~GUIFrame()
 	m_buttonNakedSingle->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( GUIFrame::OnNakedSingle ), NULL, this );
 	m_buttonHiddenSingle->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( GUIFrame::OnHiddenSingle ), NULL, this );
 	
+}
+
+GenPuzzleDialog::GenPuzzleDialog( wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos, const wxSize& size, long style ) : wxDialog( parent, id, title, pos, size, style )
+{
+	this->SetSizeHints( wxDefaultSize, wxDefaultSize );
+	
+	wxGridSizer* gSizer2;
+	gSizer2 = new wxGridSizer( 0, 2, 0, 0 );
+	
+	m_staticText1 = new wxStaticText( this, wxID_ANY, wxT("How many puzzles would you like to generate and save?"), wxDefaultPosition, wxDefaultSize, 0 );
+	m_staticText1->Wrap( -1 );
+	gSizer2->Add( m_staticText1, 0, wxALL, 5 );
+	
+	m_textCtrlGenPuzzles = new wxTextCtrl( this, wxID_ANY, wxT("1"), wxDefaultPosition, wxDefaultSize, 0 );
+	gSizer2->Add( m_textCtrlGenPuzzles, 0, wxALL, 5 );
+	
+	
+	this->SetSizer( gSizer2 );
+	this->Layout();
+	
+	this->Centre( wxBOTH );
+}
+
+GenPuzzleDialog::~GenPuzzleDialog()
+{
 }
