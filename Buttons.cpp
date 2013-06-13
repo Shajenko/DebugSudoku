@@ -200,3 +200,100 @@ void DebugSudokuFrame::OnHiddenSingle( wxCommandEvent& event )
 			}
 		}
 }
+
+void DebugSudokuFrame::OnNakedDouble( wxCommandEvent& event )
+{
+	unsigned int i,j, val;
+	wxString dString;
+
+	std::vector<GameSquare> * vec;
+	std::vector<GameSquare> vec2;
+	std::vector<GameSquare>::iterator it;
+	GameSquare * sq;
+
+	dString.clear();
+
+	sq = new GameSquare;
+
+	if(showChange)  // already found the next square, implement it
+	{
+		// todo - implement
+
+		vec2 = m_panelGuess->GetRedSquares();
+		sq->Copy(vec2.back());
+
+		i = sq->GetRow();
+		j = sq->GetCol();
+		val = sq->GetVal();
+
+		mGuessGB->RemovePossibles(i, j, val);
+
+		// Remove the value from the red squares, clear red and green square lists
+		m_panelGuess->ClearGreenSquares();
+		m_panelGuess->ClearRedSquares();
+		showChange = false;
+		Refresh();
+
+		delete sq;
+		return;
+	}
+
+	// Find the showChange and let it be shown on the board
+
+	for(i=0;i<9;i++)
+		for(j=0;j<9;j++)
+		{
+			val = mGuessGB->GetVal(i,j);
+			if( val == 0)
+			{
+				vec = mGuessGB->NakedPair(i,j);
+				if(vec->size() > 0)
+				{
+					dString.clear();
+					dString << _("Pushing to colored rectangles from button \n");
+
+					m_panelGuess->ClearGreenSquares();
+					m_panelGuess->ClearRedSquares();
+					for(it = vec->begin(); it != vec->end(); ++it)
+					{
+						sq->Copy(*it);
+						if(it + 1 == vec->end())
+						{
+							m_panelGuess->PushRedSquares(*sq);
+							dString << _("Pushing red ") << _("Row ") << sq->GetRow() << _(" col ") << sq->GetCol() << _(" val ") << sq->GetVal() << _("\n");
+						}
+						else
+						{
+							m_panelGuess->PushGreenSquares(*sq);
+							dString << _("Pushing green ") << _("Row ") << sq->GetRow() << _(" col ") << sq->GetCol() << _(" val ") << sq->GetVal() << _("\n");
+						}
+					}
+
+					writetoLog(dString, _("ColoredRect.log"));
+
+					dString.clear();
+					dString << _("Naked Pair found at row ") << i << _(" col ") << j;
+					writetoLog(dString, _("DebugSudoku.log"));
+					m_panelGuess->CopyBoard(*mGuessGB);
+					Refresh();
+					showChange = true;
+					delete sq;
+					return;
+				}
+				else
+				{
+
+				}
+			}
+		}
+	dString.clear();
+	dString << _("No Naked Pair found");
+	writetoLog(dString, _("DebugSudoku.log"));
+
+	delete sq;
+}
+
+void DebugSudokuFrame::OnHiddenDouble( wxCommandEvent& event )
+{
+
+}

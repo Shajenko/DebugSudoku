@@ -146,9 +146,16 @@ void GamePanel::DrawBoardNumbers(wxBufferedDC &dc)
 
     if(guess)
     {
+		debugString.clear();
+		debugString << _("Pushing from drawing algorithm \n");
+		writetoLog(debugString, _("ColoredRect.log"));
+
         // draw red and green squares according to greenSquare and redSquare
         testColor = greenSquares;
 
+
+		debugString.clear();
+		debugString << _("Green squares \n");
         for(it = testColor.begin(); it != testColor.end(); ++it)
         {
             // draw a rectangle over each possibility in each square in this vector
@@ -158,6 +165,7 @@ void GamePanel::DrawBoardNumbers(wxBufferedDC &dc)
             k = sq.GetVal();
             dc.SetBrush( GreenBr );
             dc.SetPen(GreenPn);
+            debugString << _("Row ") << i << _(" col ") << j << _(" val ") << k << _("\n");
             switch (k) // Draw rectanbles over each possible in the correct position
             {
                 case 1:
@@ -193,8 +201,12 @@ void GamePanel::DrawBoardNumbers(wxBufferedDC &dc)
 
         }
 
+        writetoLog(debugString, _("ColoredRect.log"));
+
         testColor = redSquares;
 
+		debugString.clear();
+		debugString << _("Red squares \n");
         for(it = testColor.begin(); it != testColor.end(); ++it)
         {
             // draw a rectangle over each possibility in each square in this vector
@@ -204,6 +216,7 @@ void GamePanel::DrawBoardNumbers(wxBufferedDC &dc)
             k = sq.GetVal();
             dc.SetBrush( RedBr );
             dc.SetPen(RedPn);
+            debugString << _("Row ") << i << _(" col ") << j << _(" val ") << k << _("\n");
             switch (k) // Draw rectanbles over each possible in the correct position
             {
                 case 1:
@@ -237,6 +250,8 @@ void GamePanel::DrawBoardNumbers(wxBufferedDC &dc)
                     break;
             }
         }
+
+        writetoLog(debugString, _("ColoredRect.log"));
     }
 
         // Create a 16 point, serif font, that is not bold,

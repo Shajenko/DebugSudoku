@@ -1,0 +1,31 @@
+Pushing from drawing algorithm 
+
+Green squares 
+
+Red squares 
+
+Pushing to colored rectangles 
+Pushing green Row 0 col 3 val 5
+Pushing green Row 0 col 8 val 5
+Pushing green Row 0 col 3 val 6
+Pushing green Row 0 col 8 val 6
+Pushing red Row 0 col 0 val 5
+
+Pushing to colored rectangles from button 
+Pushing green Row 0 col 3 val 5
+Pushing green Row 0 col 8 val 5
+Pushing green Row 0 col 3 val 6
+Pushing green Row 0 col 8 val 6
+Pushing red Row 0 col 0 val 5
+
+Pushing from drawing algorithm 
+
+Green squares 
+Row 0 col 3 val 5
+Row 0 col 8 val 5
+Row 0 col 3 val 6
+Row 0 col 8 val 6
+
+Red squares 
+Row 0 col 3 val 5
+

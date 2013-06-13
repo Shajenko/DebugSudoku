@@ -61,6 +61,8 @@ class DebugSudokuFrame: public GUIFrame
 		virtual void OnSolve( wxCommandEvent& event );
 		virtual void OnNakedSingle( wxCommandEvent& event );
 		virtual void OnHiddenSingle( wxCommandEvent& event );
+		virtual void OnNakedDouble( wxCommandEvent& event );
+		virtual void OnHiddenDouble( wxCommandEvent& event );
 		virtual void OnScrambleBoards( wxCommandEvent& event );
 
 		virtual void OnGuessPanelEraseBG( wxEraseEvent& event );

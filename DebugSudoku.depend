@@ -4329,19 +4329,23 @@
 1370034840 c:\documents and settings\tas3409.adm\my documents\github\sudoku\debugsudoku\debugsudokuapp.h
 	<wx/app.h>
 
-1370555077 c:\documents and settings\tas3409.adm\my documents\github\sudoku\debugsudoku\debugsudokumain.h
+1371144883 c:\documents and settings\tas3409.adm\my documents\github\sudoku\debugsudoku\debugsudokumain.h
 	"DebugSudokuApp.h"
 	"..\Solving and Generating\GameBoard.h"
 	<wx/file.h>
 	<wx/datetime.h>
 	<wx/tokenzr.h>
+	<wx/textfile.h>
 	<iostream>
 	<fstream>
+	<cstdlib>
+	<ctime>
 	"GUIFrame.h"
 
-1370036800 c:\documents and settings\tas3409.adm\my documents\github\sudoku\solving and generating\gameboard.h
+1371144240 c:\documents and settings\tas3409.adm\my documents\github\sudoku\solving and generating\gameboard.h
 	"GameSquare.h"
 	<set>
+	<vector>
 	<wx/file.h>
 	<wx/datetime.h>
 	<iostream>
@@ -4351,7 +4355,7 @@
 	"GameSquare.h"
 	<set>
 
-1370525746 c:\documents and settings\tas3409.adm\my documents\github\sudoku\debugsudoku\guiframe.h
+1371143539 c:\documents and settings\tas3409.adm\my documents\github\sudoku\debugsudoku\guiframe.h
 	<wx/artprov.h>
 	<wx/xrc/xmlres.h>
 	"GamePanel.h"
@@ -4368,8 +4372,11 @@
 	<wx/button.h>
 	<wx/sizer.h>
 	<wx/frame.h>
+	<wx/stattext.h>
+	<wx/textctrl.h>
+	<wx/dialog.h>
 
-1370034841 c:\documents and settings\tas3409.adm\my documents\github\sudoku\debugsudoku\gamepanel.h
+1371151375 c:\documents and settings\tas3409.adm\my documents\github\sudoku\debugsudoku\gamepanel.h
 	"..\Solving and Generating\GameBoard.h"
 	"wx/dcbuffer.h"
 	<vector>
@@ -4397,29 +4404,30 @@
 1370036800 source:c:\documents and settings\tas3409.adm\my documents\github\sudoku\solving and generating\solve.cpp
 	"GameBoard.h"
 
-1370036800 source:c:\documents and settings\tas3409.adm\my documents\github\sudoku\solving and generating\sudokualgorithms.cpp
+1371157136 source:c:\documents and settings\tas3409.adm\my documents\github\sudoku\solving and generating\sudokualgorithms.cpp
 	"GameBoard.h"
 	<cstdlib>
 	<ctime>
 	<algorithm>
 	<vector>
 
-1370525746 source:c:\documents and settings\tas3409.adm\my documents\github\sudoku\debugsudoku\buttons.cpp
+1371155718 source:c:\documents and settings\tas3409.adm\my documents\github\sudoku\debugsudoku\buttons.cpp
 	"wx_pch.h"
 	"DebugSudokuMain.h"
 
-1370525747 source:c:\documents and settings\tas3409.adm\my documents\github\sudoku\debugsudoku\gamepanel.cpp
+1371157136 source:c:\documents and settings\tas3409.adm\my documents\github\sudoku\debugsudoku\gamepanel.cpp
 	"wx_pch.h"
 	"GamePanel.h"
 
-1370525746 source:c:\documents and settings\tas3409.adm\my documents\github\sudoku\debugsudoku\guiframe.cpp
+1371143446 source:c:\documents and settings\tas3409.adm\my documents\github\sudoku\debugsudoku\guiframe.cpp
+	"GamePanel.h"
 	"GUIFrame.h"
 
 1370034841 source:c:\documents and settings\tas3409.adm\my documents\github\sudoku\debugsudoku\keyboardinput.cpp
 	"wx_pch.h"
 	"DebugSudokuMain.h"
 
-1370034841 source:c:\documents and settings\tas3409.adm\my documents\github\sudoku\debugsudoku\menus.cpp
+1371142190 source:c:\documents and settings\tas3409.adm\my documents\github\sudoku\debugsudoku\menus.cpp
 	"wx_pch.h"
 	"DebugSudokuMain.h"
 
@@ -4428,7 +4436,7 @@
 	"DebugSudokuMain.h"
 	"wx/dcbuffer.h"
 
-1370555398 source:c:\documents and settings\tas3409.adm\my documents\github\sudoku\debugsudoku\debugsudokumain.cpp
+1371142168 source:c:\documents and settings\tas3409.adm\my documents\github\sudoku\debugsudoku\debugsudokumain.cpp
 	"wx_pch.h"
 	"DebugSudokuMain.h"
 

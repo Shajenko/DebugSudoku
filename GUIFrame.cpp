@@ -173,6 +173,12 @@ GUIFrame::GUIFrame( wxWindow* parent, wxWindowID id, const wxString& title, cons
 	m_buttonHiddenSingle = new wxButton( m_panelDebug, wxID_ANY, wxT("Hidden Single"), wxDefaultPosition, wxDefaultSize, 0 );
 	gSizer1->Add( m_buttonHiddenSingle, 0, wxALL, 2 );
 	
+	m_buttonNakedDouble = new wxButton( m_panelDebug, wxID_ANY, wxT("Naked Double"), wxDefaultPosition, wxDefaultSize, 0 );
+	gSizer1->Add( m_buttonNakedDouble, 0, wxALL, 5 );
+	
+	m_buttonHiddenDouble = new wxButton( m_panelDebug, wxID_ANY, wxT("Hidden Double"), wxDefaultPosition, wxDefaultSize, 0 );
+	gSizer1->Add( m_buttonHiddenDouble, 0, wxALL, 5 );
+	
 	
 	m_panelDebug->SetSizer( gSizer1 );
 	m_panelDebug->Layout();
@@ -222,6 +228,8 @@ GUIFrame::GUIFrame( wxWindow* parent, wxWindowID id, const wxString& title, cons
 	m_buttonSolve->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( GUIFrame::OnSolve ), NULL, this );
 	m_buttonNakedSingle->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( GUIFrame::OnNakedSingle ), NULL, this );
 	m_buttonHiddenSingle->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( GUIFrame::OnHiddenSingle ), NULL, this );
+	m_buttonNakedDouble->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( GUIFrame::OnNakedDouble ), NULL, this );
+	m_buttonHiddenDouble->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( GUIFrame::OnHiddenDouble ), NULL, this );
 }
 
 GUIFrame::~GUIFrame()
@@ -263,6 +271,8 @@ GUIFrame::~GUIFrame()
 	m_buttonSolve->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( GUIFrame::OnSolve ), NULL, this );
 	m_buttonNakedSingle->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( GUIFrame::OnNakedSingle ), NULL, this );
 	m_buttonHiddenSingle->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( GUIFrame::OnHiddenSingle ), NULL, this );
+	m_buttonNakedDouble->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( GUIFrame::OnNakedDouble ), NULL, this );
+	m_buttonHiddenDouble->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( GUIFrame::OnHiddenDouble ), NULL, this );
 	
 }
 
@@ -280,13 +290,27 @@ GenPuzzleDialog::GenPuzzleDialog( wxWindow* parent, wxWindowID id, const wxStrin
 	m_textCtrlGenPuzzles = new wxTextCtrl( this, wxID_ANY, wxT("1"), wxDefaultPosition, wxDefaultSize, 0 );
 	gSizer2->Add( m_textCtrlGenPuzzles, 0, wxALL, 5 );
 	
+	m_buttonOk = new wxButton( this, wxID_ANY, wxT("OK"), wxDefaultPosition, wxDefaultSize, 0 );
+	gSizer2->Add( m_buttonOk, 0, wxALL, 5 );
+	
+	m_buttonCancel = new wxButton( this, wxID_ANY, wxT("Cancel"), wxDefaultPosition, wxDefaultSize, 0 );
+	gSizer2->Add( m_buttonCancel, 0, wxALL, 5 );
+	
 	
 	this->SetSizer( gSizer2 );
 	this->Layout();
 	
 	this->Centre( wxBOTH );
+	
+	// Connect Events
+	m_buttonOk->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( GenPuzzleDialog::OnOK ), NULL, this );
+	m_buttonCancel->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( GenPuzzleDialog::OnCancel ), NULL, this );
 }
 
 GenPuzzleDialog::~GenPuzzleDialog()
 {
+	// Disconnect Events
+	m_buttonOk->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( GenPuzzleDialog::OnOK ), NULL, this );
+	m_buttonCancel->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( GenPuzzleDialog::OnCancel ), NULL, this );
+	
 }
