@@ -151,12 +151,11 @@ void GamePanel::DrawBoardNumbers(wxBufferedDC &dc)
 		writetoLog(debugString, _("ColoredRect.log"));
 
         // draw red and green squares according to greenSquare and redSquare
-        testColor = greenSquares;
 
 
 		debugString.clear();
 		debugString << _("Green squares \n");
-        for(it = testColor.begin(); it != testColor.end(); ++it)
+        for(it = greenSquares.begin(); it != greenSquares.end(); ++it)
         {
             // draw a rectangle over each possibility in each square in this vector
             sq.Copy(*it);
@@ -203,11 +202,9 @@ void GamePanel::DrawBoardNumbers(wxBufferedDC &dc)
 
         writetoLog(debugString, _("ColoredRect.log"));
 
-        testColor = redSquares;
-
 		debugString.clear();
 		debugString << _("Red squares \n");
-        for(it = testColor.begin(); it != testColor.end(); ++it)
+        for(it = redSquares.begin(); it != redSquares.end(); ++it)
         {
             // draw a rectangle over each possibility in each square in this vector
             sq.Copy(*it);

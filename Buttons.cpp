@@ -227,14 +227,15 @@ void DebugSudokuFrame::OnNakedDouble( wxCommandEvent& event )
 		val = sq->GetVal();
 
 		mGuessGB->RemovePossibles(i, j, val);
+		m_panelGuess->CopyBoard(*mGuessGB);
 
 		// Remove the value from the red squares, clear red and green square lists
 		m_panelGuess->ClearGreenSquares();
 		m_panelGuess->ClearRedSquares();
 		showChange = false;
-		Refresh();
 
 		delete sq;
+		Refresh();
 		return;
 	}
 

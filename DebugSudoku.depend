@@ -4161,9 +4161,10 @@
 	<algorithm>
 	<vector>
 
-1369800421 c:\users\tim\documents\github\sudoku\solving and generating\gameboard.h
+1371172576 c:\users\tim\documents\github\sudoku\solving and generating\gameboard.h
 	"GameSquare.h"
 	<set>
+	<vector>
 	<wx/file.h>
 	<wx/datetime.h>
 	<iostream>
@@ -4186,7 +4187,7 @@
 1369800525 source:c:\users\tim\documents\github\sudoku\solving and generating\solve.cpp
 	"GameBoard.h"
 
-1369800421 source:c:\users\tim\documents\github\sudoku\solving and generating\sudokualgorithms.cpp
+1371173084 source:c:\users\tim\documents\github\sudoku\solving and generating\sudokualgorithms.cpp
 	"GameBoard.h"
 	<cstdlib>
 	<ctime>
@@ -4236,7 +4237,7 @@
 1369264038 c:\users\tim\documents\github\sudoku\debugsudoku\debugsudokuapp.h
 	<wx/app.h>
 
-1370564054 c:\users\tim\documents\github\sudoku\debugsudoku\debugsudokumain.h
+1371163418 c:\users\tim\documents\github\sudoku\debugsudoku\debugsudokumain.h
 	"DebugSudokuApp.h"
 	"..\Solving and Generating\GameBoard.h"
 	<wx/file.h>
@@ -4249,7 +4250,7 @@
 	<ctime>
 	"GUIFrame.h"
 
-1370563941 c:\users\tim\documents\github\sudoku\debugsudoku\guiframe.h
+1371163418 c:\users\tim\documents\github\sudoku\debugsudoku\guiframe.h
 	<wx/artprov.h>
 	<wx/xrc/xmlres.h>
 	"GamePanel.h"
@@ -4284,22 +4285,22 @@
 1369265012 c:\users\tim\documents\github\sudoku\debugsudoku\gameboardstep.h
 	"..\Solving and Generating\GameBoard.h"
 
-1370560807 source:c:\users\tim\documents\github\sudoku\debugsudoku\gamepanel.cpp
+1371173706 source:c:\users\tim\documents\github\sudoku\debugsudoku\gamepanel.cpp
 	"wx_pch.h"
 	"GamePanel.h"
 
 1369264039 source:c:\users\tim\documents\github\sudoku\debugsudoku\resource.rc
 	"wx/msw/wx.rc"
 
-1370563866 source:c:\users\tim\documents\github\sudoku\debugsudoku\guiframe.cpp
+1371163418 source:c:\users\tim\documents\github\sudoku\debugsudoku\guiframe.cpp
 	"GamePanel.h"
 	"GUIFrame.h"
 
-1370030212 source:c:\users\tim\documents\github\sudoku\debugsudoku\buttons.cpp
+1371173900 source:c:\users\tim\documents\github\sudoku\debugsudoku\buttons.cpp
 	"wx_pch.h"
 	"DebugSudokuMain.h"
 
-1370560940 source:c:\users\tim\documents\github\sudoku\debugsudoku\menus.cpp
+1370565202 source:c:\users\tim\documents\github\sudoku\debugsudoku\menus.cpp
 	"wx_pch.h"
 	"DebugSudokuMain.h"
 
